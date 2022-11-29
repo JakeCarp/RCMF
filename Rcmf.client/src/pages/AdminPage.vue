@@ -1,24 +1,16 @@
 <template>
   <div class="container-fluid mt-4">
     <div class="row">
-      <div class="col-md-3 d-flex flex-column align-items-center justify-content-between ">
-        <div class="card p-3 elevation-6">
-          <div>Admin Name/</div>
-        </div>
-        <div>
-          <div class="card p-3 elevation-6">
-            <div class="card-body">This Month's Donations</div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="col-md-9 ">
+      <!-- <div class="col-md-3 test d-flex flex-column  justify-content-between ">
+     
+      </div> -->
+<div class="col-md-12 d-flex justify-content-center">
+  <h1 class="abril">Admin DashBoard</h1>
+</div>
+      <div class="col-md-12">
         <nav>
           <div
-            class="nav nav-tabs elevation-5 rounded justify-content-center justify-content-evenly"
+            class="nav nav-tabs rounded justify-content-center justify-content-evenly"
             id="nav-tab"
             role="tablist"
           >
@@ -73,7 +65,7 @@
             </button>
           </div>
         </nav>
-        <div class="tab-content elevation-5 " id="nav-tabContent">
+        <div class="tab-content " id="nav-tabContent">
           <div
             class="tab-pane fade show active"
             id="nav-home"
@@ -81,7 +73,22 @@
             aria-labelledby="nav-home-tab"
             tabindex="0"
           >
-            1
+            <div class="container p-4 ">
+              <div class="row">
+                <div class="col-md-12  d-flex justify-content-evenly">
+                  <div class="card bg-danger border-0 p-3 elevation-6">
+                    <div>Admin Name/</div>
+                  </div>
+
+                  <div class="card bg-success border-0 mb-4 p-3 elevation-6">
+                    <div class="card-body">This Month's Donations</div>
+                  </div>
+                  <div class="card bg-primary border-0 p-3 elevation-6">
+                    <div class="card-body">Donors Amount & Shirt sizes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -129,6 +136,9 @@ export default {
 </script>
 
 <style scoped>
+.test {
+  height: 80vh;
+}
 img {
   max-width: 100px;
 }
