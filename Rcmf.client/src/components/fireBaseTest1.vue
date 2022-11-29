@@ -1,8 +1,9 @@
 <template>
   <ul>
-    <li v-for="todo in chats" :key="todo.id">
-      <span class="text-dark bg-danger">{{ todo }}</span>
+    <li v-for="todo in chats" :key="todo.id" class="list-group-item">
+      <span class="text-dark bg-danger">{{ todo.text }}</span>
     </li>
+    
     <form @submit.prevent="post()">
       <textarea v-model="editable.text" name="" id="" cols="30" rows="10">
       </textarea>
