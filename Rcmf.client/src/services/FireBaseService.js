@@ -25,13 +25,16 @@ const firebaseConfig = {
 };
 export const firebaseApp = initializeApp(firebaseConfig);
 // export const database = getDatabase(firebaseApp);
-export const firestore = getFirestore(firebaseApp);
+export const db = getFirestore(firebaseApp);
 // ... other firebase exports
 import { useFirestore } from "@vueuse/firebase/useFirestore";
 
 //  export const db = getFirestore(app);
 
-export const chats = useFirestore(collection(firestore, "chats"));
+export const chats = useFirestore(collection(db, "chats"));
+const chatsRef = collection(db, "chats")
+const use = useCollection(chatsRef)
+import { useCollection } from "vuefire";
 
 // const chat = db.collection("chats")
 // const chatsRef = FirebaseDocRef(collection(db,"chats"))
@@ -42,9 +45,9 @@ class FiresService {
     // console.log(db);
 
     console.log(firebaseApp);
-    // console.log(database);
-    console.log(firestore);
-    console.log(chats);
+    console.log(chatsRef);
+    console.log(use.value);
+    // console.log(chats.collection());
   }
   //
 }
