@@ -1,20 +1,24 @@
 <template>
   <div class="container-fluid mt-4">
     <div class="row">
-      <div class="col-md-3 d-flex flex-column">
-        <div class="card p-3">
+      <div class="col-md-3 d-flex flex-column align-items-center justify-content-between ">
+        <div class="card p-3 elevation-6">
           <div>Admin Name/</div>
         </div>
         <div>
-          <div class="card p-3">
+          <div class="card p-3 elevation-6">
             <div class="card-body">This Month's Donations</div>
           </div>
         </div>
       </div>
-      <div class="col-md-9">
+
+
+
+
+      <div class="col-md-9 ">
         <nav>
           <div
-            class="nav nav-tabs justify-content-center justify-content-evenly"
+            class="nav nav-tabs elevation-5 rounded justify-content-center justify-content-evenly"
             id="nav-tab"
             role="tablist"
           >
@@ -69,7 +73,7 @@
             </button>
           </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content elevation-5 " id="nav-tabContent">
           <div
             class="tab-pane fade show active"
             id="nav-home"
