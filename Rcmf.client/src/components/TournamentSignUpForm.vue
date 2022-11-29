@@ -7,44 +7,56 @@
         </div>
         <form action="">
           <div class="p-4">
-            <div class="input-group mb-3">
-             
-              <input type="text" class="form-control " placeholder="Name" />
-            </div>
-            <div class="input-group mb-3">
-           
+            <div class="form-floating mb-3">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Email"
+                id="floatingName"
+                placeholder="Name"
               />
+              <label for="floatingName">Name</label>
             </div>
-            <div class="input-group mb-3">
-           
+            <div class="form-floating mb-3">
               <input
-                type="text"
+                type="email"
                 class="form-control"
-                placeholder="ShirtSize"
+                id="floatingInput"
+                placeholder="name@example.com"
               />
+              <label for="floatingInput">Email address</label>
             </div>
-            <div class="input-group mb-3">
-           
+            <div class="form-floating mb-3">
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                placeholder="password"
+                id="floatingInput"
+                placeholder="name@example.com"
               />
+              <label for="floatingInput">Phone-Number </label>
             </div>
-            <div class="input-group mb-3">
-           
+            <div class="form-floating mb-3">
               <input
-                type="text"
+                type="email"
                 class="form-control"
-                placeholder="password"
+                id="floatingInput"
+                placeholder="name@example.com"
               />
+              <label for="floatingInput">ShirtSize</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Address</label>
             </div>
 
-            <button class="btn btn-outline-success text-center mt-2 p-3 px-5 " type="submit">
+            <button
+              class="btn btn-outline-success text-center mt-2 p-3 px-5"
+              type="submit"
+            >
               Sign Up
             </button>
             <!-- <p class="text-center mt-5">

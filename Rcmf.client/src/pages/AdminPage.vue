@@ -25,7 +25,7 @@
               aria-controls="nav-home"
               aria-selected="true"
             >
-              Home
+             <i class="mdi mdi-view-dashboard me-1"></i> DashBoard
             </button>
             <button
               class="nav-link"
@@ -37,7 +37,7 @@
               aria-controls="nav-profile"
               aria-selected="false"
             >
-              Profile
+            <i class="mdi mdi-account fs-2 me-1"></i>  Members
             </button>
             <button
               class="nav-link"
@@ -76,22 +76,7 @@
             tabindex="0"
           >
           <!-- Tab1 -->
-            <div class="container p-4 ">
-              <div class="row">
-                <div class="col-md-12  d-flex justify-content-evenly">
-                  <div class="card bg-danger border-0 p-3 elevation-6">
-                    <div>Admin Name/</div>
-                  </div>
-
-                  <div class="card bg-success border-0 mb-4 p-3 elevation-6">
-                    <div class="card-body">This Month's Donations</div>
-                  </div>
-                  <div class="card bg-primary border-0 p-3 elevation-6">
-                    <div class="card-body">Donors Amount & Shirt sizes</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Tab1/>
             <!-- !Tab1 -->
           </div>
           <div
@@ -133,12 +118,14 @@
 <script>
 import { computed } from "vue";
 import { AppState } from "../AppState";
+import Tab1 from "../components/adminPage/Tab1.vue";
 export default {
-  setup() {
-    return {
-      account: computed(() => AppState.account),
-    };
-  },
+    setup() {
+        return {
+            account: computed(() => AppState.account),
+        };
+    },
+    components: { Tab1 }
 };
 </script>
 
@@ -159,6 +146,8 @@ nav .nav-link {
   color: black !important;
   margin: 0 20px;
   font-size: 1.5rem;
+  align-items: center;
+  display: flex;
 }
 
 nav .nav-link:hover{
