@@ -35,6 +35,7 @@ export const chats = useFirestore(collection(db, "chats"));
 const chatsRef = collection(db, "chats")
 const use = useCollection(chatsRef)
 import { useCollection } from "vuefire";
+import { set } from "firebase/database";
 
 // const chat = db.collection("chats")
 // const chatsRef = FirebaseDocRef(collection(db,"chats"))
@@ -48,6 +49,10 @@ class FiresService {
     console.log(chatsRef);
     console.log(use.value);
     // console.log(chats.collection());
+
+
+
+    const res = await set(db,'chats')
   }
   //
 }
