@@ -160,4 +160,9 @@ nav .nav-link {
   margin: 0 20px;
   font-size: 1.5rem;
 }
+
+nav .nav-link:hover{
+  border: none;
+  border-bottom: #f5a53c 5px solid !important;
+}
 </style>

@@ -8,12 +8,19 @@
      <TournamentSignUpForm/>
     </div>
   </div>
-<div class="my-5">
+<div class="">
 
 </div>
-  <div class="brick">
+  
 
-  </div>
+
+<!-- <div v-masonry="containerId" transition-duration="0.3s" item-selector=".item">
+    <div v-masonry-tile class="item" v-for="(item, index) in blocks">
+      
+    </div>
+</div> -->
+
+
 </div>
 </template>
 
