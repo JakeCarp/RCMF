@@ -8,6 +8,7 @@
   <h1 class="abril">Admin DashBoard</h1>
 </div>
       <div class="col-md-12">
+        <!-- NavButtons -->
         <nav>
           <div
             class="nav nav-tabs rounded justify-content-center justify-content-evenly"
@@ -65,6 +66,7 @@
             </button>
           </div>
         </nav>
+        <!-- !NavButtons -->
         <div class="tab-content " id="nav-tabContent">
           <div
             class="tab-pane fade show active"
@@ -73,6 +75,7 @@
             aria-labelledby="nav-home-tab"
             tabindex="0"
           >
+          <!-- Tab1 -->
             <div class="container p-4 ">
               <div class="row">
                 <div class="col-md-12  d-flex justify-content-evenly">
@@ -89,6 +92,7 @@
                 </div>
               </div>
             </div>
+            <!-- !Tab1 -->
           </div>
           <div
             class="tab-pane fade"
@@ -97,7 +101,8 @@
             aria-labelledby="nav-profile-tab"
             tabindex="0"
           >
-            2
+            <!-- Tab2 -->
+            <!-- !Tab2 -->
           </div>
           <div
             class="tab-pane fade"
@@ -106,7 +111,8 @@
             aria-labelledby="nav-contact-tab"
             tabindex="0"
           >
-            3
+            <!-- Tab3 -->
+            <!-- !Tab3 -->
           </div>
           <div
             class="tab-pane fade"
@@ -115,7 +121,8 @@
             aria-labelledby="nav-fourth-tab"
             tabindex="0"
           >
-            4
+            <!-- Tab4 -->
+            <!-- !Tab4 -->
           </div>
         </div>
       </div>
