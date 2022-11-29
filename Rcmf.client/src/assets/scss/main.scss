@@ -3,10 +3,30 @@
 @import "./_overrides.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Audiowide&family=Bebas+Neue&family=Oswald&family=Quando&family=Roboto&display=swap');
+
+
+
+
+
+
+
+.abril{
+font-family: 'Abril Fatface', cursive;
+}
+.roboto{
+font-family: 'Roboto', sans-serif;
+}
 
 body{
   overscroll-behavior: none;
 }
+
+
+
+
+
+
 
 #app {
   display: flex;
