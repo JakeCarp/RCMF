@@ -1,9 +1,18 @@
 <template>
 <div class="container">
+  <div class="my-3 text-center">
+    <h1 class="abril display-3">Tournament</h1>
+  </div>
   <div class="row">
     <div class="col-md-12">
-      TOURNAMENT PAGE
+     <TournamentSignUpForm/>
     </div>
+  </div>
+<div class="my-5">
+
+</div>
+  <div class="brick">
+
   </div>
 </div>
 </template>
@@ -12,27 +21,28 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import TournamentSignUpForm from "../components/TournamentSignUpForm.vue";
 import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
 
 export default {
-props:{
-
-       },
-  setup(props) {
-    const editable = ref({});
-    
-    onMounted(() => {
-
-    });
-    watchEffect(() => {});
-
-    return {
-      editable,
-      }
-    }
-  }
+    props: {},
+    setup(props) {
+        const editable = ref({});
+        onMounted(() => {
+        });
+        watchEffect(() => { });
+        return {
+            editable,
+        };
+    },
+    components: { TournamentSignUpForm }
+}
 </script>
 
 <style lang="scss" scoped>
+
+.brick{
+columns: 4;
+}
 </style>
