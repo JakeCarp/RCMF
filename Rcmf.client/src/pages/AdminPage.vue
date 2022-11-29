@@ -1,27 +1,142 @@
 <template>
- <div class="container">
-   <div class="row">
-     <div class="col-md-12">
-       ADMIN PAGE
-     </div>
-   </div>
- </div>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-md-3 d-flex flex-column">
+        <div class="card p-3">
+          <div>Admin Name/</div>
+        </div>
+        <div>
+          <div class="card p-3">
+            <div class="card-body">This Month's Donations</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <nav>
+          <div
+            class="nav nav-tabs justify-content-center justify-content-evenly"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link active"
+              id="nav-home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-home"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              Home
+            </button>
+            <button
+              class="nav-link"
+              id="nav-profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-profile"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              Profile
+            </button>
+            <button
+              class="nav-link"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-contact"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              Contact
+            </button>
+
+            <button
+              class="nav-link"
+              id="nav-fourth-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-fourth"
+              type="button"
+              role="tab"
+              aria-controls="nav-fourth"
+              aria-selected="false"
+            >
+              fourth
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+            tabindex="0"
+          >
+            1
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+            tabindex="0"
+          >
+            2
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+            tabindex="0"
+          >
+            3
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-fourth"
+            role="tabpanel"
+            aria-labelledby="nav-fourth-tab"
+            tabindex="0"
+          >
+            4
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import { computed } from 'vue'
-import { AppState } from '../AppState'
+import { computed } from "vue";
+import { AppState } from "../AppState";
 export default {
   setup() {
     return {
-      account: computed(() => AppState.account)
-    }
-  }
-}
+      account: computed(() => AppState.account),
+    };
+  },
+};
 </script>
 
 <style scoped>
 img {
   max-width: 100px;
+}
+nav .active {
+  border: 0;
+  border-bottom: 5px solid #f5a53c !important;
+  background-color: transparent !important;
+  font-weight: bold;
+}
+nav .nav-link {
+  color: black !important;
+  margin: 0 20px;
+  font-size: 1.5rem;
 }
 </style>
