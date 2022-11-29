@@ -19,7 +19,27 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
         <li>
+          <router-link :to="{ name: 'Home' }" class="btn text-success lighten-30 selectable text-uppercase">
+            About
+          </router-link>
+        </li>
+        <li>
           <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Sponsor' }" class="btn text-success lighten-30 selectable text-uppercase">
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Tournament' }" class="btn text-success lighten-30 selectable text-uppercase">
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Donate' }" class="btn text-success lighten-30 selectable text-uppercase">
             About
           </router-link>
         </li>

@@ -24,7 +24,7 @@ const routes = [
   {
     path: '/donate',
     name: 'Donate',
-    component: loadPage('TournamentPage')
+    component: loadPage('DonatePage')
   },
   {
     path: '/about',
