@@ -20,7 +20,7 @@
       <ul class="navbar-nav me-auto">
         <li>
           <router-link :to="{ name: 'Home' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
+            Landing
           </router-link>
         </li>
         <li>
@@ -30,17 +30,17 @@
         </li>
         <li>
           <router-link :to="{ name: 'Sponsor' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
+            Sponsor
           </router-link>
         </li>
         <li>
           <router-link :to="{ name: 'Tournament' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
+            Tournament
           </router-link>
         </li>
         <li>
           <router-link :to="{ name: 'Donate' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
+           Donate
           </router-link>
         </li>
       </ul>
