@@ -12,6 +12,21 @@ const routes = [
     component: loadPage('HomePage')
   },
   {
+    path: '/sponsor',
+    name: 'Sponsor',
+    component: loadPage('SponsorPage')
+  },
+  {
+    path: '/tournament',
+    name: 'Tournament',
+    component: loadPage('TournamentPage')
+  },
+  {
+    path: '/donate',
+    name: 'Donate',
+    component: loadPage('TournamentPage')
+  },
+  {
     path: '/about',
     name: 'About',
     component: loadPage('AboutPage')
