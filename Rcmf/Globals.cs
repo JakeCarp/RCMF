@@ -14,3 +14,5 @@ global using CodeWorks.Utils;
 global using Rcmf.Repositories;
 global using Rcmf.Services;
 global using Rcmf.Models;
+global using Rcmf.Enums;
+global using Rcmf.Interfaces;
