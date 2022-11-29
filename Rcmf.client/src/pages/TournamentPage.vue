@@ -32,7 +32,6 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
-import FilePicker from "../components/filePicker.vue";
 import TournamentSignUpForm from "../components/TournamentSignUpForm.vue";
 import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
