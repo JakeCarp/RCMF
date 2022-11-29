@@ -17,7 +17,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav mx-auto gap-5">
         <li>
           <router-link :to="{ name: 'Home' }" class="btn text-success lighten-30 selectable text-uppercase">
             Landing
