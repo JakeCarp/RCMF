@@ -3,7 +3,11 @@
   <div class="my-3 text-center">
     <h1 class="abril display-3">Tournament</h1>
   </div>
+
   <div class="row">
+    <div class="col-md-12">
+    <FilePicker/>
+    </div>
     <div class="col-md-12">
      <TournamentSignUpForm/>
     </div>
@@ -28,6 +32,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import FilePicker from "../components/filePicker.vue";
 import TournamentSignUpForm from "../components/TournamentSignUpForm.vue";
 import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
@@ -43,7 +48,7 @@ export default {
             editable,
         };
     },
-    components: { TournamentSignUpForm }
+    components: { TournamentSignUpForm, FilePicker }
 }
 </script>
 
