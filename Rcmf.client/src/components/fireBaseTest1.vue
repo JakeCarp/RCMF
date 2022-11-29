@@ -42,7 +42,7 @@ export default {
       async post() {
         try {
         
-          await setDoc(doc(db, "chats",p ), editable.value);
+          await setDoc(doc(db, "chats",id), editable.value);
           
         } catch (error) {
           Pop.error(error, "[]");
