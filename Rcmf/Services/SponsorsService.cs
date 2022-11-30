@@ -21,10 +21,16 @@ public class SponsorsService
     return _sponsorsRepo.Get();
   }
 
-  // internal void DeleteSponsor(int sponsorId, string AdminId)
-  // {
-
-  // }
+  internal void DeleteSponsor(int sponsorId, string userId)
+  {
+    Sponsor sponsor = _sponsorsRepo.GetById(sponsorId);
+    Account account = _accountsService.GetAdminById(userId);
+    if(account == null)
+    {
+      throw new Exception("Unauthorized to Delete");
+    }
+    _sponsorsRepo.Delete(sponsorId);
+  }
 
   internal Sponsor GetSponsorById(int sponsorId)
   {
@@ -34,6 +40,24 @@ public class SponsorsService
       throw new Exception("Bad Sponsor Id");
     }
     return sponsor;
+  }
+
+  internal Sponsor UpdateSponsor(Sponsor sponsor, string accountId)
+  {
+    Sponsor original = GetSponsorById(sponsor.Id);
+
+    original.Name = sponsor.Name ?? original.Name;
+    original.Email = sponsor.Email ?? original.Email;
+    original.Tier = sponsor.Tier;
+
+    Sponsor updated = _sponsorsRepo.Update(original);
+    return updated;
+
+  }
+
+  internal Sponsor CreateSponsor(Sponsor sponsorData)
+  {
+    return _sponsorsRepo.Create(sponsorData);
   }
 
 
