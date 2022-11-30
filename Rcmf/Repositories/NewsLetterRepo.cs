@@ -6,9 +6,17 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
   {
   }
 
-  public Newsletter Create(Newsletter data)
+  public Newsletter Create(Newsletter newsLetterData)
   {
-    throw new NotImplementedException();
+    var sql = @"INSERT INTO newsLetters
+                (name,email,)
+                VALUES
+                (@Name,@Email);
+                SELECT LAST_INSERT_ID()
+                ;";
+
+    int newsLetterId = _db.ExecuteScalar<int>(sql, newsLetterData);
+    return GetById(newsLetterId);
   }
 
   public void Delete(int id)

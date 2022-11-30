@@ -4,31 +4,31 @@ namespace Rcmf.Controllers;
 [Route("[controller]")]
 public class NewsLetterController : ControllerBase
 {
-  [HttpGet]
-  public ActionResult<List<string>> Get()
+  private readonly NewsletterService _newsLetterService;
+  private readonly Auth0Provider _auth0Provider;
+
+  public NewsLetterController(NewsletterService newsLetterService, Auth0Provider auth0Provider)
   {
-    try
-    {
-      return Ok(new List<string>() { "Value 1", "Value 2" });
-    }
-    catch (Exception e)
-    {
-      return BadRequest(e.Message);
-    }
+    _newsLetterService = newsLetterService;
+    _auth0Provider = auth0Provider;
   }
 
-
-  [HttpPost]
-  public ActionResult<List<string>> Create([FromBody] string value)
-  {
-    try
-    {
-      return Ok(value);
-    }
-    catch (Exception e)
-    {
-      return BadRequest(e.Message);
-    }
-  }
+  [Authorize]
+   [HttpPost]
+   public ActionResult<Newsletter> CreateNewsletter([FromBody] Newsletter newsletterData)
+   {
+     try
+     {
+  
+       Newsletter newsletter = _newsLetterService.CreateNewsletter(newsletterData);
+       return Ok(newsletter);
+     }
+     catch (Exception e)
+     {
+       return BadRequest(e.Message);
+     }
+   }
+ 
+ 
 
 }
