@@ -1,10 +1,10 @@
 <template>
 <div class="container">
-  <div class="row g-2">
+  <div class="row my-2 g-2">
     <div class="col-md-12" v-for="i in 10">
-      <div class="card p-2 ">
+      <div class="card p-2 elevation-3 ">
 <div>
-<img src="//thiscatdoesnotexist.com" alt="" width="80" height="80">
+<img src="//thiscatdoesnotexist.com" alt="" width="150" height="150">
 
   
 </div>
