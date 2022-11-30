@@ -111,11 +111,12 @@ export default {
         let currentScrollPos = window.scrollY;
         console.log(["current"], currentScrollPos);
         if (prevScrollpos > currentScrollPos) {
-          // nav.style.top="0"
+          nav.style.top="0"
+          nav.style.transition="all 0.25s ease"
           nav.classList.remove("showOnScroll");
         } else {
           nav.classList.add("hiddenOnScroll");
-          //  nav.style.top="-70px"
+           nav.style.top="-70px"
         }
         prevScrollpos = currentScrollPos;
       };
@@ -128,7 +129,7 @@ export default {
 <style scoped lang="scss">
 
 #searchBar22{
-  
+  transition: all 0.5s ease;
 }
 .hiddenOnScroll {
   transform: scale(3);
