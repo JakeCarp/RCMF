@@ -11,7 +11,7 @@ public class NewsletterService
     _accountsService = accountsService;
   }
 
-  internal Newsletter CreateNewsletter(Newsletter newsletterData)
+  internal NewsLetter CreateNewsletter(NewsLetter newsletterData)
   {
     return _newsletterRepo.Create(newsletterData);
   }

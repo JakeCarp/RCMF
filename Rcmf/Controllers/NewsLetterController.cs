@@ -14,21 +14,21 @@ public class NewsLetterController : ControllerBase
   }
 
   [Authorize]
-   [HttpPost]
-   public ActionResult<Newsletter> CreateNewsletter([FromBody] Newsletter newsletterData)
-   {
-     try
-     {
-  
-       Newsletter newsletter = _newsLetterService.CreateNewsletter(newsletterData);
-       return Ok(newsletter);
-     }
-     catch (Exception e)
-     {
-       return BadRequest(e.Message);
-     }
-   }
- 
- 
+  [HttpPost]
+  public ActionResult<NewsLetter> CreateNewsletter([FromBody] NewsLetter newsLetterData)
+  {
+    try
+    {
+
+      NewsLetter newsLetter = _newsLetterService.CreateNewsletter(newsLetterData);
+      return Ok(newsLetter);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+
 
 }

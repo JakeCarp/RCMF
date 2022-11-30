@@ -1,6 +1,6 @@
 namespace Rcmf.Models;
 
-public class Newsletter : IDbItem<int>
+public class NewsLetter : IDbItem<int>
 {
   public string Name { get; set; }
   public string Email { get; set; }

@@ -1,12 +1,12 @@
 namespace Rcmf.Repositories;
 
-public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
+public class NewsletterRepository : BaseRepository, IRepo<NewsLetter, int>
 {
   public NewsletterRepository(IDbConnection db) : base(db)
   {
   }
 
-  public Newsletter Create(Newsletter newsLetterData)
+  public NewsLetter Create(NewsLetter newsLetterData)
   {
     var sql = @"INSERT INTO newsLetters
                 (name,email)
@@ -29,25 +29,25 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
 
   }
 
-  public List<Newsletter> Get()
+  public List<NewsLetter> Get()
   {
     string sql = @"SELECT 
               *
               FROM newsLetters;";
-    return _db.Query<Newsletter>(sql).ToList();
+    return _db.Query<NewsLetter>(sql).ToList();
   }
 
-  public Newsletter GetById(int id)
+  public NewsLetter GetById(int id)
   {
     string sql = @"SELECT 
                 *
                 FROM newsLetters
                 WHERE id = @id
                 ;";
-    return _db.Query<Newsletter>(sql, new { id }).FirstOrDefault();
+    return _db.Query<NewsLetter>(sql, new { id }).FirstOrDefault();
   }
 
-  public Newsletter Update(Newsletter data)
+  public NewsLetter Update(NewsLetter data)
   {
     throw new NotImplementedException();
   }
