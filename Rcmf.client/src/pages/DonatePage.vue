@@ -62,30 +62,11 @@ export default {
     return {
       editable,
       supa: computed(() => AppState.supabase),
-      async handleDonate() {
-        try {
-          // console.log(editable.value);
-          // await firesService.addChat(editable.value);
-          const res = await supabaseService.addSupabaseChat(editable.value);
-        }
-        return {
-            editable,
-            supa: computed(() => AppState.supabase),
-            async handleDonate() {
-                try {
-                    // console.log(editable.value);
-                    // await firesService.addChat(editable.value);
-                    const res = await supabaseService.addSupabaseChat(editable.value);
-                }
-                catch (error) {
-                    console.error("[]", error);
-                    Pop.error(error);
-                }
-            },
-        };
-    },
-    components: { DonateForm, DonateForm }
-};
+
+      components: { DonateForm, DonateForm }
+    }
+  }
+  }
 </script>
 
 <style lang="scss" scoped>
