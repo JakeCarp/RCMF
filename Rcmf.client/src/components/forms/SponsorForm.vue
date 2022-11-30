@@ -6,7 +6,7 @@
           <h3 class="text-primary abril">SponsorShip Form</h3>
         </div>
 
-        <form action="">
+        <form @submit.prevent="handleSubmit()">
           <div class="p-4">
             <div class="form-floating mb-3">
               <input
@@ -14,6 +14,7 @@
                 class="form-control"
                 id="floatingName"
                 placeholder="Name"
+                v-model="editable.name"
               />
               <label for="floatingName">Sponsor Name</label>
             </div>
@@ -24,6 +25,7 @@
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                v-model="editable.email"
               />
               <label for="floatingInput">Email </label>
             </div>
@@ -33,10 +35,10 @@
   <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown button
   </button>
-  <ul class="dropdown-menu p-2">
-    <li class="list-group-item p-2 selectable rounded" v-for="t in tiers"> {{t}} </li>
+  <select class="dropdown-menu p-2" v-model="editable.tier">
+    <option class="list-group-item p-2 selectable rounded" :value="t"   v-for="t in tiers"> {{t}} </option>
 
-  </ul>
+  </select>
 </div>
             </div>
 <div class="d-flex justify-content-end">
@@ -64,9 +66,9 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
+import { sponsorsService } from "../../services/SponsorsService.js";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
-import sponsorsService from '../../services/SponsorsService.js'
 export default {
   props: {},
   setup(props) {
@@ -78,9 +80,10 @@ export default {
     return {
       editable,
       tiers:computed(() => AppState.sponsorTiers),
-      handleSubmit(){
+     async  handleSubmit(){
         try {
-          // await sponsorsService.
+        await sponsorsService.createSponsor(editable.value)
+        Pop.success()
           } catch (error) {
             Pop.error(error,'[createSponsor]')
           }
