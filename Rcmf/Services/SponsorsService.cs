@@ -13,7 +13,11 @@ public class SponsorsService
 
   internal List<Sponsor> GetAllSponsors(string adminId)
   {
-
+    var admin = _accountsService.GetAdminById(adminId);
+    if (admin == null)
+    {
+      throw new Exception("Bad Admin Id");
+    }
     return _sponsorsRepo.Get();
   }
 }
