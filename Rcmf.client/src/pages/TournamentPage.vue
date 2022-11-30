@@ -29,7 +29,7 @@ import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import FireBaseTest1 from "../components/fireBaseTest1.vue";
 
-import TournamentSignUpForm from "../components/TournamentSignUpForm.vue";
+import TournamentSignUpForm from "../components/forms/TournamentSignUpForm.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
