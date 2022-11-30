@@ -37,21 +37,25 @@
             </div>
             <div class="form-floating mb-3">
               
-              <input
-                type=""
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Sponsorship Level</label>
-            </div>
+        <div class="dropdown">
+  <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu p-2">
+    <li class="list-group-item p-2 selectable rounded" v-for="t in tiers"> {{t}} </li>
 
-            <button
-              class="btn btn-outline-success text-center mt-2 p-3 px-5"
-              type="submit"
-            >
-              Sign Up
-            </button>
+  </ul>
+</div>
+            </div>
+<div class="d-flex justify-content-end">
+
+  <button
+    class="btn btn-outline-success text-center mt-2 p-3 px-5"
+    type="submit"
+  >
+    Sign Up
+  </button>
+</div>
             <!-- <p class="text-center mt-5">
               Don't have an account?
               <span class="text-primary">Sign Up</span>
@@ -81,6 +85,7 @@ export default {
 
     return {
       editable,
+      tiers:computed(() => AppState.sponsorTiers),
     };
   },
 };
