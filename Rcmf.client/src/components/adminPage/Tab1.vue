@@ -61,6 +61,28 @@
           </div>
         </div>
       </div>
+        <div class="col-md-6">
+        <div class="card p-3 elevation-6 border-0">
+          <div class="d-flex justify-content-between">
+            <p class="fw-bold">SPONSORS</p>
+           
+          </div>
+          <div class="d-flex justify-content-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1692/1692130.png"
+              alt=""
+              width="150"
+            />
+          </div>
+          <div class="card p-3 elevation-2 border d-flex justify-content-evenly ">
+            <div class="d-flex justify-content-around">
+              <p v-for="s in sponsors">Sponsor Name:  {{s}}</p>
+               <p> Amount:{{}} </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -81,6 +103,7 @@ export default {
 
     return {
       editable,
+      sponsors: computed(() => AppState.sponsors),
     };
   },
 };

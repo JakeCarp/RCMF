@@ -4,7 +4,12 @@ import { audience, clientId, domain } from "../env";
 import { router } from "../router";
 import { accountService } from "./AccountService";
 import { mySQL } from "./AxiosService";
+import { donationsService } from "./DonationsService.js";
+import { grantsService } from "./GrantsService.js";
+import { playersService } from "./PlayersService.js";
 import { socketService } from "./SocketService";
+import { sponsorsService } from "./SponsorsService.js";
+import { teamsService } from "./TeamsService.js";
 
 export const AuthService = initialize({
   domain,
@@ -26,6 +31,11 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function () {
   AppState.user = AuthService.user;
   await accountService.getAccount();
   socketService.authenticate(AuthService.bearer);
+  sponsorsService.getSponsors()
+  grantsService.getGrants()
+  donationsService.getDonors()
+  teamsService.getTeams()
+  playersService.getPlayers()
   // NOTE if there is something you want to do once the user is authenticated, place that here
 });
 

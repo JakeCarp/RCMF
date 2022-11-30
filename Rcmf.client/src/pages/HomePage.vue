@@ -122,9 +122,9 @@ export default {
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
           nav.style.transition = "all 0.25s ease";
-          nav.classList.remove("showOnScroll");
+          // nav.classList.remove("showOnScroll");
         } else {
-          nav.classList.add("hiddenOnScroll");
+          // nav.classList.add("hiddenOnScroll");
           nav.style.top = "-70px";
         }
         prevScrollpos = currentScrollPos;
