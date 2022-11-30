@@ -8,7 +8,15 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
 
   public Tournament Create(Tournament data)
   {
-    throw new NotImplementedException();
+    var sql = @"
+    INSERT INTO
+    tournaments (date, location, netIncome)
+    VALUES (@Date, @Location, @NetIncome);
+    SELECT LAST_INSERT_ID()
+    ;";
+
+    int tourneyId = _db.ExecuteScalar<int>(sql, data);
+    return GetById(tourneyId);
   }
 
   public void Delete(int id)
@@ -23,7 +31,12 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
 
   public Tournament GetById(int id)
   {
-    throw new NotImplementedException();
+    var sql = @"
+    SELECT *
+    FROM tournaments
+    WHERE id = @id
+    ;";
+    return _db.Query<Tournament>(sql, new { id }).FirstOrDefault();
   }
 
   public Tournament Update(Tournament data)
