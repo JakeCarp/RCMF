@@ -3,7 +3,7 @@
     <div class="rounded d-flex justify-content-center">
       <div class="col-md-8 col-sm-12 shadow-lg p-5 bg-light">
         <div class="text-center">
-          <h3 class="text-primary">Sign Up form</h3>
+          <h3 class="text-primary">Donation Form</h3>
         </div>
         <form action="">
           <div class="p-4">
