@@ -58,22 +58,22 @@ public class SponsorsController : ControllerBase
     }
   }
 
-   [HttpPut("{sponsorId}")]
-      [Authorize]
-      public async Task<ActionResult<Sponsor>> EditSponsor([FromBody] Sponsor sponsorData, int sponsorId)
-      {
-        try
-        {
-          Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-          Sponsor sponsor = _sponsorsService.UpdateSponsor(sponsorData, userInfo.Id);
-          return Ok(sponsor);
-        }
-        catch (Exception e)
-        {
-          return BadRequest(e.Message);
-        }
-      }
-  
+  [HttpPut("{sponsorId}")]
+  [Authorize]
+  public async Task<ActionResult<Sponsor>> EditSponsor([FromBody] Sponsor sponsorData, int sponsorId)
+  {
+    try
+    {
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      Sponsor sponsor = _sponsorsService.UpdateSponsor(sponsorData, userInfo.Id);
+      return Ok(sponsor);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
 
 
 }
