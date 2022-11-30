@@ -4,9 +4,18 @@
       <!-- <div class="col-md-3 test d-flex flex-column  justify-content-between ">
      
       </div> -->
-<div class="col-md-12 d-flex justify-content-center">
-  <h1 class="abril">Admin DashBoard</h1>
-</div>
+      <div class="col-md-12 d-flex justify-content-between">
+        <div>
+          <button
+           v-motion-pop 
+            class="elevation-2 btn btn-outline-danger rounded-1 p-2 px-5 fw-bold fs-3"
+          >
+            Logout
+          </button>
+        </div>
+        <h1 class="abril">Admin DashBoard animated nav scrollbt00t0f0</h1>
+        <div></div>
+      </div>
       <div class="col-md-12">
         <!-- NavButtons -->
         <nav>
@@ -16,6 +25,7 @@
             role="tablist"
           >
             <button
+            v-motion-pop 
               class="nav-link active"
               id="nav-home-tab"
               data-bs-toggle="tab"
@@ -25,9 +35,10 @@
               aria-controls="nav-home"
               aria-selected="true"
             >
-             <i class="mdi mdi-view-dashboard me-1"></i> DashBoard
+              <i class="mdi mdi-view-dashboard me-1"></i> DashBoard
             </button>
             <button
+            v-motion-pop 
               class="nav-link"
               id="nav-profile-tab"
               data-bs-toggle="tab"
@@ -37,9 +48,10 @@
               aria-controls="nav-profile"
               aria-selected="false"
             >
-            <i class="mdi mdi-account fs-2 me-1"></i>  Members
+              <i class="mdi mdi-account fs-2 me-1"></i> Members
             </button>
             <button
+            v-motion-pop 
               class="nav-link"
               id="nav-contact-tab"
               data-bs-toggle="tab"
@@ -53,6 +65,7 @@
             </button>
 
             <button
+                 v-motion-pop 
               class="nav-link"
               id="nav-fourth-tab"
               data-bs-toggle="tab"
@@ -67,7 +80,7 @@
           </div>
         </nav>
         <!-- !NavButtons -->
-        <div class="tab-content " id="nav-tabContent">
+        <div class="tab-content" id="nav-tabContent">
           <div
             class="tab-pane fade show active"
             id="nav-home"
@@ -75,8 +88,8 @@
             aria-labelledby="nav-home-tab"
             tabindex="0"
           >
-          <!-- Tab1 -->
-        <Tab1/>
+            <!-- Tab1 -->
+            <Tab1 />
             <!-- !Tab1 -->
           </div>
           <div
@@ -87,6 +100,7 @@
             tabindex="0"
           >
             <!-- Tab2 -->
+            <MembersTab/>
             <!-- !Tab2 -->
           </div>
           <div
@@ -118,14 +132,15 @@
 <script>
 import { computed } from "vue";
 import { AppState } from "../AppState";
+import MembersTab from "../components/adminPage/MembersTab.vue";
 import Tab1 from "../components/adminPage/Tab1.vue";
 export default {
-    setup() {
-        return {
-            account: computed(() => AppState.account),
-        };
-    },
-    components: { Tab1 }
+  setup() {
+    return {
+      account: computed(() => AppState.account),
+    };
+  },
+  components: { Tab1, MembersTab },
 };
 </script>
 
@@ -150,7 +165,7 @@ nav .nav-link {
   display: flex;
 }
 
-nav .nav-link:hover{
+nav .nav-link:hover {
   border: none;
   border-bottom: #f5a53c 5px solid !important;
 }
