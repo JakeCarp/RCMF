@@ -49,24 +49,24 @@ import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
 export default {
-  props: {},
-  setup(props) {
-    const editable = ref("");
-    onMounted(() => {
-      getChats();
-    });
-    watchEffect(() => { });
-    async function getChats() {
-      await supabaseService.getChats();
-    }
-    return {
-      editable,
-      supa: computed(() => AppState.supabase),
-
-      components: { DonateForm, DonateForm }
-    }
-  }
-  }
+    props: {},
+    setup(props) {
+        const editable = ref("");
+        onMounted(() => {
+            getChats();
+        });
+        watchEffect(() => { });
+        async function getChats() {
+            await supabaseService.getChats();
+        }
+        return {
+            editable,
+            supa: computed(() => AppState.supabase),
+            components: { DonateForm, DonateForm }
+        };
+    },
+    components: { DonateForm }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,12 +5,12 @@ import { mySQL } from "./AxiosService.js"
 class NewsLetterService{
 
 async getNewsletterSubscribers(){
-const res = await mySQL.get('api/newsletters')
+const res = await mySQL.get('newsletters')
 AppState.newsletterSubscribers = res.data.map((n)=> new Newsletter(n))
 }
 
 async createSubscriber(subscriberData){
-  const res = await mySQL.post('api/newsletters',subscriberData)
+  const res = await mySQL.post('newsletters',subscriberData)
   let newSubscriber = new Newsletter(res.data)
   AppState.newsletterSubscribers.push(newSubscriber)
 }
