@@ -8,12 +8,10 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
 
   public Donor Create(Donor data)
   {
-    var sql = @"
-             INSERT INTO
-             donors ()
-             VALUES (@);
-             SELECT LAST_INSERT_ID()
-                 ; ";
+    var sql = @"INSERT INTO donors (name, email, amount)
+            VALUES (@Name, @Email, @Amount);
+            SELECT LAST_INSERT_ID()
+            ;";
 
     int donorId = _db.ExecuteScalar<int>(sql, data);
     return GetById(donorId);
@@ -31,7 +29,12 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
 
   public Donor GetById(int id)
   {
-    throw new NotImplementedException();
+    string sql = @"SELECT 
+                *
+                FROM donors
+                WHERE id = @id
+                     ;";
+    return _db.Query<Donor>(sql, new { id }).FirstOrDefault();
   }
 
   public Donor Update(Donor data)

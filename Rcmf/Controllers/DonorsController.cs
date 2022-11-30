@@ -6,7 +6,7 @@ public class DonorsController : ControllerBase
 
 
 {
-    private readonly DonorsService _donorsService;
+  private readonly DonorsService _donorsService;
 
   public DonorsController(DonorsService donorsService)
   {
@@ -27,13 +27,13 @@ public class DonorsController : ControllerBase
   }
 
 
-  [Authorize]
+
   [HttpPost]
   public ActionResult<Donor> CreateDonor([FromBody] Donor DonorData)
   {
     try
     {
-     
+
       Donor Donor = _donorsService.CreateDonor(DonorData);
       return Ok(Donor);
     }
