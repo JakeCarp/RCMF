@@ -19,12 +19,22 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
 
   public void Delete(int id)
   {
-    throw new NotImplementedException();
+    var sql = @"DELETE FROM donors WHERE id = @id limit 1;";
+
+    var rows = _db.Execute(sql, new { id });
+    if (rows != 1) { throw new Exception("unable to delete properly"); }
+    return;
+
   }
 
   public List<Donor> Get()
   {
-    throw new NotImplementedException();
+    string sql = @"SELECT 
+                  *
+                  FROM donors;";
+
+    return _db.Query<Donor>(sql).ToList();
+
   }
 
   public Donor GetById(int id)
@@ -37,8 +47,20 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
     return _db.Query<Donor>(sql, new { id }).FirstOrDefault();
   }
 
-  public Donor Update(Donor data)
+  public Donor Update(Donor donorData)
   {
-    throw new NotImplementedException();
+    string sql = @"UPDATE donors SET
+                  name = @name,
+                  email = @email,
+                  amount = @amount
+                  WHERE id = @Id LIMIT 1
+                       ;";
+    var rows = _db.Execute(sql, donorData);
+    if (rows != 1)
+    {
+      throw new Exception("Unable to update");
+    }
+
+    return GetById(donorData.Id);
   }
 }
