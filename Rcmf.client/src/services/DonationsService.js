@@ -5,7 +5,7 @@ import { mySQL } from "./AxiosService.js";
 class DonationsService {
   async getDonors() {
     const res = await mySQL.get("donors");
-    AppState.donors = res.data.map(new Donor(res.data));
+    AppState.donors = res.data.map((d) => new Donor(d));
   }
   async getDonorById(donorId) {
     const res = await mySQL.get(`donors/${donorId}`);

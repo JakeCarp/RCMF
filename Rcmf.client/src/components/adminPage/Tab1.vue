@@ -16,12 +16,18 @@
 
        -->
     </div>
-    <div class="row">
-      <div class="col-md-3">
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTournament">
-  Launch demo modal
-</button>
-
+    <div class="row g-2">
+      <div class="col-md-3 mb-3">
+        <div class="card">
+          <button
+            type="button"
+            class="btn btn-primary fs-4"
+            data-bs-toggle="modal"
+            data-bs-target="#createTournament"
+          >
+            Create Tournament
+          </button>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -38,20 +44,20 @@
               width="150"
             />
           </div>
-          <div class="card p-3 elevation-2 border d-flex justify-content-evenly ">
+          <div
+            class="card p-3 elevation-2 border d-flex justify-content-evenly"
+          >
             <div class="d-flex justify-content-around">
               <p>Donor Name:</p>
-               <p> Amount:{{}} </p>
-
+              <p>Amount:{{}}</p>
             </div>
           </div>
         </div>
       </div>
-     <div class="col-md-6">
+      <div class="col-md-6">
         <div class="card p-3 elevation-6 border-0">
           <div class="d-flex justify-content-between">
             <p class="fw-bold">Grant Applications</p>
-           
           </div>
           <div class="d-flex justify-content-center">
             <img
@@ -60,20 +66,27 @@
               width="150"
             />
           </div>
-          <div class="card p-3 elevation-2 border d-flex justify-content-evenly ">
-            <div class="d-flex justify-content-around">
-              <p>Donor Name:</p>
-               <p> Amount:{{}} </p>
 
+          <div
+            class="card p-1 elevation-2 border d-flex justify-content-evenly"
+          >
+            <div
+              class="d-flex justify-content-around p-2 rounded selectable"
+              v-for="d in donors"
+            >
+              <p>{{}}</p>
+              <p>{{ d.name }}</p>
+              <p>{{ d.email }}</p>
+              <p>{{ d.amount }}</p>
+              <p>{{ d.createdAt }}</p>
             </div>
           </div>
         </div>
       </div>
-        <div class="col-md-6">
+      <div class="col-md-6">
         <div class="card p-3 elevation-6 border-0">
           <div class="d-flex justify-content-between">
-            <p class="fw-bold">SPONSORS</p>
-           
+            <p class="fw-bold">Recent Sponsors</p>
           </div>
           <div class="d-flex justify-content-center">
             <img
@@ -82,11 +95,18 @@
               width="150"
             />
           </div>
-          <div class="card p-3 elevation-2 border d-flex justify-content-evenly ">
-            <div class="d-flex justify-content-around">
-              <p v-for="s in sponsors">Sponsor Name:  {{s}}</p>
-               <p> Amount:{{}} </p>
-
+          <div
+            class="card p-1 elevation-2 border d-flex justify-content-evenly"
+          >
+            <div
+              class="d-flex justify-content-around p-2 rounded selectable"
+              v-for="s in sponsors"
+            >
+              <p>{{}}</p>
+              <p>{{ s.name }}</p>
+              <p>{{ s.email }}</p>
+              <p>{{ s.tier }}</p>
+              <p>{{ s.createdAt }}</p>
             </div>
           </div>
         </div>
@@ -103,17 +123,18 @@ import Pop from "../../utils/Pop.js";
 import TournamentCreateForm from "../forms/TournamentCreateForm.vue";
 
 export default {
-    props: {},
-    setup(props) {
-        const editable = ref({});
-        onMounted(() => { });
-        watchEffect(() => { });
-        return {
-            editable,
-            sponsors: computed(() => AppState.sponsors),
-        };
-    },
-    components: { TournamentCreateForm }
+  props: {},
+  setup(props) {
+    const editable = ref({});
+    onMounted(() => {});
+    watchEffect(() => {});
+    return {
+      editable,
+      sponsors: computed(() => AppState.sponsors),
+      donors: computed(() => AppState.donors),
+    };
+  },
+  components: { TournamentCreateForm },
 };
 </script>
 

@@ -82,7 +82,11 @@ export default {
       editable,
       async handleSubmit(){
         try {
-            await donationsService.createDonor(editable.value)
+              if (await Pop.confirm(`name: ${editable.value.name} ` + `email: ${editable.value.email} ` +`amount: ${editable.value.amount} $` )) {
+                   
+                await donationsService.createDonor(editable.value)
+                    }
+            Pop.success('Thank you for donating, It is genuinely appreciated')
           } catch (error) {
             Pop.error(error,'[createDonor]')
           }
