@@ -17,7 +17,8 @@ CREATE TABLE
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
         name varchar(255),
         email varchar(255),
-        shirtSize varchar(255) teamId INT NOT NULL,
+        shirtSize varchar(255),
+        teamId INT NOT NULL,
         FOREIGN KEY (teamId) REFERENCES teams(id)
     ) default charset utf8 COMMENT '';
 
