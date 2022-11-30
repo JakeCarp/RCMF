@@ -10,12 +10,12 @@ public class SponsorsController : ControllerBase
 
 
   [HttpGet]
+  [Authorize]
   public async Task<ActionResult<List<Sponsor>>> GetAllSponsors()
   {
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-
       List<Sponsor> sponsors = _sponsorsService.GetAllSponsors(userInfo?.Id);
       return Ok(sponsors);
     }
@@ -25,13 +25,11 @@ public class SponsorsController : ControllerBase
     }
   }
 
-  [Authorize]
   [HttpPost]
-  public async Task<ActionResult<Sponsor>> CreateSponsor([FromBody] Sponsor sponsorData)
+  public ActionResult<Sponsor> CreateSponsor([FromBody] Sponsor sponsorData)
   {
     try
     {
-      var userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
       Sponsor sponsor = _sponsorsService.CreateSponsor(sponsorData);
       return Ok(sponsor);
     }

@@ -14,21 +14,14 @@ public class SponsorsService
   internal List<Sponsor> GetAllSponsors(string adminId)
   {
     var admin = _accountsService.GetAdminById(adminId);
-    if (admin == null)
-    {
-      throw new Exception("Bad Admin Id");
-    }
+ 
     return _sponsorsRepo.Get();
   }
 
   internal void DeleteSponsor(int sponsorId, string userId)
   {
     Sponsor sponsor = _sponsorsRepo.GetById(sponsorId);
-    Account account = _accountsService.GetAdminById(userId);
-    if(account == null)
-    {
-      throw new Exception("Unauthorized to Delete");
-    }
+    Account admin = _accountsService.GetAdminById(userId);
     _sponsorsRepo.Delete(sponsorId);
   }
 
@@ -44,6 +37,7 @@ public class SponsorsService
 
   internal Sponsor UpdateSponsor(Sponsor sponsor, string accountId)
   {
+    Account admin = _accountsService.GetAdminById(accountId);
     Sponsor original = GetSponsorById(sponsor.Id);
 
     original.Name = sponsor.Name ?? original.Name;
