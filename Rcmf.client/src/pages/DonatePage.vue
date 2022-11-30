@@ -8,7 +8,7 @@
 
       </div>
     </div>
-    
+
     <!-- <div class="row">
       <div class="col-md-12">DONATE PAGE</div>
       <div>
@@ -39,46 +39,45 @@ import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
 export default {
-    props: {},
-    setup(props) {
-        const editable = ref("");
-        onMounted(() => {
-            getChats();
-        });
-        watchEffect(() => { });
-        async function getChats() {
-            await supabaseService.getChats();
+  props: {},
+  setup(props) {
+    const editable = ref("");
+    onMounted(() => {
+      getChats();
+    });
+    watchEffect(() => { });
+    async function getChats() {
+      await supabaseService.getChats();
+    }
+    return {
+      editable,
+      supa: computed(() => AppState.supabase),
+      async handleDonate() {
+        try {
+          // console.log(editable.value);
+          // await firesService.addChat(editable.value);
+          const res = await supabaseService.addSupabaseChat(editable.value);
         }
-        return {
-            editable,
-            supa: computed(() => AppState.supabase),
-            async handleDonate() {
-                try {
-                    // console.log(editable.value);
-                    // await firesService.addChat(editable.value);
-                    const res = await supabaseService.addSupabaseChat(editable.value);
-                }
-                catch (error) {
-                    console.error("[]", error);
-                    Pop.error(error);
-                }
-            },
-        };
-    },
-    components: { DonateForm }
+        catch (error) {
+          console.error("[]", error);
+          Pop.error(error);
+        }
+      },
+    };
+  },
+  components: { DonateForm }
 };
 </script>
 
 <style lang="scss" scoped>
-
-.heroImg{
+.heroImg {
   background-image: url(https://images.unsplash.com/photo-1614338577234-8747c0b37571?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80);
   height: 400px;
   width: 100vw;
-background-size: cover;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   border-radius: 4px;
-
 }
+
 </style>

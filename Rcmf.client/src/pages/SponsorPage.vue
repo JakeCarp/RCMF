@@ -1,12 +1,33 @@
 <template>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      SPONSOR PAGE
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 text-center">
+        <h1 class="display-3 abril mt-5"> Our Sponsors</h1>
+      </div>
+      <div class="col-md-12 heroImg elevation-6 my-5">
+
+      </div>
     </div>
+
+    <!-- <div class="row">
+      <div class="col-md-12">DONATE PAGE</div>
+      <div>
+        <form @submit.prevent="handleDonate()">
+          <textarea type="text" src="" alt="" v-model="editable" rows="4" />
+          <button type="submit">donate</button>
+        </form>
+      </div>
+      <div>
+        <ul>
+          <li v-for="s in supa">
+            <div>{{s}}</div>
+          </li>
+        </ul>
+      </div>
+    </div> -->
   </div>
-</div>
 </template>
+
 
 <script>
 import { computed } from "@vue/reactivity";
@@ -35,4 +56,13 @@ props:{
 </script>
 
 <style lang="scss" scoped>
+.heroImg {
+  background-image: url(https://images.unsplash.com/photo-1531431199010-1f9985f83baa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80);
+  height: 400px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 4px;
+}
 </style>
