@@ -36,6 +36,6 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
-    "cSpell.words": ["Firestore", "Rcmf"]
+    "cSpell.words": ["Firestore", "Rcmf", "Supabase"]
   }
 }

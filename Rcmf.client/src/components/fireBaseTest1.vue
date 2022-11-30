@@ -32,14 +32,9 @@ import { AppState } from "../AppState.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 import { useCollection } from "vuefire";
-import {
-  addDoc,
-  collection,
-  doc,
-  getFirestore,
-  setDoc,
-} from "firebase/firestore";
-import { chats, db } from "../services/FireBaseService.js";
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "../services/FireBaseService.js";
+import { supabaseService } from "../services/SupabaseService";
 import { set } from "@firebase/database";
 
 export default {
@@ -58,16 +53,8 @@ export default {
 
       async post() {
         try {
-          let id = this.generateId();
-          let data = {
-            text: editable.value.text,
-            uid: "633e5b0b5367e0d6e157b8a3",
-            photoUrl:
-              "https://s.gravatar.com/avatar/2b917e2ca61eeea5a929fa6337bf9de0?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fih.png",
-            createdAt: new Date(),
-          };
-          await setDoc(doc(db, "chats", id), data);
-          
+          // await setDoc(doc(db, "chats",id), editable.value);
+          await supabaseService.addSupabaseChat(editable.value);
         } catch (error) {
           Pop.error(error, "[]");
         }

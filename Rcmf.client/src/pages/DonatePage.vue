@@ -8,6 +8,13 @@
           <button type="submit">donate</button>
         </form>
       </div>
+      <div>
+        <ul>
+          <li v-for="s in supa">
+            <div>{{s}}</div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +24,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import { firesService } from "../services/FireBaseService.js";
+import { supabaseService } from "../services/SupabaseService";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -25,15 +33,23 @@ export default {
   setup(props) {
     const editable = ref("");
 
-    onMounted(() => {});
+    onMounted(() => {
+    getChats()
+    });
     watchEffect(() => {});
+
+    async function getChats(){
+      await supabaseService.getChats()
+    }
 
     return {
       editable,
+      supa: computed(() => AppState.supabase),
       async handleDonate() {
         try {
-          console.log(editable.value);
-          await firesService.addChat(editable.value);
+          // console.log(editable.value);
+          // await firesService.addChat(editable.value);
+          const res = await supabaseService.addSupabaseChat(editable.value)
         } catch (error) {
           console.error("[]", error);
           Pop.error(error);
