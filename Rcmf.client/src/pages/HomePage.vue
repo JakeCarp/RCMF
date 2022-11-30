@@ -130,7 +130,12 @@ export default {
         prevScrollpos = currentScrollPos;
       };
     }
-    return {};
+
+
+
+    return {
+      
+    };
   },
 };
 </script>
