@@ -8,12 +8,18 @@
   <footer>
     <FooterComponent />
   </footer>
+
+  <ModalComponent id="createTournament">
+<TournamentCreateForm/>
+  </ModalComponent>
 </template>
 
 <script>
 import { computed, onMounted } from "vue";
 import { AppState } from "./AppState";
 import FooterComponent from "./components/FooterComponent.vue";
+import TournamentCreateForm from "./components/forms/TournamentCreateForm.vue";
+import ModalComponent from "./components/ModalComponent.vue";
 import Navbar from "./components/Navbar.vue";
 
 export default {
@@ -43,7 +49,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, FooterComponent },
+  components: { Navbar, FooterComponent, ModalComponent, TournamentCreateForm },
 };
 </script>
 <style lang="scss">

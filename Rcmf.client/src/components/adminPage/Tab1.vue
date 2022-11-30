@@ -1,7 +1,7 @@
 <template>
   <div class="container p-4">
     <div class="row">
-      <div class="col-md-12 d-flex justify-content-evenly">
+      <!-- <div class="col-md-12 d-flex justify-content-evenly">
         <div class="card bg-danger border-0 p-3 elevation-6">
           <div>Admin Name/</div>
         </div>
@@ -14,7 +14,15 @@
         </div>
       </div>
 
-      .
+       -->
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createTournament">
+  Launch demo modal
+</button>
+
+      </div>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -92,20 +100,20 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import Pop from "../../utils/Pop.js";
+import TournamentCreateForm from "../forms/TournamentCreateForm.vue";
 
 export default {
-  props: {},
-  setup(props) {
-    const editable = ref({});
-
-    onMounted(() => {});
-    watchEffect(() => {});
-
-    return {
-      editable,
-      sponsors: computed(() => AppState.sponsors),
-    };
-  },
+    props: {},
+    setup(props) {
+        const editable = ref({});
+        onMounted(() => { });
+        watchEffect(() => { });
+        return {
+            editable,
+            sponsors: computed(() => AppState.sponsors),
+        };
+    },
+    components: { TournamentCreateForm }
 };
 </script>
 
