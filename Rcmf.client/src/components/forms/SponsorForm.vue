@@ -17,6 +17,7 @@
               />
               <label for="floatingName">Sponsor Name</label>
             </div>
+
             <div class="form-floating mb-3">
               <input
                 type="text"
@@ -24,16 +25,7 @@
                 id="floatingInput"
                 placeholder="name@example.com"
               />
-              <label for="floatingInput">Contact Name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="number"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Phone Number </label>
+              <label for="floatingInput">Email </label>
             </div>
             <div class="form-floating mb-3">
               
