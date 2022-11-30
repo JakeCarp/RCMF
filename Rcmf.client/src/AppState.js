@@ -4,16 +4,26 @@ import { supabase } from "./utils/Supabase.js";
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
   user: {},
-  /** @type {import('./models/Account.js').Account} */
   account: {},
   supabase: [],
 
   members: [],
-  donation: 0,
-  grants: [],
-  donors: [],
-  sponsors:[],
 
+  donation: 0,
+
+  /** @type {import('./models/Grant.js').Grant.js[]} */
+  grants: [],
+
+  /** @type {import('./models/Donor.js').Donor.js[]} */
+  donors: [],
+
+  /** @type {import('./models/Sponsor.js').Sponsor.js[]} */
+  sponsors: [],
+
+  /** @type {import('./models/Player.js').Player.js[]} */
+  players: [],
+  /** @type {import('./models/Team.js').Team.js[]} */
+  teams: [],
   sponsorTiers: [
     "Hole",
     "Team",
@@ -25,3 +35,9 @@ export const AppState = reactive({
   ],
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
+  function donationTotal(){
+    
+    AppState.donors.forEach(d=> {
+      AppState.donation += d.amount
+    })
+  }
