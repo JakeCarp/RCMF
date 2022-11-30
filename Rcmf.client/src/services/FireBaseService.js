@@ -7,6 +7,7 @@ import {
   orderBy,
   query,
   addDoc,
+  Firestore,
 } from "firebase/firestore";
 // import firebase from "firebase"
 
@@ -26,14 +27,16 @@ const firebaseConfig = {
 export const firebaseApp = initializeApp(firebaseConfig);
 // export const database = getDatabase(firebaseApp);
 export const db = getFirestore(firebaseApp);
+// const fireStore =   db
 // ... other firebase exports
 import { useFirestore } from "@vueuse/firebase/useFirestore";
 
 //  export const db = getFirestore(app);
-
+// export const dateTest =
+// export const test = 
 export const chats = useFirestore(collection(db, "chats"));
-const chatsRef = collection(db, "chats")
-const use = useCollection(chatsRef)
+export const  chatsRef = collection(db, "chats");
+const use = useCollection(chatsRef);
 import { useCollection } from "vuefire";
 import { set } from "firebase/database";
 
@@ -50,10 +53,34 @@ class FiresService {
     console.log(use.value);
     // console.log(chats.collection());
 
+    const res = await set(db, "chats");
+  }
+
+  async createMessage() {
+
+    
+    let id = this.generateId();
+   
+    // await setDoc(doc(db, "chats", id), {
+    //   text: editable.value,
+    //   createdAt: serverTimestamp(),
+    //   uid: AppState.account.id,
+    //   photoUrl: AppState.account.picture,
+    // });
 
 
-    const res = await set(db,'chats')
+   
   }
   //
+
+  generateId() {
+    let timestamp = ((new Date().getTime() / 1000) | 0).toString(16);
+    return (
+      timestamp +
+      "xxxxxxxxxxxxxxxx"
+        .replace(/[x]/g, () => ((Math.random() * 16) | 0).toString(16))
+        .toLowerCase()
+    );
+  }
 }
 export const firesService = new FiresService();
