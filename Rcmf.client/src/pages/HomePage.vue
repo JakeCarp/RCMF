@@ -34,7 +34,12 @@
           class="img-fluid rounded elevation-6"
         />
         <div class="">
-          <p class="fs-3 mb-0 abril">  Fire Ground Training</p>
+          <p class="fs-3 mb-0 abril" v-motion
+    :initial="{ opacity: 0, y: 100 }"
+    :enter="{ opacity: 1, y: 0, scale: 1 }"
+    :variants="{ custom: { scale: 2 } }"
+    :hovered="{ scale: 1.2 }"
+    :delay="200">  Fire Ground Training</p>
           <p>Through Hands On Experience</p>
         </div>
       </div>
