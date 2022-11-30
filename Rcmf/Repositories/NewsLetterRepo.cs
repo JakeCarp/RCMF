@@ -9,7 +9,7 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
   public Newsletter Create(Newsletter newsLetterData)
   {
     var sql = @"INSERT INTO newsLetters
-                (name,email,)
+                (name,email)
                 VALUES
                 (@Name,@Email);
                 SELECT LAST_INSERT_ID()
@@ -24,14 +24,17 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
     var sql = @"DELETE FROM newsLetters WHERE id = @id;";
 
     var rows = _db.Execute(sql, new { id });
-    if (rows != 1) { throw new Exception("Data is bad or Id is Bad"); }
+    if (rows != 1) { throw new Exception("unable to delete newsletter properly"); }
     return;
 
   }
 
   public List<Newsletter> Get()
   {
-    throw new NotImplementedException();
+    string sql = @"SELECT 
+              *
+              FROM newsLetters;";
+    return _db.Query<Newsletter>(sql).ToList();
   }
 
   public Newsletter GetById(int id)
