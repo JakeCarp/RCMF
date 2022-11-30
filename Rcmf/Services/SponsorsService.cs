@@ -13,20 +13,21 @@ public class SponsorsService
 
   internal List<Sponsor> GetAllSponsors(string adminId)
   {
-    var admin = _accountsService.GetAdminById(adminId);
+    Account admin = _accountsService.GetAdminById(adminId);
  
     return _sponsorsRepo.Get();
   }
 
   internal void DeleteSponsor(int sponsorId, string userId)
   {
-    Sponsor sponsor = _sponsorsRepo.GetById(sponsorId);
     Account admin = _accountsService.GetAdminById(userId);
+    Sponsor sponsor = _sponsorsRepo.GetById(sponsorId);
     _sponsorsRepo.Delete(sponsorId);
   }
 
   internal Sponsor GetSponsorById(int sponsorId)
   {
+    // Account admin = _accountsService.GetAdminById(userId);
     var sponsor = _sponsorsRepo.GetById(sponsorId);
     if (sponsor == null)
     {
@@ -38,6 +39,7 @@ public class SponsorsService
   internal Sponsor UpdateSponsor(Sponsor sponsor, string accountId)
   {
     Account admin = _accountsService.GetAdminById(accountId);
+
     Sponsor original = GetSponsorById(sponsor.Id);
 
     original.Name = sponsor.Name ?? original.Name;

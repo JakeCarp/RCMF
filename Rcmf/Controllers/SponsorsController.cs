@@ -30,6 +30,7 @@ public class SponsorsController : ControllerBase
     }
   }
 
+
   [HttpPost]
   public ActionResult<Sponsor> CreateSponsor([FromBody] Sponsor sponsorData)
   {
@@ -52,7 +53,7 @@ public class SponsorsController : ControllerBase
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      _sponsorsService.DeleteSponsor(sponsorId, userInfo.Id);
+      _sponsorsService.DeleteSponsor(sponsorId, userInfo?.Id);
       return Ok("Sponsor deleted");
     }
     catch (Exception e)
