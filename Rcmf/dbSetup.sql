@@ -1,4 +1,4 @@
--- Active: 1669834043794@@rcmforg.mysql.database.azure.com@3306@rcmforg
+-- Active: 1669695164409@@rcmforg.mysql.database.azure.com@3306@rcmforg
 
 CREATE TABLE
     IF NOT EXISTS accounts(
@@ -80,11 +80,13 @@ CREATE TABLE
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
-    IF NOT EXISTS newsLetter(
+    IF NOT EXISTS newsLetters(
         id INT NOT NULL primary key AUTO_INCREMENT,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
         name varchar(255),
         email varchar(255)
     ) default charset utf8 COMMENT '';
+
+
 

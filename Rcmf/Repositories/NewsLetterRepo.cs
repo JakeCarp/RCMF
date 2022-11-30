@@ -21,7 +21,12 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
 
   public void Delete(int id)
   {
-    throw new NotImplementedException();
+    var sql = @"DELETE FROM newsLetters WHERE id = @id;";
+
+    var rows = _db.Execute(sql, new { id });
+    if (rows != 1) { throw new Exception("Data is bad or Id is Bad"); }
+    return;
+
   }
 
   public List<Newsletter> Get()
@@ -33,7 +38,7 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
   {
     string sql = @"SELECT 
                 *
-                FROM newsLetter
+                FROM newsLetters
                 WHERE id = @id
                 ;";
     return _db.Query<Newsletter>(sql, new { id }).FirstOrDefault();
