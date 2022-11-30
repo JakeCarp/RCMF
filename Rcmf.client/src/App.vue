@@ -2,7 +2,7 @@
   <header  class="sticky-top" id="searchBar22">
     <Navbar  />
   </header>
-  <main class="bg-light">
+  <main class="bg-light overflow-hidden">
     <router-view />
   </main>
   <footer>

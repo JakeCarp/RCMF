@@ -79,7 +79,16 @@ export default {
 
     return {
       editable,
-      tiers:computed(() => AppState.sponsorTiers),
+        tiers: [
+    "Hole",
+    "Team",
+    "Bronze",
+    "Silver",
+    "Gold",
+    "Platinum",
+    "Diamond",
+  ],
+      // tiers:computed(() => AppState.sponsorTiers),
      async  handleSubmit(){
         try {
         await sponsorsService.createSponsor(editable.value)

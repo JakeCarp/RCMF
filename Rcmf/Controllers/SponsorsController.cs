@@ -8,6 +8,11 @@ public class SponsorsController : ControllerBase
   private readonly Auth0Provider _auth0Provider;
   private readonly SponsorsService _sponsorsService;
 
+  public SponsorsController(Auth0Provider auth0Provider, SponsorsService sponsorsService)
+  {
+    _auth0Provider = auth0Provider;
+    _sponsorsService = sponsorsService;
+  }
 
   [HttpGet]
   [Authorize]

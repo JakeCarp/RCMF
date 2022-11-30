@@ -5,20 +5,20 @@
       style="background-color: rgba(0, 0, 0, 0.2)"
     ></div>
     <section class="d-flex justify-content-end d-none d-md-flex">
-      <div class="d-flex align-items-end me-3">
+      <div class="d-flex align-items-end me-md-3">
         <p class="abril fs-3 ">Proud Sponsors</p>
       </div>
       <div class="d-flex">
-        <div class="card bg-light p-1 elevation-5 m-2">
+        <div class="card bg-light p-1 elevation-5 m-md-2">
           <img
             src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
             alt=""
-            class="img-fluid m-2"
+            class="img-fluid m-md-2"
             width="220"
           />
         </div>
         <div
-          class="rounded bg-light p-1 elevation-5 m-2 d-flex align-items-center"
+          class="rounded bg-light p-1 elevation-5 m-md-2 d-flex align-items-center"
         >
           <img
             src="http://pictures.dealer.com/t/teammazdasubaru/0516/de54bce8b069b739700d80f6c18ead60x.jpg"
@@ -28,7 +28,7 @@
           />
         </div>
         <a href="https://www.cabelas.com/shop/en#">
-          <div class="rounded bg-light p-1 text-center elevation-5 m-2 px-4">
+          <div class="rounded bg-light p-1 text-center elevation-5 m-md-2 px-4">
             <img
               src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
               alt=""
@@ -39,7 +39,7 @@
         </a>
 
         <a href="https://www.iddk.com/">
-          <div class="rounded bg-primary p-1 m-2 px-4 text-center elevation-5">
+          <div class="rounded bg-primary p-1 m-md-2 px-4 text-center elevation-5">
             <img
               src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
               alt=""
@@ -51,12 +51,12 @@
       </div>
     
       <div class="d-flex text-center align-items-center d-flex">
-             <h5 class="fs-3 mx-4">Find Us</h5>
+             <h5 class="fs-3 mx-md-4">Find Us</h5>
         <a
           href="https://www.facebook.com/profile.php?id=100064958131113"
-          class="text-white me-4"
+          class="text-white me-md-4"
         >
-          <i class="mdi mdi-facebook fs-1"></i>
+        <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="" width="60" height="60">
         </a>
       </div>
     </section>
@@ -64,7 +64,7 @@
     <section class="">
       <div class="container text-center text-md-start my-2">
         <div class="row mt-3">
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-2 mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-md-2 mb-4">
             <h6 class="text-uppercase fw-bold">
               Randy Carpenter Memorial Foundation
             </h6>
@@ -79,10 +79,10 @@
             </p>
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mb-4 mx-5">
+          <div class="col-md-2 col-lg-2 col-xl-2 mb-4 mx-auto">
             <h6 class="text-uppercase fw-bold">Useful links</h6>
             <hr
-              class="mb-4 mt-0 d-inline-block mx-2"
+              class="mb-4 mt-0 d-inline-block mx-md-2"
               style="width: 60px; background-color: #7c4dff; height: 2px"
             />
             <p>
@@ -97,7 +97,7 @@
             </p>
           </div>
 
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-2 mb-4">
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-md-2 mb-4">
             <h6 class="text-uppercase fw-bold">Contact</h6>
             <hr
               class="mb-4 mt-0 d-inline-block mx-auto"

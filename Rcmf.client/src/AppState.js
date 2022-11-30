@@ -6,7 +6,7 @@ export const AppState = reactive({
   user: {},
   account: {},
   supabase: [],
-
+loader:0,
   members: [],
 
   donationTotal: 0,
@@ -28,15 +28,7 @@ export const AppState = reactive({
   players: [],
   /** @type {import('./models/Team.js').Team.js[]} */
   teams: [],
-  sponsorTiers: [
-    "Hole",
-    "Team",
-    "Bronze",
-    "Silver",
-    "Gold",
-    "Platinum",
-    "Diamond",
-  ],
+
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
 function donationTotal() {

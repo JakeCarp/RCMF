@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center my-3" v-motion-slide-visible-left>
+      <div class="col-md-12 text-center my-3 " v-motion-slide-visible-left>
         <h1 class="abril display-1">Randy Carpenter Memorial Foundation</h1>
       </div>
       <div class="col-md-4" v-motion-slide-visible-left>
@@ -223,5 +223,15 @@ export default {
 .link a {
   color: #000;
   font-size: 25px; 
+}
+
+.image{
+  height: 100vh;
+  /* always scale the image to the appropriate size of your screen */
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1575920197509-2de60ffa1b0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80);
+  background-position: center;
+  /* keeps the image fixed while scrolling , neat effect. */
+  background-attachment: fixed; 
 }
 </style>
