@@ -8,7 +8,15 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
 
   public Donor Create(Donor data)
   {
-    throw new NotImplementedException();
+    var sql = @"
+             INSERT INTO
+             donors ()
+             VALUES (@);
+             SELECT LAST_INSERT_ID()
+                 ; ";
+
+    int donorId = _db.ExecuteScalar<int>(sql, data);
+    return GetById(donorId);
   }
 
   public void Delete(int id)

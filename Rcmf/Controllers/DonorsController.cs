@@ -3,7 +3,16 @@ namespace Rcmf.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class DonorsController : ControllerBase
+
+
 {
+    private readonly DonorsService _donorsService;
+
+  public DonorsController(DonorsService donorsService)
+  {
+    _donorsService = donorsService;
+  }
+
   [HttpGet]
   public ActionResult<List<string>> Get()
   {
@@ -18,17 +27,22 @@ public class DonorsController : ControllerBase
   }
 
 
+  [Authorize]
   [HttpPost]
-  public ActionResult<List<string>> Create([FromBody] string value)
+  public ActionResult<Donor> CreateDonor([FromBody] Donor DonorData)
   {
     try
     {
-      return Ok(value);
+     
+      Donor Donor = _donorsService.CreateDonor(DonorData);
+      return Ok(Donor);
     }
     catch (Exception e)
     {
       return BadRequest(e.Message);
     }
   }
+
+
 
 }

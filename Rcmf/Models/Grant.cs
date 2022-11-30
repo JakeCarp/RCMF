@@ -1,5 +1,5 @@
 namespace Rcmf.Models;
-public class GrantApplication : IDbItem<int>
+public class Grant : IDbItem<int>
 {
 
 
@@ -9,7 +9,7 @@ public class GrantApplication : IDbItem<int>
   public string Email { get; set; }
   public string Department { get; set; }
   public string Description { get; set; }
-  public  int Budget{ get; set; } //needs to be a file?
+  public int Budget { get; set; } //needs to be a file?
   public string TrainingProvider { get; set; }
   public DateTime CreatedAt { get; set; }
   public DateTime UpdatedAt { get; set; }

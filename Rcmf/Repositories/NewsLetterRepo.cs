@@ -1,12 +1,12 @@
 namespace Rcmf.Repositories;
 
-public class NewsletterRepository : BaseRepository, IRepo<NewsletterSubscription, int>
+public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
 {
   public NewsletterRepository(IDbConnection db) : base(db)
   {
   }
 
-  public NewsletterSubscription Create(NewsletterSubscription data)
+  public Newsletter Create(Newsletter data)
   {
     throw new NotImplementedException();
   }
@@ -16,17 +16,17 @@ public class NewsletterRepository : BaseRepository, IRepo<NewsletterSubscription
     throw new NotImplementedException();
   }
 
-  public List<NewsletterSubscription> Get()
+  public List<Newsletter> Get()
   {
     throw new NotImplementedException();
   }
 
-  public NewsletterSubscription GetById(int id)
+  public Newsletter GetById(int id)
   {
     throw new NotImplementedException();
   }
 
-  public NewsletterSubscription Update(NewsletterSubscription data)
+  public Newsletter Update(Newsletter data)
   {
     throw new NotImplementedException();
   }

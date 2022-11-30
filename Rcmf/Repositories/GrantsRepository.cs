@@ -1,12 +1,12 @@
 namespace Rcmf.Repositories;
 
-public class GrantsRepository : BaseRepository, IRepo<GrantApplication, int>
+public class GrantsRepository : BaseRepository, IRepo<Grant, int>
 {
   public GrantsRepository(IDbConnection db) : base(db)
   {
   }
 
-  public GrantApplication Create(GrantApplication data)
+  public Grant Create(Grant data)
   {
     throw new NotImplementedException();
   }
@@ -16,17 +16,17 @@ public class GrantsRepository : BaseRepository, IRepo<GrantApplication, int>
     throw new NotImplementedException();
   }
 
-  public List<GrantApplication> Get()
+  public List<Grant> Get()
   {
     throw new NotImplementedException();
   }
 
-  public GrantApplication GetById(int id)
+  public Grant GetById(int id)
   {
     throw new NotImplementedException();
   }
 
-  public GrantApplication Update(GrantApplication data)
+  public Grant Update(Grant data)
   {
     throw new NotImplementedException();
   }
