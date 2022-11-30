@@ -12,29 +12,35 @@
         />
       </div>
       <div class="col-md-8" v-motion-slide-visible-right>
-        <div class="card elevation-2 border-0 p-3" v-motion-slide-visible-right>
-          <a href="#tournament">
-            <button class="btn btn-outline-dark p-3">
-              Sign Up for Golf tournament
-            </button>
-          </a>
+        <div class="card elevation-2 border-0 p-3 d-flex justify-content-around" v-motion-slide-visible-right>
+          <div class="d-flex justify-content-around">
+
+            <a href="#tournament" class="text-dark">
+              <button class="btn  p-3">
+                Sign Up for Golf tournament
+              </button>
+            </a>
+            <a href="#donate" class="text-dark">
+              <button class="btn  p-3">
+                Make a Donation
+              </button>
+            </a>
+          </div>
         </div>
 
-        <div class="card p-5  border-0 mt-5 roboto" v-motion-slide-visible-right>
- 
-<figure>
-  <blockquote class="blockquote">
-    <p class="fs-2"><i class="mdi mdi-format-quote-open"></i> PREPARATION
-is the SEPARATION
-between being a
-good Firefighter
-- or becoming the BEST <i class="mdi mdi-format-quote-close"></i></p>
-  </blockquote>
-  <figcaption class="blockquote-footer fs-5 mt-2 text-center">
-    Captain Randy Carpenter
-  </figcaption>
-</figure>
-
+        <div class="card p-5 border-0 mt-5 roboto" v-motion-slide-visible-right>
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-2">
+                <i class="mdi mdi-format-quote-open"></i> PREPARATION is the
+                SEPARATION between being a good Firefighter - or becoming the
+                BEST <i class="mdi mdi-format-quote-close"></i>
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer fs-5 mt-2 text-center">
+              Captain Randy Carpenter
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -51,12 +57,17 @@ good Firefighter
           class="img-fluid rounded elevation-6"
         />
         <div class="">
-          <p class="fs-3 mb-0 abril" v-motion
-    :initial="{ opacity: 0, y: 100 }"
-    :enter="{ opacity: 1, y: 0, scale: 1 }"
-    :variants="{ custom: { scale: 2 } }"
-    :hovered="{ scale: 1.2 }"
-    :delay="200">  Fire Ground Training</p>
+          <p
+            class="fs-3 mb-0 abril"
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ scale: 1.2 }"
+            :delay="200"
+          >
+            Fire Ground Training
+          </p>
           <p>Through Hands On Experience</p>
         </div>
       </div>
@@ -95,15 +106,13 @@ good Firefighter
 <script>
 import { onMounted } from "vue";
 
-
-
 export default {
   setup() {
-    onMounted(()=>{
-    hideOnScrollTest()
-    })
+    onMounted(() => {
+      hideOnScrollTest();
+    });
 
-      function hideOnScrollTest() {
+    function hideOnScrollTest() {
       let nav = document.querySelector("#searchBar22");
       let prevScrollpos = window.scrollY;
       console.log(["prev"], prevScrollpos);
@@ -111,12 +120,12 @@ export default {
         let currentScrollPos = window.scrollY;
         console.log(["current"], currentScrollPos);
         if (prevScrollpos > currentScrollPos) {
-          nav.style.top="0"
-          nav.style.transition="all 0.25s ease"
+          nav.style.top = "0";
+          nav.style.transition = "all 0.25s ease";
           nav.classList.remove("showOnScroll");
         } else {
           nav.classList.add("hiddenOnScroll");
-           nav.style.top="-70px"
+          nav.style.top = "-70px";
         }
         prevScrollpos = currentScrollPos;
       };
@@ -127,19 +136,87 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-#searchBar22{
+#searchBar22 {
   transition: all 0.5s ease;
 }
 .hiddenOnScroll {
   transform: scale(3);
-transform: rotate(40deg);
-
+  transform: rotate(40deg);
 }
 .showOnScroll {
-
-
-
 }
 
+
+.button_container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+  font-size: 35px;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+.btn:hover{
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  z-index: -1;
+  width: 140%;
+  background: #41ffc0e1;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .75s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
 </style>

@@ -42,7 +42,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
-import DonateForm from "../components/DonateForm.vue";
+import DonateForm from "../components/forms/DonateForm.vue";
 import { firesService } from "../services/FireBaseService.js";
 import { supabaseService } from "../services/SupabaseService";
 import { logger } from "../utils/Logger.js";
