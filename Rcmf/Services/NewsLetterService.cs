@@ -2,9 +2,9 @@ namespace Rcmf.Services;
 
 public class NewsletterService
 {
-  private readonly NewsLetterRepository _newsletterRepo;
+  private readonly NewsletterRepository _newsletterRepo;
 
-  public NewsletterService(NewsLetterRepository newsletterRepo)
+  public NewsletterService(NewsletterRepository newsletterRepo)
   {
     _newsletterRepo = newsletterRepo;
   }

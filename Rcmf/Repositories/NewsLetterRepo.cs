@@ -1,8 +1,8 @@
 namespace Rcmf.Repositories;
 
-public class NewsLetterRepository : BaseRepository, IRepo<NewsletterSubscription, int>
+public class NewsletterRepository : BaseRepository, IRepo<NewsletterSubscription, int>
 {
-  public NewsLetterRepository(IDbConnection db) : base(db)
+  public NewsletterRepository(IDbConnection db) : base(db)
   {
   }
 

@@ -1,10 +1,10 @@
 namespace Rcmf.Services;
 
-public class TournamentService
+public class TournamentsService
 {
   private readonly TournamentsRepository _tournamentRepo;
 
-  public TournamentService(TournamentsRepository tournamentRepo)
+  public TournamentsService(TournamentsRepository tournamentRepo)
   {
     _tournamentRepo = tournamentRepo;
   }
