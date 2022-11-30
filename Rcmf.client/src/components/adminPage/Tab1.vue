@@ -29,6 +29,20 @@
           </button>
         </div>
       </div>
+      <div class="col-md-3 mb-3">
+        <div class="card">
+        
+    <button
+            type="button"
+            class="btn btn-primary fs-4"
+          
+          >
+           Send Mass Email
+          </button>
+        
+      
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-6">

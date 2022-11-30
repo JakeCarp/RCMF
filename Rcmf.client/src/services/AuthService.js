@@ -6,6 +6,7 @@ import { accountService } from "./AccountService";
 import { mySQL } from "./AxiosService";
 import { donationsService } from "./DonationsService.js";
 import { grantsService } from "./GrantsService.js";
+import { newsLetterService } from "./NewsLetterService.js";
 import { playersService } from "./PlayersService.js";
 import { socketService } from "./SocketService";
 import { sponsorsService } from "./SponsorsService.js";
@@ -33,6 +34,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function () {
   socketService.authenticate(AuthService.bearer);
   sponsorsService.getSponsors()
   // grantsService.getGrants()
+  newsLetterService.getNewsletterSubscribers()
   donationsService.getDonors()
   // teamsService.getTeams()
   // playersService.getPlayers()
