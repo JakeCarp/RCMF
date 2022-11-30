@@ -69,7 +69,7 @@ public class SponsorsController : ControllerBase
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      Sponsor sponsor = _sponsorsService.UpdateSponsor(sponsorData, userInfo.Id);
+      Sponsor sponsor = _sponsorsService.UpdateSponsor(sponsorData, userInfo?.Id);
       return Ok(sponsor);
     }
     catch (Exception e)

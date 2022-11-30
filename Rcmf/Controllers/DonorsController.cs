@@ -44,6 +44,7 @@ public class DonorsController : ControllerBase
   }
 
   [HttpGet]
+  [Authorize]
   public async Task<ActionResult<List<Donor>>> GetAllDonors()
   {
     try
@@ -60,22 +61,22 @@ public class DonorsController : ControllerBase
   }
 
 
-   [HttpPut("{donorId}")]
-      [Authorize]
-      public async Task<ActionResult<Donor>> EditDonor([FromBody] Donor donorData)
-      {
-        try
-        {
-          Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-          Donor donor = _donorsService.EditDonor(donorData, userInfo?.Id);
-          return Ok(donor);
-        }
-        catch (Exception e)
-        {
-          return BadRequest(e.Message);
-        }
-      }
-  
+  [HttpPut("{donorId}")]
+  [Authorize]
+  public async Task<ActionResult<Donor>> EditDonor([FromBody] Donor donorData)
+  {
+    try
+    {
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      Donor donor = _donorsService.EditDonor(donorData, userInfo?.Id);
+      return Ok(donor);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
 
 
 
