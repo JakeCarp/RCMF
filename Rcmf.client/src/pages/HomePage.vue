@@ -25,7 +25,7 @@
                 Make a Donation
               </button>
             </a>
-            <button class="btn p-3 text-dark" data-bs-toggle="modal" data-bs-target="#newsletterForm">
+            <button class="btn p-3 " data-bs-toggle="modal" data-bs-target="#newsletterForm">
               Sign up for NewsLetter
             </button>
           </div>
@@ -207,7 +207,7 @@ export default {
   background: #41ffc0e1;
    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   -webkit-transition: all .5s ease-in-out;
-  transition: all .75s ease-in-out;
+  transition: all .50s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
   transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
