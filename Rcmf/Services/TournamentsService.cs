@@ -16,10 +16,15 @@ public class TournamentsService
     return _tournamentRepo.Create(tourneyData);
   }
 
-  internal void DeleteTourney(int tourneyId, string userId)
+  internal void ArchiveTourney(int tourneyId, string userId)
   {
     Account admin = _accountsService.GetAdminById(userId);
     Tournament tourney = _tournamentRepo.GetById(tourneyId);
+    if (tourney.Archived)
+    {
+      throw new Exception("Tournament is already archived");
+    }
+    tourney.Archived = true;
     _tournamentRepo.Delete(tourneyId);
   }
 
@@ -47,7 +52,6 @@ public class TournamentsService
 
     original.Date = tourney.Date ?? original.Date;
     original.Location = tourney.Location ?? original.Location;
-    original.Archived = tourney.Archived ?? original.Archived;
     original.NetIncome = tourney.NetIncome ?? original.NetIncome;
 
     Tournament updated = _tournamentRepo.Update(original);

@@ -51,7 +51,7 @@ public class TournamentsController : ControllerBase
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      _tournamentsService.DeleteTourney(tourneyId, userInfo?.Id);
+      _tournamentsService.ArchiveTourney(tourneyId, userInfo?.Id);
       return Ok("Tournament deleted");
     }
     catch (Exception e)

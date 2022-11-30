@@ -21,7 +21,17 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
 
   public void Delete(int id)
   {
-    throw new NotImplementedException();
+    string sql = @"
+      UPDATE tournaments
+      SET
+      archived = true
+      WHERE id = @Id
+      ;";
+    var rowsAffected = _db.Execute(sql, new{id});
+    if (rowsAffected == 0)
+    {
+      throw new Exception("Unable to archive album");
+    }
   }
 
   public List<Tournament> Get()
