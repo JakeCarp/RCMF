@@ -8,4 +8,9 @@ public class SponsorsService
   {
     _sponsorsRepo = sponsorsRepo;
   }
+
+  internal List<Sponsor> GetAllSponsors(string adminId)
+  {
+    return _sponsorsRepo.Get();
+  }
 }

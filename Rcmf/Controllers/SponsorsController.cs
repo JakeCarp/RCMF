@@ -4,12 +4,20 @@ namespace Rcmf.Controllers;
 [Route("[controller]")]
 public class SponsorsController : ControllerBase
 {
+
+  private readonly Auth0Provider _auth0Provider;
+private readonly SponsorsService _sponsorsService;
+
+
   [HttpGet]
-  public ActionResult<List<string>> Get()
+  public async Task<ActionResult<List<Sponsor>>> GetAllSponsors()
   {
     try
     {
-      return Ok(new List<string>() { "Value 1", "Value 2" });
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      
+      List<Sponsor> sponsors = _sponsorsService.GetAllSponsors(userInfo?.Id);
+      return Ok(sponsors);
     }
     catch (Exception e)
     {

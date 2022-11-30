@@ -18,7 +18,12 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
 
   public List<Sponsor> Get()
   {
-    throw new NotImplementedException();
+    string sql = @"
+    SELECT *
+    FROM
+    sponsors
+    ;";
+    return _db.Query<Sponsor>(sql).ToList();
   }
 
   public Sponsor GetById(int id)
@@ -30,4 +35,6 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
   {
     throw new NotImplementedException();
   }
+
+  
 }
