@@ -9,11 +9,12 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
   public Sponsor Create(Sponsor data)
   {
       var sql = @"
-              INSERT INTO
-              sponsors (name, email, tier)
-              VALUES (@Name, @Email, @Tier);
-              SELECT LAST_INSERT_ID()
-                  ; ";
+    INSERT INTO
+    sponsors (name, email, tier)
+    VALUES (@Name, @Email, @Tier);
+    SELECT LAST_INSERT_ID()
+    ;";
+
     int sponsorId = _db.ExecuteScalar<int>(sql, data);
     return GetById(sponsorId);
   }
@@ -55,12 +56,12 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
   public Sponsor Update(Sponsor data)
   {
     string sql = @"
-                  UPDATE sponsors SET
-                  name = @Name,
-                  email = @Email,
-                  tier = @Tier,
-                  WHERE id = @Id LIMIT 1
-                       ;";
+    UPDATE sponsors SET
+    name = @Name,
+    email = @Email,
+    tier = @Tier,
+    WHERE id = @Id LIMIT 1
+    ;";
     var rows = _db.Execute(sql, data);
     if (rows != 1)
     {
@@ -71,5 +72,4 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
     return GetById(sponsorId);
   }
 
-  
 }
