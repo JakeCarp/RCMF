@@ -3,9 +3,39 @@ namespace Rcmf.Services;
 public class TournamentsService
 {
   private readonly TournamentsRepository _tournamentRepo;
+  private readonly AccountService _accountsService;
 
-  public TournamentsService(TournamentsRepository tournamentRepo)
+  public TournamentsService(TournamentsRepository tournamentRepo, AccountService accountsService)
   {
     _tournamentRepo = tournamentRepo;
+    _accountsService = accountsService;
+  }
+
+  internal Tournament CreateTournament(Tournament tourneyData)
+  {
+    return _tournamentRepo.Create(tourneyData);
+  }
+
+  internal void DeleteTourney(int tourneyId, string userId)
+  {
+    Account admin = _accountsService.GetAdminById(userId);
+    Tournament tourney = _tournamentRepo.GetById(tourneyId);
+    _tournamentRepo.Delete(tourneyId);
+  }
+
+  internal List<Tournament> GetAllSponsors(string adminId)
+  {
+    Account admin = _accountsService.GetAdminById(adminId);
+    return _tournamentRepo.Get();
+  }
+
+  internal Tournament GetTourneyById(int tourneyId)
+  {
+    Tournament tourney = _tournamentRepo.GetById(tourneyId);
+    if (tourney == null)
+    {
+      throw new Exception("Bad Tournament Id");
+    }
+    return tourney;
   }
 }

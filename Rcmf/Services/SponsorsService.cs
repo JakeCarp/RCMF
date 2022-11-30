@@ -28,7 +28,7 @@ public class SponsorsService
   internal Sponsor GetSponsorById(int sponsorId)
   {
     // Account admin = _accountsService.GetAdminById(userId);
-    var sponsor = _sponsorsRepo.GetById(sponsorId);
+    Sponsor sponsor = _sponsorsRepo.GetById(sponsorId);
     if (sponsor == null)
     {
       throw new Exception("Bad Sponsor Id");
