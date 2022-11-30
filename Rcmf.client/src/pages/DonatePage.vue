@@ -1,11 +1,21 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 text-center my-3">
         <h1 class="display-3 abril"> Donation Page</h1>
       </div>
-      <div class="col-md-12 heroImg elevation-6">
+      <div class="col-md-12 heroImg elevation-6 mb-5 mt-2">
 
+      </div>
+      <div class="row my-5">
+        <div class="col-md-6">
+<DonateForm/>
+        </div>
+        <div class="col-md-6">
+<div class="card">
+  TODO // Information Block
+</div>
+        </div>
       </div>
     </div>
     
@@ -65,14 +75,14 @@ export default {
             },
         };
     },
-    components: { DonateForm }
+    components: { DonateForm, DonateForm }
 };
 </script>
 
 <style lang="scss" scoped>
 
 .heroImg{
-  background-image: url(https://images.unsplash.com/photo-1614338577234-8747c0b37571?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80);
+  background-image: url(https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
   height: 400px;
   width: 100vw;
 background-size: cover;
