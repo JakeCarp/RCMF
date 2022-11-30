@@ -57,7 +57,7 @@
       <div class="col-md-6">
         <div class="card p-3 elevation-6 border-0">
           <div class="d-flex justify-content-between">
-            <p class="fw-bold">Grant Applications</p>
+            <p class="fw-bold">Recent Donors</p>
           </div>
           <div class="d-flex justify-content-center">
             <img

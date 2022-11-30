@@ -25,6 +25,9 @@
                 Make a Donation
               </button>
             </a>
+            <button class="btn p-3 text-dark" data-bs-toggle="modal" data-bs-target="#newsletterForm">
+              Sign up for NewsLetter
+            </button>
           </div>
         </div>
 
