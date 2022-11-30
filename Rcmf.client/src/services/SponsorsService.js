@@ -8,6 +8,10 @@ class SponsorsService {
     console.log(res.data);
     AppState.sponsors = res.data.map((s) => new Sponsor(s));
   }
+  async getSponsorById(sponsorId){
+    const res = await mySQL.get(`api/sponsors/${sponsorId}`)
+    AppState.activeSponsor = new Sponsor(res.data)
+  }
 
   async createSponsor(sponsorData) {
     const res = await mySQL.post("api/sponsors", sponsorData);
