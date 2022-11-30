@@ -28,7 +28,7 @@ public class TournamentsService
     _tournamentRepo.Delete(tourneyId);
   }
 
-  internal List<Tournament> GetAllSponsors(string adminId)
+  internal List<Tournament> GetAllTournaments(string adminId)
   {
     Account admin = _accountsService.GetAdminById(adminId);
     return _tournamentRepo.Get();

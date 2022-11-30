@@ -27,7 +27,7 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
       archived = true
       WHERE id = @Id
       ;";
-    var rowsAffected = _db.Execute(sql, new{id});
+    var rowsAffected = _db.Execute(sql, new { id });
     if (rowsAffected == 0)
     {
       throw new Exception("Unable to archive album");
@@ -36,7 +36,12 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
 
   public List<Tournament> Get()
   {
-    throw new NotImplementedException();
+    string sql = @"
+               SELECT 
+               *
+               FROM tournaments
+                    ;";
+    return _db.Query<Tournament>(sql).ToList();
   }
 
   public Tournament GetById(int id)

@@ -20,7 +20,7 @@ public class TournamentsController : ControllerBase
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      List<Tournament> tourneys = _tournamentsService.GetAllSponsors(userInfo?.Id);
+      List<Tournament> tourneys = _tournamentsService.GetAllTournaments(userInfo?.Id);
       return Ok(tourneys);
     }
     catch (Exception e)
