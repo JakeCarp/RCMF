@@ -9,7 +9,7 @@ export const AppState = reactive({
 
   members: [],
 
-  donation: 0,
+  donationTotal: 0,
 
   /** @type {import('./models/Newsletter.js').Newsletter.js[]} */
   newsletterSubscribers:[],

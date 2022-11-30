@@ -22,5 +22,12 @@ class DonationsService {
     await mySQL.delete(`api/donors/${donorId}`);
     AppState.donors.filter((d) => d.id != donorId);
   }
+  getDonationTotal() {
+    let donors = AppState.donors;
+    let total = AppState.donationTotal;
+    donors.forEach((d) => {
+      total += d.amount;
+    });
+  }
 }
 export const donationsService = new DonationsService();
