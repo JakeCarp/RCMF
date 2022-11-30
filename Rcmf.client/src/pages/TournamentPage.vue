@@ -7,9 +7,9 @@
 
     <div class="row">
       <div class="col-md-12">
-     <FireBaseTest1/>
+     <!-- <FireBaseTest1/> -->
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12" id="tournamentForm">
         <TournamentSignUpForm />
       </div>
     </div>
