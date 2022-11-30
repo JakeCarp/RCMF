@@ -20,4 +20,21 @@ public class SponsorsService
     }
     return _sponsorsRepo.Get();
   }
+
+  // internal void DeleteSponsor(int sponsorId, string AdminId)
+  // {
+
+  // }
+
+  internal Sponsor GetSponsorById(int sponsorId)
+  {
+    var sponsor = _sponsorsRepo.GetById(sponsorId);
+    if (sponsor == null)
+    {
+      throw new Exception("Bad Sponsor Id");
+    }
+    return sponsor;
+  }
+
+
 }
