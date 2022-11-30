@@ -93,11 +93,52 @@ good Firefighter
 </template>
 
 <script>
+import { onMounted } from "vue";
+
+
+
 export default {
   setup() {
+    onMounted(()=>{
+    hideOnScrollTest()
+    })
+
+      function hideOnScrollTest() {
+      let nav = document.querySelector("#searchBar22");
+      let prevScrollpos = window.scrollY;
+      console.log(["prev"], prevScrollpos);
+      window.onscroll = function () {
+        let currentScrollPos = window.scrollY;
+        console.log(["current"], currentScrollPos);
+        if (prevScrollpos > currentScrollPos) {
+          // nav.style.top="0"
+          nav.classList.remove("showOnScroll");
+        } else {
+          nav.classList.add("hiddenOnScroll");
+          //  nav.style.top="-70px"
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    }
     return {};
   },
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+#searchBar22{
+  
+}
+.hiddenOnScroll {
+  transform: scale(3);
+transform: rotate(40deg);
+
+}
+.showOnScroll {
+
+
+
+}
+
+</style>

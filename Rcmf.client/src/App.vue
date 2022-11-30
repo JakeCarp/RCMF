@@ -1,34 +1,55 @@
 <template>
-  <header>
-    <Navbar />
+  <header  class="sticky-top" id="searchBar22">
+    <Navbar  />
   </header>
   <main class="bg-light">
     <router-view />
   </main>
-   <footer >
-  <FooterComponent/>
+  <footer>
+    <FooterComponent />
   </footer>
 </template>
 
 <script>
-import { computed } from 'vue'
-import { AppState } from './AppState'
-import FooterComponent from "./components/FooterComponent.vue"
-import Navbar from './components/Navbar.vue'
+import { computed, onMounted } from "vue";
+import { AppState } from "./AppState";
+import FooterComponent from "./components/FooterComponent.vue";
+import Navbar from "./components/Navbar.vue";
 
 export default {
   setup() {
+    onMounted(() => {
+      // hideOnScrollTest();
+    });
+
+    // function hideOnScrollTest() {
+    //   let nav = document.querySelector("#searchBar22");
+    //   let prevScrollpos = window.scrollY;
+    //   console.log(["prev"], prevScrollpos);
+    //   window.onscroll = function () {
+    //     let currentScrollPos = window.scrollY;
+    //     console.log(["current"], currentScrollPos);
+    //     if (prevScrollpos > currentScrollPos) {
+    //       // nav.style.top="0"
+    //       nav.classList.remove("showOnScroll");
+    //     } else {
+    //       nav.classList.add("showOnScroll");
+    //       //  nav.style.top="-50px"
+    //     }
+    //     prevScrollpos = currentScrollPos;
+    //   };
+    // }
     return {
-      appState: computed(() => AppState)
-    }
+      appState: computed(() => AppState),
+    };
   },
-  components: { Navbar, FooterComponent }
-}
+  components: { Navbar, FooterComponent },
+};
 </script>
 <style lang="scss">
 @import "./assets/scss/main.scss";
 
-:root{
+:root {
   --main-height: calc(100vh - 32px - 64px);
 }
 
