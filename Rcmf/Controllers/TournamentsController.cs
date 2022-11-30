@@ -60,5 +60,19 @@ public class TournamentsController : ControllerBase
     }
   }
 
-  
+  [HttpPut("{tournamentId}")]
+  [Authorize]
+  public async Task<ActionResult<Sponsor>> EditSponsor([FromBody] Tournament tourneyData, int tournamentId)
+  {
+    try
+    {
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      Tournament tourney = _tournamentsService.UpdateTourney(tourneyData, userInfo.Id);
+      return Ok(tourney);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 }

@@ -38,4 +38,19 @@ public class TournamentsService
     }
     return tourney;
   }
+
+  internal Tournament UpdateTourney(Tournament tourney, string accountId)
+  {
+    Account admin = _accountsService.GetAdminById(accountId);
+
+    Tournament original = GetTourneyById(tourney.Id);
+
+    original.Date = tourney.Date ?? original.Date;
+    original.Location = tourney.Location ?? original.Location;
+    original.Archived = tourney.Archived ?? original.Archived;
+    original.NetIncome = tourney.NetIncome ?? original.NetIncome;
+
+    Tournament updated = _tournamentRepo.Update(original);
+    return updated;
+  }
 }
