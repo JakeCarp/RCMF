@@ -115,10 +115,10 @@ export default {
     function hideOnScrollTest() {
       let nav = document.querySelector("#searchBar22");
       let prevScrollpos = window.scrollY;
-      console.log(["prev"], prevScrollpos);
+      // console.log(["prev"], prevScrollpos);
       window.onscroll = function () {
         let currentScrollPos = window.scrollY;
-        console.log(["current"], currentScrollPos);
+        // console.log(["current"], currentScrollPos);
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
           nav.style.transition = "all 0.25s ease";

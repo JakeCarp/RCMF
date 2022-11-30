@@ -66,7 +66,7 @@ import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
-
+import sponsorsService from '../../services/SponsorsService.js'
 export default {
   props: {},
   setup(props) {
@@ -80,7 +80,7 @@ export default {
       tiers:computed(() => AppState.sponsorTiers),
       handleSubmit(){
         try {
-          
+          // await sponsorsService.
           } catch (error) {
             Pop.error(error,'[createSponsor]')
           }
