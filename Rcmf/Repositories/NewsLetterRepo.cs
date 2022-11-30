@@ -31,7 +31,12 @@ public class NewsletterRepository : BaseRepository, IRepo<Newsletter, int>
 
   public Newsletter GetById(int id)
   {
-    throw new NotImplementedException();
+    string sql = @"SELECT 
+                *
+                FROM newsLetter
+                WHERE id = @id
+                ;";
+    return _db.Query<Newsletter>(sql, new { id }).FirstOrDefault();
   }
 
   public Newsletter Update(Newsletter data)
