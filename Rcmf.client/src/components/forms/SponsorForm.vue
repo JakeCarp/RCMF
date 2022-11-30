@@ -78,6 +78,13 @@ export default {
     return {
       editable,
       tiers:computed(() => AppState.sponsorTiers),
+      handleSubmit(){
+        try {
+          
+          } catch (error) {
+            Pop.error(error,'[createSponsor]')
+          }
+      }
     };
   },
 };
