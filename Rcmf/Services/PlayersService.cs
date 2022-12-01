@@ -8,4 +8,17 @@ public class PlayersService
   {
     _playersRepo = playersRepo;
   }
+
+  internal Player CreatePlayer(Player playerData)
+  {
+    Player player = _playersRepo.GetByNameAndEmail(playerData);
+    if (player != null)
+    {
+      throw new Exception("player already added");
+    }
+
+    return _playersRepo.Create(playerData);
+
+
+  }
 }

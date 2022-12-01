@@ -4,31 +4,33 @@ namespace Rcmf.Controllers;
 [Route("[controller]")]
 public class PlayersController : ControllerBase
 {
-  [HttpGet]
-  public ActionResult<List<string>> Get()
-  {
-    try
-    {
-      return Ok(new List<string>() { "Value 1", "Value 2" });
-    }
-    catch (Exception e)
-    {
-      return BadRequest(e.Message);
-    }
-  }
+  private readonly Auth0Provider _auth0Provider;
+  private readonly PlayersService _playersService;
 
+  public PlayersController(Auth0Provider auth0Provider, PlayersService playersService)
+  {
+    _auth0Provider = auth0Provider;
+    _playersService = playersService;
+  }
 
   [HttpPost]
-  public ActionResult<List<string>> Create([FromBody] string value)
+  public ActionResult<Player> CreatePlayer([FromBody] Player playerData)
   {
     try
     {
-      return Ok(value);
+      Player player = _playersService.CreatePlayer(playerData);
+      return Ok(player);
     }
     catch (Exception e)
     {
       return BadRequest(e.Message);
     }
   }
+
+
+
+
+  
+  
 
 }
