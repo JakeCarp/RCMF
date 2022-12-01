@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card p-3 elevation-6 border-0 gradient1">
+        <div class="card p-3 elevation-6 border-0 ">
           <div class="">
           <p class="mb-0 text-muted">  Total Count since  {{new Date().toLocaleDateString()}}</p>
           </div>
@@ -105,7 +105,7 @@
 
 
       <div class="col-md-6">
-        <div class="card p-3 elevation-6 border-0 gradient2">
+        <div class="card p-3 elevation-6 border-0 ">
           <div class="d-flex justify-content-between">
             <p class="fw-bold"> Sponsors</p>
             <img src="https://cdn-icons-png.flaticon.com/512/1672/1672241.png" alt="" width="100" height="100">
@@ -162,7 +162,8 @@ export default {
 background: linear-gradient(90deg, rgba(2,0,36,0.8590029761904762) 0%, rgba(68,207,108,1) 100%);
 }
 .gradient2{
-
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.8590029761904762) 0%, rgba(214,64,69,1) 100%);
 }
 .scrollY{
   height: 30vh;
