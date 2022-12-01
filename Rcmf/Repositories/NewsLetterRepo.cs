@@ -51,4 +51,14 @@ public class NewsletterRepository : BaseRepository, IRepo<NewsLetter, int>
   {
     throw new NotImplementedException();
   }
+
+  internal NewsLetter GetByNameAndEmail(NewsLetter newsletterData)
+  {
+    string sql = @"SELECT 
+              *
+              FROM newsLetters
+              WHERE name = @name and email = @email
+                   ;";
+    return _db.Query<NewsLetter>(sql, newsletterData).FirstOrDefault();
+  }
 }

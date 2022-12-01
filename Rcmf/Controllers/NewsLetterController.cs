@@ -44,6 +44,24 @@ public class NewsLetterController : ControllerBase
         return BadRequest(e.Message);
       }
     }
+
+    
+      [HttpDelete("{newsLetterId}")]
+      [Authorize]
+      public async Task<ActionResult<string>> DeleteNewsLetter(int newsLetterId)
+      {
+        try
+        {
+          Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+          _newsLetterService.DeleteNewsLetter(newsLetterId, userInfo?.Id);
+          return Ok("NewsLetter deleted");
+        }
+        catch (Exception e)
+        {
+          return BadRequest(e.Message);
+        }
+      }
+    
   
 
 
