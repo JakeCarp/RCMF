@@ -15,22 +15,14 @@ public class NewsletterService
   {
 
     NewsLetter foundLetter = _newsletterRepo.GetByNameAndEmail(newsletterData);
-    if (foundLetter != null)
-    {
-      throw new Exception("already subscribed");
-    }
+    if (foundLetter != null){throw new Exception("already subscribed");}
     NewsLetter newsLetter = _newsletterRepo.Create(newsletterData);
     return newsLetter;
   }
   internal NewsLetter GetNewsletter(int newsLetterId)
   {
     NewsLetter newsLetter = _newsletterRepo.GetById(newsLetterId);
-    if (newsLetter == null)
-    {
-      throw new Exception("newsLetter doesnt exist");
-    }
-
-
+    if (newsLetter == null){throw new Exception("newsLetter doesnt exist");}
     return newsLetter;
   }
 
