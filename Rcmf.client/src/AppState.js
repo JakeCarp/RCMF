@@ -10,7 +10,7 @@ loader:0,
   members: [],
 
   donationTotal: 0,
-
+monthTotal : 0,
   /** @type {import('./models/Newsletter.js').Newsletter.js[]} */
   newsletterSubscribers:[],
   /** @type {import('./models/Grant.js').Grant.js[]} */
@@ -31,8 +31,5 @@ loader:0,
 
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
-function donationTotal() {
-  AppState.donors.forEach((d) => {
-    AppState.donation += d.amount;
-  });
-}
+
+

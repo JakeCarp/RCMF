@@ -3,14 +3,13 @@
     <div class="row">
       <div class="col-md-8">
         <div class="card p-2 elevation-6 border-0">
-         
           <div class="justify-content-between d-flex p-2">
-            <p  class="fw-bold ">Donations</p>
+            <p class="fw-bold">Donations</p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/639/639365.png"
               alt=""
-              width="100"
-              height="100"
+              width="75"
+              height="75"
             />
           </div>
 
@@ -25,8 +24,21 @@
               <p>{{ d.email }}</p>
               <p>${{ d.amount }}</p>
               <p>{{ new Date(d.createdAt).toLocaleString() }}</p>
+              <p>{{ new Date(d.createdAt).getMonth() }}</p>
+              <p>{{ new Date(Date.now()).getMonth() + 1 }}</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <!-- <VueChart1/> -->
+        <div class="card border-0 p-3 elevation-6 text-center">
+          <p class="roboto text-muted">
+            Total Count since {{ new Date().toLocaleDateString() }}
+          </p>
+          <p class="roboto display-2 text-shadow2">${{ total }}</p>
+          <p class="roboto fs-5 text-shadow2">This Month ${{ monthTotal }}</p>
         </div>
       </div>
 
@@ -37,8 +49,8 @@
             <img
               src="https://cdn-icons-png.flaticon.com/512/1672/1672241.png"
               alt=""
-              width="100"
-              height="100"
+              width="75"
+              height="75"
             />
           </div>
 
@@ -68,6 +80,7 @@ import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import Pop from "../../utils/Pop.js";
 import TournamentCreateForm from "../forms/TournamentCreateForm.vue";
+import VueChart1 from "../VueChart1.vue";
 
 export default {
   props: {},
@@ -81,9 +94,21 @@ export default {
       sponsors: computed(() => AppState.sponsors),
       donors: computed(() => AppState.donors),
       total: computed(() => AppState.donationTotal),
+      monthTotal: computed(() =>
+        AppState.donors.forEach((d) => {
+          let current = new Date(Date.now());
+          let donorDate = new Date(d.createdAt);
+
+          if (donorDate == current) {
+            AppState.monthTotal += d.amount;
+          
+          }
+          return AppState.monthTotal
+        })
+      ),
     };
   },
-  components: { TournamentCreateForm },
+  components: { TournamentCreateForm, VueChart1 },
 };
 </script>
 
