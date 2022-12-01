@@ -42,6 +42,15 @@
               <h2>What Am I Supporting?</h2>
             </div>
             <div>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ea id itaque doloribus eveniet alias
+                recusandae! Maiores doloribus sunt voluptatibus cumque odit, hic molestiae repellendus ad perspiciatis
+                quidem temporibus omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aut esse porro
+                quisquam harum at quos culpa tempora quaerat non dolorum placeat doloribus, magnam eveniet, quas maiores
+                voluptas! Doloremque, nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis
+                exercitationem quisquam nam dolorem ea explicabo rem, quis sapiente facere, porro, reiciendis
+                necessitatibus! Molestiae, vitae! Delectus autem eius aperiam dolorem?
+              </div>
+
             </div>
           </div>
 
@@ -50,10 +59,6 @@
             <div class="row">
               <div class="col-md-8 col-lg-12 d-flex justify-content-center">
                 <h2>About Randy</h2>
-              </div>
-              <div class="col-md-6 col-lg-12 d-flex justify-content-center ">
-                <img src="http://ourfallenbrother.org/pictures/randy.jpg" alt="Randy E Carepenter"
-                  class="elevation-5 rounded">
               </div>
               <div class="col-md-6 col-lg-12">
                 <p>Coos Bay Fire Department
@@ -121,6 +126,10 @@
                   needed training
                   for Oregon and Southwest Idaho firefighters and emergency personnel.</p>
               </div>
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center ">
+                <img src="http://ourfallenbrother.org/pictures/randy.jpg" alt="Randy E Carepenter"
+                  class="elevation-5 rounded randyPic">
+              </div>
             </div>
           </div>
           <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" tabindex="0">
@@ -181,7 +190,11 @@ export default {
 }
 
 .heroImg {
-  width: 25 rem;
+  width: 25rem;
   height: 30rem;
+}
+
+.randyPic {
+  height: 8rem;
 }
 </style>
