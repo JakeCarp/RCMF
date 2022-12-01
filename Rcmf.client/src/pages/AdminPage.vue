@@ -13,7 +13,7 @@
             Logout
           </button>
         </div>
-        <h1 class="abril">Admin DashBoard animated nav scrollbt00t0f0</h1>
+        <h1 class="abril">Admin DashBoard </h1>
         <div></div>
       </div>
       <div class="col-md-12">

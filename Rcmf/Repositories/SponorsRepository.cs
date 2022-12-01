@@ -39,6 +39,7 @@ public class SponsorsRepository : BaseRepository, IRepo<Sponsor, int>
     SELECT *
     FROM
     sponsors
+    ORDER BY sponsors.createdAt DESC
     ;";
     return _db.Query<Sponsor>(sql).ToList();
   }

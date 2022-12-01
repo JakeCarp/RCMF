@@ -22,10 +22,11 @@
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-About Foundation <img
-                src="http://ourfallenbrother.org/pictures/memorial.jpg" alt="Coos Bay FireFighters Memorial"
-                class="coosbay elevation-5 rounded">
+ <!-- tab1 -->
 
+
+ 
+ <!-- !tab1 -->
   </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
     

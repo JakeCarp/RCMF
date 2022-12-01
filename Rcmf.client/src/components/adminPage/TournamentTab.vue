@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 text-center">
-      <p class="display-3 roboto "> Tournament</p>
+      <p class="display-3 roboto "> Tournament Details</p>
     </div>
   </div>
 </div>

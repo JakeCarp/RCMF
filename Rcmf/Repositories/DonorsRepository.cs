@@ -31,7 +31,9 @@ public class DonorsRepository : BaseRepository, IRepo<Donor, int>
   {
     string sql = @"SELECT 
                   *
-                  FROM donors;";
+                  FROM donors 
+                  ORDER BY donors.createdAt DESC
+                  ;";
 
     return _db.Query<Donor>(sql).ToList();
 
