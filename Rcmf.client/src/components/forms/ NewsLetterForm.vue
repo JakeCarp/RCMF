@@ -1,6 +1,9 @@
 <template>
   <div class="modal-body image">
-    <div class="rounded d-flex justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+      <p class="fs-3 fw-bold text-light text-shadow2 abril p-2  ">   Join our Newsletter to receive the latest updates of gatherings and other information</p>
+      </div>
       <div class="col-md-8 col-sm-12 shadow-lg p-5 bg-light">
         <div class="text-center">
           <h3 class="text-primary abril">Newsletter</h3>
@@ -87,7 +90,6 @@ export default {
 <style lang="scss" scoped>
 .image{
  height: 80vh;
-
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);

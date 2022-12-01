@@ -13,9 +13,9 @@
       </div>
       <div class="col-md-8" v-motion-slide-visible-right>
         <div class="card elevation-2 border-0 p-3 d-flex justify-content-around" v-motion-slide-visible-right>
-          <div class="d-flex justify-content-around">
+          <div class="d-flex ">
 
-            <a href="#tournament" class="text-dark">
+            <a href="#tournament" class="text-dark mx-auto">
               <button class="btn  p-3">
                 Sign Up for Golf tournament
               </button>
@@ -46,6 +46,11 @@
           </figure>
         </div>
       </div>
+    </div>
+    <div class="row">
+       <div class="card">
+      
+       </div>
     </div>
     <div class="row my-4">
       <div class="col-md-12" v-motion-slide-visible-right>
