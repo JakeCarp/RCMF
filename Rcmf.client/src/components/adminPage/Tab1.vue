@@ -80,7 +80,7 @@
 
       <div class="col-md-6 my-3">
         <div class="card p-2 elevation-6 border-0">
-          <div class="d-flex justify-content-between p-2">
+          <div class="d-flex justify-cont   ent-between p-2">
             <p class="fw-bold">Upcoming Event</p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/3277/3277487.png"
