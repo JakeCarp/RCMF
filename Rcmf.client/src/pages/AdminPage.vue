@@ -75,7 +75,7 @@
               aria-controls="nav-fourth"
               aria-selected="false"
             >
-              fourth
+              Events
             </button>
           </div>
         </nav>

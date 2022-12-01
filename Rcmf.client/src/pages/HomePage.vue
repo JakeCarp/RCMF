@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row ">
       <div class="col-md-12 text-center my-3 " v-motion-slide-visible-left>
         <h1 class="abril display-1">Randy Carpenter Memorial Foundation</h1>
       </div>
@@ -47,51 +47,61 @@
         </div>
       </div>
     </div>
-    <div class="row">
-       <div class="card">
-      
-       </div>
-    </div>
-    <div class="row my-4">
-      <div class="col-md-12" v-motion-slide-visible-right>
+
+
+    
+  
+    <div class="row justify-content-evenly my-5 bg-grey">
+       <div class="col-md-12 my-5" v-motion-slide-visible-right>
         <h2 class="display-4 abril">Providing Firefighters With..</h2>
       </div>
-    </div>
-    <div class="row justify-content-evenly my-5">
       <div class="col-md-3" v-motion-slide-visible-right>
         <img
           src="https://images.unsplash.com/photo-1633092228879-d6a88c22e7bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
           alt=""
-          class="img-fluid rounded elevation-6"
+          class="three-images img-fluid rounded elevation-6"
         />
         <div class="">
           <p
             class="fs-3 mb-0 abril"
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :variants="{ custom: { scale: 2 } }"
-            :hovered="{ scale: 1.2 }"
-            :delay="200"
+        
           >
             Fire Ground Training
           </p>
           <p>Through Hands On Experience</p>
         </div>
       </div>
-      <div class="col-md-3" v-motion-slide-visible-right>
+      <div class="col-md-5" v-motion-slide-visible-right>
         <img
-          src="//thiscatdoesnotexist.com"
+          src="https://scontent-fml2-1.xx.fbcdn.net/v/t31.18172-8/13483319_10154795226862080_1434242293369889234_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZiXSMZmPGfQAX8jdQEq&_nc_ht=scontent-fml2-1.xx&oh=00_AfCdtEC9PsQ9xnwgPpD-7l2-LxZ58X2XRdFom-CA0ILBPg&oe=63B0634F"
           alt=""
-          class="img-fluid rounded elevation-6"
+          class="three-images img-fluid rounded elevation-6"
         />
+  <div class="">
+          <p
+            class="fs-3 mb-0 abril"
+        
+          >
+            Lorem ipsum dolor
+          </p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa.</p>
+        </div>
       </div>
       <div class="col-md-3" v-motion-slide-visible-right>
         <img
-          src="//thiscatdoesnotexist.com"
+          src="https://scontent-fml2-1.xx.fbcdn.net/v/t31.18172-8/13495663_10154795225037080_7692198579030023972_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=zOC_iireDwkAX_XgKG1&_nc_ht=scontent-fml2-1.xx&oh=00_AfD4Xk6C_-Yxv8sB8rNXS5za9ukRueRvCs9eEdLOF43Tsg&oe=63B07750"
           alt=""
-          class="img-fluid rounded elevation-6"
+          class="three-images img-fluid rounded elevation-6"
         />
+          <div class="">
+          <p
+            class="fs-3 mb-0 abril"
+        
+          >
+            Lorem ipsum dolor
+          </p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa.</p>
+        </div>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -105,6 +115,7 @@
             alt=""
             class="img-fluid rounded elevation-6"
           />
+          
         </div>
       </div>
     </div>
@@ -149,6 +160,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.three-images{
+  height: 30rem;
+  width: auto;
+  object-fit: cover;
+}
 #searchBar22 {
   transition: all 0.5s ease;
 }

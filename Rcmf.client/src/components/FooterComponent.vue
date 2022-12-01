@@ -86,14 +86,14 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
             />
             <p>
-              <a href="#/account" class="text-white">Your Account</a>
+              <a href="#/account" class="text-white">Lorem, ipsum.</a>
             </p>
 
             <p>
-              <a href="#/account/lists" class="text-white">Your Lists</a>
+              <a href="#/account/lists" class="text-white">Lorem, ipsum.</a>
             </p>
             <p>
-              <a href="#/search" class="text-white">SearchPage</a>
+              <a href="#/search" class="text-white">Lorem, ipsum.</a>
             </p>
           </div>
 

@@ -34,7 +34,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function () {
   socketService.authenticate(AuthService.bearer);
   sponsorsService.getSponsors()
   // grantsService.getGrants()
-  // newsLetterService.getNewsletterSubscribers()
+  newsLetterService.getNewsletterSubscribers()
   donationsService.getDonors()
   // teamsService.getTeams()
   // playersService.getPlayers()

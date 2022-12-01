@@ -1,10 +1,15 @@
 <template>
   <div class="container p-4">
     <div class="row">
-      <div class="col-md-8">
-        <div class="card p-2 elevation-6 border-0">
-          <div class="justify-content-between d-flex p-2">
-            <p class="fw-bold">Donations</p>
+      <div class="col-md-4 my-2">
+        <div class="card p-2  border-0 bg-primary">
+          <div class="d-flex justify-content-between p-2">
+            <div class="">
+              <p class="fw-bold mb-0">Donations</p>
+              <p class="roboto text-grey">
+                Total Count since {{ new Date().toLocaleDateString() }}
+              </p>
+            </div>
             <img
               src="https://cdn-icons-png.flaticon.com/512/639/639365.png"
               alt=""
@@ -12,37 +17,93 @@
               height="75"
             />
           </div>
-
-          <div
-            class="card p-1 elevation-2 border d-flex justify-content-evenly scrollY"
-          >
-            <div
-              class="d-flex justify-content-around p-2 rounded selectable"
-              v-for="d in donors"
-            >
-              <p>{{ d.name }}</p>
-              <p>{{ d.email }}</p>
-              <p>${{ d.amount }}</p>
-              <p>{{ new Date(d.createdAt).toLocaleString() }}</p>
-              <p>{{ new Date(d.createdAt).getMonth() }}</p>
-              <p>{{ new Date(Date.now()).getMonth() + 1 }}</p>
+          <div class="text-center">
+            <p class="roboto display-2 text-shadow2">${{ total }}</p>
+            <p class="roboto fs-5 text-shadow2">
+              More Information on MemberTab
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-2">
+        <div class="card p-2 border-0 bg-success lighten-0">
+          <div class="d-flex justify-content-between p-2">
+            <div class="">
+              <p class="fw-bold mb-0">NewsLetter Subscriptions</p>
+              <p class="roboto">
+                Total Count since {{ new Date().toLocaleDateString() }}
+              </p>
             </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3187/3187067.png"
+              alt=""
+              width="75"
+              height="75"
+            />
+          </div>
+          <div class="text-center">
+            <p class="roboto display-2 text-shadow2">
+              {{ subScribers.length }}
+            </p>
+            <p class="roboto fs-5 text-shadow2">
+              More Information on MemberTab
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-2">
+        <div class="card p-2  border-0 bg-danger lighten-0">
+          <div class="d-flex justify-content-between p-2">
+            <div class="">
+              <p class="fw-bold mb-0">Grant Applications</p>
+              <p class="roboto">
+                Total Count since {{ new Date().toLocaleDateString() }}
+              </p>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/8632/8632992.png"
+              alt=""
+              width="75"
+              height="75"
+            />
+          </div>
+          <div class="text-center">
+            <p class="roboto display-2 text-shadow2">
+              {{ grants.length }}
+            </p>
+            <p class="roboto fs-5 text-shadow2">
+              More Information on MemberTab
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <!-- <VueChart1/> -->
-        <div class="card border-0 p-3 elevation-6 text-center">
-          <p class="roboto text-muted">
-            Total Count since {{ new Date().toLocaleDateString() }}
-          </p>
-          <p class="roboto display-2 text-shadow2">${{ total }}</p>
-          <p class="roboto fs-5 text-shadow2">This Month ${{ monthTotal }}</p>
+      <div class="col-md-6 my-3">
+        <div class="card p-2 elevation-6 border-0">
+          <div class="d-flex justify-content-between p-2">
+            <p class="fw-bold">Upcoming Event</p>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3277/3277487.png"
+              alt=""
+              width="75"
+              height="75"
+            />
+          </div>
+
+        <div class="">
+ <p> Details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestias perspiciatis esse sed odio ducimus deleniti itaque assumenda dolor. Quidem, autem corrupti sapiente distinctio quibusdam aliquid ipsam quam unde modi magnam exercitationem possimus voluptates?</p>
+
+ <p> Location :    </p>
+        </div>
         </div>
       </div>
 
-      <div class="col-md-6">
+
+
+
+
+
+      <div class="col-md-6 my-3">
         <div class="card p-2 elevation-6 border-0">
           <div class="d-flex justify-content-between p-2">
             <p class="fw-bold">Sponsors</p>
@@ -93,6 +154,8 @@ export default {
       sponsors: computed(() => AppState.sponsors),
       donors: computed(() => AppState.donors),
       total: computed(() => AppState.donationTotal),
+      grants: computed(() => AppState.grants),
+      subScribers: computed(() => AppState.newsletterSubscribers),
       monthTotal: computed(() =>
         AppState.donors.forEach((d) => {
           let current = new Date(Date.now());
@@ -100,14 +163,13 @@ export default {
 
           if (donorDate == current) {
             AppState.monthTotal += d.amount;
-          
           }
-          return AppState.monthTotal
+          return AppState.monthTotal;
         })
       ),
     };
   },
-  components: { TournamentCreateForm},
+  components: { TournamentCreateForm },
 };
 </script>
 

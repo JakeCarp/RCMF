@@ -1,16 +1,77 @@
 <template>
 <div class="container">
   <div class="row my-2 g-2">
-    <div class="col-md-12" v-for="i in 10">
-      <div class="card p-2 elevation-3 ">
-<div>
-<img src="//thiscatdoesnotexist.com" alt="" width="150" height="150">
-
+    <div class="table-responsive">
+  <table class="table 
+  table-hover	
+  table-borderless
   
+  align-middle">
+    <thead class="table-light">
+      <caption>Donations</caption>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Amount</th>
+        <th>Donation Date</th>
+      </tr>
+      </thead>
+      <tbody class="table-group-divider ">
+        <tr class="table"  v-for="d in donors" >
+        
+          <td>{{d.name}}</td>
+          <td>{{d.email}}</td>
+          <td>{{d.amount}}</td>
+          <td>{{new Date(d.createdAt).toDateString()}}</td>
+
+        </tr>
+    
+      </tbody>
+      <tfoot>
+        
+      </tfoot>
+  </table>
 </div>
 
-      </div>
-    </div>
+
+
+
+  </div>
+
+  <div class="row my-2 g-2">
+        <div class="table-responsive">
+  <table class="table 
+  table-hover	
+  table-borderless
+  
+  align-middle">
+    <thead class="table-light">
+      <caption>Sponsors</caption>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Tier</th>
+        <th>Sponsorship Date</th>
+      </tr>
+      </thead>
+      <tbody class="table-group-divider ">
+        <tr class="table"  v-for="s in sponsors" >
+        
+          <td>{{s.name}}</td>
+          <td>{{s.email}}</td>
+          <td>{{s.tier}}</td>
+          <td>{{new Date(s.createdAt).toDateString()}}</td>
+
+        </tr>
+    
+      </tbody>
+      <tfoot>
+        
+      </tfoot>
+  </table>
+</div>
+
+
   </div>
 </div>
 </template>
@@ -35,6 +96,9 @@ props:{
 
     return {
       editable,
+        donors: computed(() => AppState.donors),
+        sponsors:computed(() => AppState.sponsors),
+
       }
     }
   }
