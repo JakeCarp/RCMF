@@ -6,6 +6,10 @@ class DonationsService {
   async getDonors() {
     const res = await mySQL.get("donors");
     AppState.donors = res.data.map((d) => new Donor(d));
+
+
+    AppState.donors.forEach(d=> AppState.donationTotal += d.amount)
+
   }
   async getDonorById(donorId) {
     const res = await mySQL.get(`donors/${donorId}`);

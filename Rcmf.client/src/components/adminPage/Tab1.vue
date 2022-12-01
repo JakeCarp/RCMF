@@ -72,7 +72,7 @@
         <div class="card p-3 elevation-6 border-0">
           <div class="d-flex justify-content-between">
             <p class="fw-bold">Recent Donors</p>
-                <p>{{donationTotal}}</p>
+                <p v-if="donors">{{total}}</p>
           </div>
           <div class="d-flex justify-content-center">
             <img
@@ -143,12 +143,12 @@ export default {
     const editable = ref({});
     onMounted(() => {});
     watchEffect(() => {});
-
+   
     return {
       editable,
       sponsors: computed(() => AppState.sponsors),
       donors: computed(() => AppState.donors),
-   
+      total : computed(()=> AppState.donationTotal),
     };
   },
   components: { TournamentCreateForm },
