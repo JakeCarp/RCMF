@@ -19,6 +19,9 @@
             <button class="nav-link bg-dark navButton" id="nav-profile-tab" data-bs-toggle="tab"
               data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
               aria-selected="false">Who Is Randy Carpenter?</button>
+            <button class="nav-link bg-dark navButton" id="nav-profile-tab" data-bs-toggle="tab"
+              data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+              aria-selected="false">What Events Are Held?</button>
             <button class="nav-link bg-dark navButton" id="nav-contact-tab" data-bs-toggle="tab"
               data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
               aria-selected="false">Contact Information</button>
@@ -83,6 +86,6 @@ export default {
 }
 
 .navButton {
-  width: 20rem;
+  width: 15rem;
 }
 </style>
