@@ -9,7 +9,7 @@
     </div>
 
 
-    <div class="row my-5 navPanel bg-secondary">
+    <div class="row my-5 navPanel navbg">
       <div class="col-md-12 p-4">
         <nav>
           <div class="nav nav-tabs justify-content-around" id="nav-tab" role="tablist">
@@ -38,29 +38,30 @@
             <!-- !tab1 -->
           </div>
           <div class="tab-pane fade" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
-            <div>
-              <h2>What Am I Supporting?</h2>
-            </div>
-            <div>
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ea id itaque doloribus eveniet alias
-                recusandae! Maiores doloribus sunt voluptatibus cumque odit, hic molestiae repellendus ad perspiciatis
-                quidem temporibus omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aut esse porro
-                quisquam harum at quos culpa tempora quaerat non dolorum placeat doloribus, magnam eveniet, quas maiores
-                voluptas! Doloremque, nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis
-                exercitationem quisquam nam dolorem ea explicabo rem, quis sapiente facere, porro, reiciendis
-                necessitatibus! Molestiae, vitae! Delectus autem eius aperiam dolorem?
+            <div class="row">
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center m-4">
+                <h2>What Am I Supporting?</h2>
               </div>
-
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lCwic7784c8"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen> </iframe>
+              </div>
             </div>
           </div>
-
 
           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
             <div class="row">
               <div class="col-md-8 col-lg-12 d-flex justify-content-center">
                 <h2>About Randy</h2>
               </div>
-              <div class="col-md-6 col-lg-12">
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center ">
+                <img src="http://ourfallenbrother.org/pictures/randy.jpg" alt="Randy E Carepenter"
+                  class="elevation-5 rounded mb-4">
+              </div>
+
+              <div class="col-md-6 col-lg-12 d-flex">
                 <p>Coos Bay Fire Department
                   A career firefighter, Captain Randy E. Carpenter, 46, died November 25, 2002, when the burning roof of
                   a
@@ -132,24 +133,32 @@
               </div>
             </div>
           </div>
+
           <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" tabindex="0">
-            <div>
-              <h2>What Events Are Held?</h2>
-            </div>
-            <div> <img
-                src="https://images.unsplash.com/photo-1632844281300-7ce850388164?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt="plane putting out fire" class="elevation-5 rounded twofiremen">
+            <div class="row">
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center">
+                <h2>What Events Are Held?</h2>
+              </div>
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center"> <img
+                  src="https://images.unsplash.com/photo-1632844281300-7ce850388164?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  alt="plane putting out fire" class="elevation-5 rounded twofiremen">
+              </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-            Apply For A Grant <img
-              src="https://images.unsplash.com/photo-1632844281300-7ce850388164?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="plane putting out fire" class="elevation-5 rounded twofiremen">
 
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <div class="row">
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center">
+                <h2>Apply For A Grants </h2>
+              </div>
+              <div class="col-md-6 col-lg-12 d-flex justify-content-center">
+                <img
+                  src="https://images.unsplash.com/photo-1632844281300-7ce850388164?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  alt="plane putting out fire" class="elevation-5 rounded twofiremen">
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
-
-
           </div>
         </div>
       </div>
@@ -179,6 +188,11 @@ export default {
   height: 15rem;
   width: 15rem;
 }
+
+.navbg {
+  background-color: #6a7b76fd;
+}
+
 
 .twofiremen {
   height: 16rem;
