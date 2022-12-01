@@ -2,8 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
-        <img src="https://www.bing.com/images/blob?bcid=syaEJ8QJp.MEng" alt="Firefighters Through Fire"
-          class="rounded m-4 elevation-5 heroImg">
+        <img
+          src="https://images.unsplash.com/photo-1554256092-96709174126a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+          alt="Firefighters Through Fire" class="rounded m-4 elevation-5 heroImg">
       </div>
     </div>
 
@@ -89,6 +90,7 @@ export default {
 }
 
 .heroImg {
-  width: 75%;
+  width: 25 rem;
+  height: 30rem;
 }
 </style>
