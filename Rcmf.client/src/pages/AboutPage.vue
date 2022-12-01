@@ -14,14 +14,14 @@
         <nav>
           <div class="nav nav-tabs justify-content-around" id="nav-tab" role="tablist">
             <button class="nav-link active bg-dark navButton" id="nav-home-tab" data-bs-toggle="tab"
-              data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-              aria-selected="true">Home</button>
+              data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">What Am
+              I Supporting?</button>
             <button class="nav-link bg-dark navButton" id="nav-profile-tab" data-bs-toggle="tab"
               data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-              aria-selected="false">Profile</button>
+              aria-selected="false">Who Is Randy Carpenter?</button>
             <button class="nav-link bg-dark navButton" id="nav-contact-tab" data-bs-toggle="tab"
               data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-              aria-selected="false">Contact</button>
+              aria-selected="false">Contact Information</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
