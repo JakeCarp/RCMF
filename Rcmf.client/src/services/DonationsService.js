@@ -25,8 +25,9 @@ class DonationsService {
   getDonationTotal() {
     let donors = AppState.donors;
     let total = AppState.donationTotal;
-    donors.forEach((d) => {
+    AppState.donors.forEach((d) => {
       total += d.amount;
+      return total
     });
   }
 }
