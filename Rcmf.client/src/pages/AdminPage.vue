@@ -143,7 +143,7 @@ export default {
       account: computed(() => AppState.account),
     };
   },
-  components: { Tab1, MembersTab, TournamentTab, EventsTab },
+  components: { Tab1, MembersTab, EventsTab },
 };
 </script>
 

@@ -1,6 +1,16 @@
 <template>
   <div class="container">
     <div class="row">
+      <div class="col-md-12">
+         <button
+            type="button"
+            class="btn btn-primary fs-4"
+            data-bs-toggle="modal"
+            data-bs-target="#createTournament"
+          >
+            Create Tournament
+          </button>
+      </div>
       <div class="col-md-12 text-center">
         <p class="display-3 roboto">Tournament Details</p>
       </div>
