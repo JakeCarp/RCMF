@@ -4,7 +4,7 @@ import { mySQL } from "./AxiosService.js";
 
 class NewsLetterService {
   async getNewsletterSubscribers() {
-    const res = await mySQL.get("newsletter");
+    const res = await mySQL.get("newsLetter");
     AppState.newsletterSubscribers = res.data.map((n) => new Newsletter(n));
   }
 

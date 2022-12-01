@@ -121,6 +121,7 @@
             tabindex="0"
           >
             <!-- Tab4 -->
+            <TournamentTab/>
             <!-- !Tab4 -->
           </div>
         </div>
@@ -134,13 +135,14 @@ import { computed } from "vue";
 import { AppState } from "../AppState";
 import MembersTab from "../components/adminPage/MembersTab.vue";
 import Tab1 from "../components/adminPage/Tab1.vue";
+import TournamentTab from "../components/adminPage/TournamentTab.vue";
 export default {
   setup() {
     return {
       account: computed(() => AppState.account),
     };
   },
-  components: { Tab1, MembersTab },
+  components: { Tab1, MembersTab, TournamentTab },
 };
 </script>
 

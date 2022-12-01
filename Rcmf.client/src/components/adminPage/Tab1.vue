@@ -72,7 +72,7 @@
         <div class="card p-3 elevation-6 border-0">
           <div class="d-flex justify-content-between">
             <p class="fw-bold">Recent Donors</p>
-                <p v-if="donors">{{total}}</p>
+                <p v-if="donors"> Total ${{total}}</p>
           </div>
           <div class="d-flex justify-content-center">
             <img
@@ -92,7 +92,7 @@
           
               <p>{{ d.name }}</p>
               <p>{{ d.email }}</p>
-              <p>{{ d.amount }}</p>
+              <p>${{ d.amount }}</p>
               <p>{{ d.createdAt }}</p>
             </div>
           </div>
