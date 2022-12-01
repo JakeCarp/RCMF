@@ -40,8 +40,11 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
                SELECT 
                *
                FROM tournaments
-                    ;";
-    return _db.Query<Tournament>(sql).ToList();
+                    ;
+                    ";
+    List<Tournament> tournaments = _db.Query<Tournament>(sql).ToList();
+
+    return tournaments;
   }
 
   public Tournament GetById(int id)
