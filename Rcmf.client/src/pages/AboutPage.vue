@@ -2,9 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
-        <img
-          src="https://images-ext-2.discordapp.net/external/VUMO-JdjQhpPTHQGzprkkSXOMheJUjAd0HYChhUwTLM/https/s3.amazonaws.com/gs-waymarking-images/03a76656-afe3-44cf-8894-9aaf0a305b2f_l.jpg?width=693&height=468"
-          alt="Firefighter Statue" class="rounded m-4 elevation-5">
+        <img src="https://www.bing.com/images/blob?bcid=syaEJ8QJp.MEng" alt="Firefighters Through Fire"
+          class="rounded m-4 elevation-5 heroImg">
       </div>
     </div>
 
@@ -87,5 +86,9 @@ export default {
 
 .navButton {
   width: 15rem;
+}
+
+.heroImg {
+  width: 75%;
 }
 </style>
