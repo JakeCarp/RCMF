@@ -80,7 +80,6 @@ import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import Pop from "../../utils/Pop.js";
 import TournamentCreateForm from "../forms/TournamentCreateForm.vue";
-import VueChart1 from "../VueChart1.vue";
 
 export default {
   props: {},
@@ -108,7 +107,7 @@ export default {
       ),
     };
   },
-  components: { TournamentCreateForm, VueChart1 },
+  components: { TournamentCreateForm},
 };
 </script>
 
