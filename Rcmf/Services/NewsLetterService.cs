@@ -15,4 +15,10 @@ public class NewsletterService
   {
     return _newsletterRepo.Create(newsletterData);
   }
+
+  internal List<NewsLetter> GetAllNewsLetters(string adminId)
+  {
+    Account admin = _accountsService.GetAdminById(adminId);
+    return _newsletterRepo.Get();
+  }
 }
