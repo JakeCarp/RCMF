@@ -56,10 +56,6 @@
               <div class="col-md-8 col-lg-12 d-flex justify-content-center">
                 <h2>About Randy</h2>
               </div>
-              <div class="col-md-6 col-lg-12 d-flex justify-content-center ">
-                <img src="http://ourfallenbrother.org/pictures/randy.jpg" alt="Randy E Carepenter"
-                  class="elevation-5 rounded mb-4">
-              </div>
 
               <div class="col-md-6 col-lg-12 d-flex">
                 <p>Coos Bay Fire Department
