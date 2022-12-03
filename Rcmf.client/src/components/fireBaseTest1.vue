@@ -54,7 +54,7 @@ export default {
       async post() {
         try {
           // await setDoc(doc(db, "chats",id), editable.value);
-          await supabaseService.addSupabaseChat(editable.value);
+        //   await supabaseService.addSupabaseChat(editable.value);
         } catch (error) {
           Pop.error(error, "[]");
         }
