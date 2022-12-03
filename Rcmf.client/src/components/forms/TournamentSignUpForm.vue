@@ -27,8 +27,9 @@
             </div>
             <div class="form-floating mb-3">
               <input
-                type="number"
+                type="phone"
                 class="form-control"
+                pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
                 id="floatingInput"
                 placeholder="name@example.com"
               />
@@ -36,16 +37,15 @@
             </div>
             <div class="form-floating mb-3">
               <input
-                type="email"
                 class="form-control"
                 id="floatingInput"
-                placeholder="name@example.com"
+                placeholder="859-543-2203"
               />
               <label for="floatingInput">ShirtSize</label>
             </div>
             <div class="form-floating mb-3">
               <input
-                type="email"
+                type="text"
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
