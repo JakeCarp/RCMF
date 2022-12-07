@@ -164,7 +164,7 @@ export default {
 
 <style scoped lang="scss">
 .hero-image{
-  height: 50vh;
+  height: 40vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://rare-gallery.com/uploads/posts/527149-firefighter.jpg);
