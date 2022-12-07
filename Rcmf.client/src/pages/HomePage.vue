@@ -35,7 +35,7 @@
         </div>
 
         <div class="card p-5 border-0 mt-5 roboto" v-motion-slide-visible-right>
-          <figure>
+          <figure class="">
             <blockquote class="blockquote">
               <p class="fs-2">
                 <i class="mdi mdi-format-quote-open"></i> PREPARATION is the
