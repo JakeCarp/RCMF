@@ -144,6 +144,25 @@ export default {
 }
 </script>
 <style>
+
+nav .active {
+  border: 0;
+  border-bottom: 5px solid #f5a53c !important;
+  background-color: transparent !important;
+  font-weight: bold;
+}
+nav .nav-link {
+  color: black !important;
+  margin: 0 20px;
+  font-size: 1.5rem;
+  align-items: center;
+  display: flex;
+}
+
+nav .nav-link:hover {
+  border: none;
+  border-bottom: #f5a53c 5px solid !important;
+}
 .navPanel {
   height: 90vh;
   width: auto;
