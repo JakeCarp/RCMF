@@ -1,6 +1,6 @@
 <template>
   <div class="hero-image text-center d-flex align-items-center justify-content-center">
- <h1 class="text-center text-light display-1 ">Our Sponsors</h1>
+ <h1 class="text-center text-light display-1 abril">Our Sponsors</h1>
     </div>
 <div class="container">
      <div class="row justify-content-center">
