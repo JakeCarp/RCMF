@@ -1,23 +1,23 @@
 <template>
   <div class="hero-image text-center d-flex align-items-center justify-content-center">
- <h1 class="text-center text-light display-1 ">Our Sponsors</h1>
-    </div>
-<div class="container">
-     <div class="row justify-content-center">
-      
+    <h1 class="text-center text-light display-1 ">Our Sponsors</h1>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+
       <div class="col-md-12 heroImg elevation-6 my-5">
 
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <SponsorForm/>
+        <SponsorForm />
 
 
       </div>
     </div>
 
-   
+
   </div>
 </template>
 
@@ -31,17 +31,17 @@ import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
 
 export default {
-    props: {},
-    setup(props) {
-        const editable = ref({});
-        onMounted(() => {
-        });
-        watchEffect(() => { });
-        return {
-            editable,
-        };
-    },
-    components: { SponsorForm }
+  props: {},
+  setup(props) {
+    const editable = ref({});
+    onMounted(() => {
+    });
+    watchEffect(() => { });
+    return {
+      editable,
+    };
+  },
+  components: { SponsorForm }
 }
 </script>
 

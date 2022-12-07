@@ -30,7 +30,7 @@ public class TournamentsRepository : BaseRepository, IRepo<Tournament, int>
     var rowsAffected = _db.Execute(sql, new { id });
     if (rowsAffected == 0)
     {
-      throw new Exception("Unable to archive album");
+      throw new Exception("Unable to update tournaments");
     }
   }
 

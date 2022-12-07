@@ -1,11 +1,8 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <img
-          src="https://images.unsplash.com/photo-1554256092-96709174126a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-          alt="Firefighters Through Fire" class="rounded m-4 elevation-5 heroImg">
-      </div>
+
+
+    <div class="hero-image text-center d-flex align-items-center justify-content-center">
+      <h1 class="text-center text-light display-1 text-shadow">About us</h1>
     </div>
 
 
@@ -162,7 +159,7 @@
 
 
 
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -199,9 +196,14 @@ export default {
   width: 15rem;
 }
 
-.heroImg {
-  width: 25rem;
-  height: 30rem;
+.hero-image {
+  background-image: url(https://images.unsplash.com/photo-1575920197509-2de60ffa1b0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1848&q=80);
+  height: 400px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 4px;
 }
 
 .randyPic {
