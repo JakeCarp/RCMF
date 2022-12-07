@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <img alt="logo" src="../assets/img/cw-logo.png" height="45" />
+        <img alt="logo" src="http://ourfallenbrother.org/pictures/helmet.png" height="50" class=""/>
       </div>
     </router-link>
     <button
@@ -19,32 +19,32 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mx-auto gap-5">
         <li>
-          <router-link :to="{ name: 'Home' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'Home' }" class="btn text-danger  selectable text-uppercase">
             Landing
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'About' }" class="btn text-danger  selectable text-uppercase">
             About
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'Sponsor' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'Sponsor' }" class="btn text-danger  selectable text-uppercase">
             Sponsor
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'Tournament' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'Tournament' }" class="btn text-danger  selectable text-uppercase">
             Tournament
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'Donate' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'Donate' }" class="btn text-danger  selectable text-uppercase">
            Donate
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'Admin' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'Admin' }" class="btn text-danger  selectable text-uppercase">
            Admin
           </router-link>
         </li>
