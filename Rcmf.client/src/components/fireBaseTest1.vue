@@ -34,7 +34,7 @@ import Pop from "../utils/Pop.js";
 import { useCollection } from "vuefire";
 import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../services/FireBaseService.js";
-import { supabaseService } from "../services/SupabaseService";
+// import { supabaseService } from "../services/SupabaseService";
 import { set } from "@firebase/database";
 
 export default {

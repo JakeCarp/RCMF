@@ -14,7 +14,19 @@
       </div>
     </div>
     <div class=""></div>
+<ul>
+  <li>
+    Go to facebook page and grab 15-30 photos
 
+  </li>
+  <li>Masonry Layout </li>
+  <li>
+    same hero-image effect on top
+  </li>
+  <li>
+    
+  </li>
+</ul>
     <!-- <div v-masonry="containerId" transition-duration="0.3s" item-selector=".item">
     <div v-masonry-tile class="item" v-for="(item, index) in blocks">
       
