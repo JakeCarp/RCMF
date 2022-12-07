@@ -1,12 +1,15 @@
 <template>
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-md-12 text-center my-3 " v-motion-slide-visible-left>
-        <h1 class="abril display-1">Randy Carpenter Memorial Foundation</h1>
+ <div class="hero-image d-flex align-items-center justify-content-center">
+ <div class="col-md-12 text-center " v-motion-slide-visible-left>
+        <h1 class="abril display-1 text-light text-shadow-2">Randy Carpenter Memorial Foundation</h1>
       </div>
+ </div>
+  <div class="container-fluid mt-5">
+    <div class="row ">
+     
       <div class="col-md-4" v-motion-slide-visible-left>
         <img
-          src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/309310916_462265265948741_4507589102631506885_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=be58jBQBO1YAX8vF_jZ&_nc_ht=scontent-fml2-1.xx&oh=00_AfAWa5YCuvIMUQyprPmIj0aAF6LnbOzoHJxTClaX3RRVHQ&oe=638C58B3"
+          src="https://images.unsplash.com/photo-1666518842815-32acf376466a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
           alt=""
           class="img-fluid rounded elevation-6"
         />
@@ -160,7 +163,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.hero-image{
+  height: 50vh;
+  /* always scale the image to the appropriate size of your screen */
+  background-size: cover;
+  background-image: url(https://rare-gallery.com/uploads/posts/527149-firefighter.jpg);
+  background-position: bottom;
+  /* keeps the image fixed while scrolling , neat effect. */
+  background-attachment: fixed; 
+}
 .three-images{
   height: 30rem;
   width: auto;
