@@ -43,16 +43,84 @@
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
       <!-- Tab2 -->
-  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 my-3 ">
+      The dog (Canis familiaris[4][5] or Canis lupus familiaris[5]) is a domesticated descendant of the wolf. Also called the
+      domestic dog, it is derived from the extinct Pleistocene wolf,[6][7] and the modern wolf is the dog's nearest living
+      relative.[8] Dogs were the first species to be domesticated[9][8] by hunter-gatherers over 15,000 years ago[7] before
+      the development of agriculture.[1] Due to their long association with humans, dogs have expanded to a large number of
+      domestic individuals[10] and gained the ability to thrive on a starch-rich diet that would be inadequate for other
+      canids.[11]
+      
+      The dog has been selectively bred over millennia for various behaviors, sensory capabilities, and physical
+      attributes.[12] Dog breeds vary widely in shape, size, and color. They perform many roles for humans, such as hunting,
+      herding, pulling loads, protection, assisting police and the military, companionship, therapy, and aiding disabled
+      people. Over the millennia, dogs became uniquely adapted to human behavior, and the human-canine bond has been a topic
+      of frequent study.[13] This influence on human society has given them the sobriquet of "man's best friend".
+      </div>
+    </div>
+  </div>
       <!-- !Tab2 -->
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
       <!-- Tab3 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 my-3 ">
+            The cat (Felis catus) is a domestic species of small carnivorous mammal.[1][2] It is the only domesticated species in
+            the family Felidae and is commonly referred to as the domestic cat or house cat to distinguish it from the wild members
+            of the family.[4] Cats are commonly kept as house pets but can also be farm cats or feral cats; the feral cat ranges
+            freely and avoids human contact.[5] Domestic cats are valued by humans for companionship and their ability to kill
+            rodents. About 60 cat breeds are recognized by various cat registries.[6]
+            
+            The cat is similar in anatomy to the other felid species: it has a strong flexible body, quick reflexes, sharp teeth,
+            and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Cat
+            communication includes vocalizations like meowing, purring, trilling, hissing, growling, and grunting as well as
+            cat-specific body language. Although the cat is a social species, it is a solitary hunter. As a predator, it is
+            crepuscular, i.e. most active at dawn and dusk. It can hear sounds too faint or too high in frequency for human ears,
+            such as those made by mice and other small mammals.[7] It also secretes and perceives pheromones.[8]
+            
+            Female domestic cats can have kittens from spring to late autumn, with litter sizes often ranging from two to five
+            kittens.[9] Domestic cats are bred and shown at events as registered pedigreed cats, a hobby known as cat fancy.
+            Population control of cats may be effected by spaying and neutering, but their proliferation and the abandonment of pets
+            has resulted in large numbers of feral cats worldwide, contributing to the extinction of entire bird, mammal, and
+            reptile species.[10]
+            
+            It was long thought that cat domestication began in ancient Egypt, where cats were venerated from around 3100
+            BC,[11][12] but recent advances in archaeology and genetics have shown that their domestication occurred in Western Asia
+            around 7500 BC.[13]
+            
+            As of 2021, there were an estimated 220 million owned and 480 million stray cats in the world.[14][15] As of 2017, the
+            domestic cat was the second most popular pet in the United States, with 95.6 million cats owned[16][17][18] and around
+            42 million households owning at least one cat.[19] In the United Kingdom, 26% of adults have a cat, with an estimated
+            population of 10.9 million pet cats as of 2020
+          </div>
+        </div>
+      </div>
       <!-- !Tab3 -->
     </div>
     <div class="tab-pane fade" id="nav-fourth" role="tabpanel" aria-labelledby="nav-fourth-tab" tabindex="0">
       <!-- Tab4 -->
-     
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 my-3 ">
+          Lizards are a widespread group of squamate reptiles, with over 7,000 species,[1] ranging across all continents except
+          Antarctica, as well as most oceanic island chains. The group is paraphyletic since it excludes the snakes and
+          Amphisbaenia although some lizards are more closely related to these two excluded groups than they are to other lizards.
+          Lizards range in size from chameleons and geckos a few centimeters long to the 3-meter-long Komodo dragon.
+          
+          Most lizards are quadrupedal, running with a strong side-to-side motion. Some lineages (known as "legless lizards"),
+          have secondarily lost their legs, and have long snake-like bodies. Some such as the forest-dwelling Draco lizards are
+          able to glide. They are often territorial, the males fighting off other males and signalling, often with bright colours,
+          to attract mates and to intimidate rivals. Lizards are mainly carnivorous, often being sit-and-wait predators; many
+          smaller species eat insects, while the Komodo eats mammals as big as water buffalo.
+          
+          Lizards make use of a variety of antipredator adaptations, including venom, camouflage, reflex bleeding, and the ability
+          to sacrifice and regrow their tails.
+        </div>
+      </div>
+    </div>
       <!-- !Tab4 -->
     </div>
   </div>
