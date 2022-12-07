@@ -15,16 +15,16 @@
       </button>
       <button v-motion-pop class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
         type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-        <i class="mdi mdi-account fs-2 me-1"></i> Members
+       Dogs
       </button>
       <button v-motion-pop class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
         type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-        Contact
+        Cats
       </button>
 
       <button v-motion-pop class="nav-link" id="nav-fourth-tab" data-bs-toggle="tab" data-bs-target="#nav-fourth"
         type="button" role="tab" aria-controls="nav-fourth" aria-selected="false">
-        Events
+        Lizards
       </button>
     </div>
   </nav>
@@ -33,7 +33,7 @@
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
       <!-- Tab1 -->
       <Tab1 />
-      lorem
+      
       <!-- !Tab1 -->
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
