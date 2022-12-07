@@ -1,10 +1,10 @@
 import { reactive } from "vue";
-// import { supabase } from "./utils/Supabase.js";
+
+
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
   user: {},
   account: {},
-  supabase: [],
 loader:0,
   members: [],
 

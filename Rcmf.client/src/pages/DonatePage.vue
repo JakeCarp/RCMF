@@ -18,23 +18,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div class="col-md-12">DONATE PAGE</div>
-      <div>
-        <form @submit.prevent="handleDonate()">
-          <textarea type="text" src="" alt="" v-model="editable" rows="4" />
-          <button type="submit">donate</button>
-        </form>
-      </div>
-      <div>
-        <ul>
-          <li v-for="s in supa">
-            <div>{{s}}</div>
-          </li>
-        </ul>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -44,7 +27,7 @@ import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import DonateForm from "../components/forms/DonateForm.vue";
 import { firesService } from "../services/FireBaseService.js";
-import { supabaseService } from "../services/SupabaseService";
+
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -55,13 +38,9 @@ export default {
         onMounted(() => {
             getChats();
         });
-        watchEffect(() => { });
-        async function getChats() {
-            await supabaseService.getChats();
-        }
+   
         return {
             editable,
-            supa: computed(() => AppState.supabase),
             components: { DonateForm, DonateForm }
         };
     },

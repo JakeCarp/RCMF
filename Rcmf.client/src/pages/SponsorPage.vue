@@ -15,23 +15,9 @@
 
 
       </div>
-</div>
-    <!-- <div class="row">
-      <div class="col-md-12">DONATE PAGE</div>
-      <div>
-        <form @submit.prevent="handleDonate()">
-          <textarea type="text" src="" alt="" v-model="editable" rows="4" />
-          <button type="submit">donate</button>
-        </form>
-      </div>
-      <div>
-        <ul>
-          <li v-for="s in supa">
-            <div>{{s}}</div>
-          </li>
-        </ul>
-      </div>
-    </div> -->
+    </div>
+
+   
   </div>
 </template>
 
