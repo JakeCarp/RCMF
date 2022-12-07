@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="my-3 text-center">
-      <h1 class="abril display-3">Tournament</h1>
+      <h1 class="abril display-3 text-shadow-2">Tournament</h1>
     </div>
     <!-- <FireBaseTest1/> -->
 
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class=""></div>
-<ul>
+<ul> 
   <li>
     Go to facebook page and grab 15-30 photos
 
@@ -24,7 +24,7 @@
     same hero-image effect on top
   </li>
   <li>
-    
+
   </li>
 </ul>
     <!-- <div v-masonry="containerId" transition-duration="0.3s" item-selector=".item">
@@ -39,7 +39,6 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
-import FireBaseTest1 from "../components/fireBaseTest1.vue";
 
 import TournamentSignUpForm from "../components/forms/TournamentSignUpForm.vue";
 import { logger } from "../utils/Logger.js";
@@ -55,7 +54,7 @@ export default {
       editable,
     };
   },
-  components: { TournamentSignUpForm, FireBaseTest1, FireBaseTest1 },
+  components: { TournamentSignUpForm },
 };
 </script>
 
