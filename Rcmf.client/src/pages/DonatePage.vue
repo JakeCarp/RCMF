@@ -36,7 +36,7 @@ export default {
     setup(props) {
         const editable = ref("");
         onMounted(() => {
-            getChats();
+       
         });
    
         return {
