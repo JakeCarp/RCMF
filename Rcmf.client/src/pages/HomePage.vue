@@ -56,10 +56,12 @@
 
             <blockquote class="p-4">
               <p class="fs-5 fw-bold text-start">
-                I have from an early age abjured the use of meat, and the time
-                will come when men such as I will look upon the murder of
-                animals as they now look upon the murder of men.
-              </p>
+                "PREPARATION
+                is the SEPARATION
+                between being a
+                good Firefighter
+                - or becoming the BEST"
+                Capt. Randy Carpenter              </p>
               <figcaption class="blockquote-footer fs-5 mt-2 text-center">
                 Captain Randy Carpenter
               </figcaption>
