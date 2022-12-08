@@ -27,7 +27,14 @@ body{
 }
 
 
-
+.hover-2{
+  transition: all 0.25s ease;
+}
+.hover-2:hover{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transform: scale(1.03);
+  filter: brightness(80%);
+}
 
 
 

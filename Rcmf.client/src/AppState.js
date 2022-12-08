@@ -28,6 +28,7 @@ monthTotal : 0,
   /** @type {import('./models/Team.js').Team.js[]} */
   teams: [],
 
+  photos:[],
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
 

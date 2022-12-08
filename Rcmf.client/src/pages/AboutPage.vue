@@ -1,7 +1,7 @@
 <template>
 
 
-    <div class="hero-image text-center d-flex align-items-center justify-content-center">
+    <div class="hero-image text-center d-flex align-items-center justify-content-center" >
       <h1 class="text-center text-light display-1 text-shadow abril">Who We Are</h1>
     </div>
 
@@ -144,6 +144,9 @@ export default {
 }
 </script>
 <style>
+
+
+
 
 nav .active {
   border: 0;

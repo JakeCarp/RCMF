@@ -33,46 +33,30 @@ import { useFirestore } from "@vueuse/firebase/useFirestore";
 
 //  export const db = getFirestore(app);
 // export const dateTest =
-// export const test = 
+// export const test =
 export const chats = useFirestore(collection(db, "chats"));
-export const  chatsRef = collection(db, "chats");
+export const chatsRef = collection(db, "chats");
 const use = useCollection(chatsRef);
 import { useCollection } from "vuefire";
 import { set } from "firebase/database";
+import { getDownloadURL, getStorage, listAll, ref } from "firebase/storage";
+import { AppState } from "../AppState.js";
 
 // const chat = db.collection("chats")
 // const chatsRef = FirebaseDocRef(collection(db,"chats"))
 
 class FiresService {
-  async addChat(chatsData) {
-    // console.log(app);
-    // console.log(db);
+  async getFaceBookPictures() {
+    const storage = getStorage();
+    const storageRef = ref(storage);
+    const imagesRef = ref(storage, "facebookPictures");
+    const test = await listAll(imagesRef);
 
-    console.log(firebaseApp);
-    console.log(chatsRef);
-    console.log(use.value);
-    // console.log(chats.collection());
-
-    const res = await set(db, "chats");
+    for await (const x of test.items) {
+      let test = await getDownloadURL(x);
+      AppState.photos.push(test);
+    }
   }
-
-  async createMessage() {
-
-    
-    let id = this.generateId();
-   
-    // await setDoc(doc(db, "chats", id), {
-    //   text: editable.value,
-    //   createdAt: serverTimestamp(),
-    //   uid: AppState.account.id,
-    //   photoUrl: AppState.account.picture,
-    // });
-
-
-   
-  }
-  //
-
   generateId() {
     let timestamp = ((new Date().getTime() / 1000) | 0).toString(16);
     return (
