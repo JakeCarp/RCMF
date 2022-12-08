@@ -14,12 +14,7 @@
       </div>
     </div>
     <div class=""></div>
-    <ul>
-      <li>Go to facebook page and grab 15-30 photos</li>
-      <li>Masonry Layout</li>
-      <li>same hero-image effect on top</li>
-      <li></li>
-    </ul>
+   
     <!-- <div
       v-masonry="containerId"
       transition-duration="0.3s"
@@ -32,7 +27,6 @@
     <div class="brick my-5 p-5">
       <div class="" v-for="i in images" v-if="images">
         <div class="card my-3">
-
           <img :src="i" alt="" class="image-fluid">
         </div>
       </div>

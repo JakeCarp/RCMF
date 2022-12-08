@@ -1,12 +1,17 @@
 <template>
+  <div class="heroImg d-flex align-items-center justify-content-center">
+    <div class="col-md-12 text-center" v-motion-slide-left :delay="600">
+      
+    </div>
+  </div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-12 text-center my-3">
         <h1 class="display-3 abril"> Donation Page</h1>
       </div>
-      <div class="col-md-12 heroImg elevation-6 mb-5 mt-2">
+      <!-- <div class="col-md-12 heroImg elevation-6 mb-5 mt-2">
 
-      </div>
+      </div> -->
       <div class="row my-5">
         <div class="col-md-6">
 <DonateForm/>
