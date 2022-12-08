@@ -1,21 +1,21 @@
 <template>
  <div class="hero-image d-flex align-items-center justify-content-center">
- <div class="col-md-12 text-center " v-motion-slide-visible-left>
-        <h1 class="abril display-1 text-light text-shadow-2">Randy Carpenter Memorial Foundation</h1>
+ <div class="col-md-12 text-center " v-motion-slide-left :delay="600">
+        <h1 class="hero-text font-1 text-light px-5 text-shadow-2">Randy Carpenter Memorial Foundation</h1>
       </div>
  </div>
   <div class="container-fluid mt-5">
     <div class="row ">
      
-      <div class="col-md-4" v-motion-slide-visible-left>
+      <div class="col-md-5 d-flex align-items-center justify-content-center" v-motion-slide-left :delay="300">
         <img
-          src="https://images.unsplash.com/photo-1666518842815-32acf376466a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+          src="https://scontent-fml2-1.xx.fbcdn.net/v/t1.18169-9/154320_466267117079_6118989_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=WDMrIYo_jxIAX-lfkcp&_nc_ht=scontent-fml2-1.xx&oh=00_AfDZpQIltUKPbi9QmLLR50ZFMIYJ2UPHLmUZEsWoVSae5w&oe=63B8D3E0"
           alt=""
-          class="img-fluid rounded elevation-6"
+          class="img-fluid  image-2 rounded elevation-6"
         />
       </div>
-      <div class="col-md-8" v-motion-slide-visible-right>
-        <div class="card elevation-2 border-0 p-3 d-flex justify-content-around" v-motion-slide-visible-right>
+      <div class="col-md-7" v-motion-slide-right :delay="300">
+        <div class="card border-0 p-3 d-flex justify-content-around" v-motion-slide-right :delay="300">
           <div class="d-flex ">
 
             <a href="#tournament" class="text-dark mx-auto">
@@ -34,18 +34,26 @@
           </div>
         </div>
 
-        <div class="card p-5 border-0 mt-5 roboto" v-motion-slide-visible-right>
+        <div class="card p-5 border-0 mt-5 roboto" v-motion-slide-right :delay="300">
           <figure class="">
-            <blockquote class="blockquote">
-              <p class="fs-2">
+      
+              <!-- <p class="fs-2">
                 <i class="mdi mdi-format-quote-open"></i> PREPARATION is the
                 SEPARATION between being a good Firefighter - or becoming the
                 BEST <i class="mdi mdi-format-quote-close"></i>
-              </p>
-            </blockquote>
-            <figcaption class="blockquote-footer fs-5 mt-2 text-center">
+              </p> -->
+
+      
+                <blockquote class="p-4">
+		<p class="fs-5 fw-bold text-start">I have from an early age abjured the use of meat, and the time will come when men such as I will look upon the murder of animals as they now look upon the murder of men.</p>
+		  <figcaption class="blockquote-footer fs-5 mt-2 text-center">
               Captain Randy Carpenter
             </figcaption>
+	
+	</blockquote>
+       
+      
+          
           </figure>
         </div>
       </div>
@@ -54,9 +62,9 @@
 
     
   
-    <div class="row justify-content-evenly my-5 bg-grey">
+    <div class="row justify-content-evenly my-5 bg-primary ">
        <div class="col-md-12 my-5" v-motion-slide-visible-right>
-        <h2 class="display-4 abril">Providing Firefighters With..</h2>
+        <h2 class="display-4 font-1">Providing Firefighters With..</h2>
       </div>
       <div class="col-md-3" v-motion-slide-visible-right>
         <img
@@ -66,7 +74,7 @@
         />
         <div class="">
           <p
-            class="fs-3 mb-0 abril"
+            class="fs-3 mb-0 font-1"
         
           >
             Fire Ground Training
@@ -82,7 +90,7 @@
         />
   <div class="">
           <p
-            class="fs-3 mb-0 abril"
+            class="fs-3 mb-0 font-1"
         
           >
             Lorem ipsum dolor
@@ -98,7 +106,7 @@
         />
           <div class="">
           <p
-            class="fs-3 mb-0 abril"
+            class="fs-3 mb-0 font-1"
         
           >
             Lorem ipsum dolor
@@ -109,17 +117,30 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-12 text-center" v-motion-slide-visible-right>
-        <h3 class="abril display-5 my-5">Our Sponsors</h3>
+        <h3 class="font-1 display-3 ">Sponsors</h3>
       </div>
-      <div class="col-md-10 my-5" v-motion-slide-visible-right>
-        <div class="card border-0">
-          <img
-            src="https://images.unsplash.com/photo-1666872173125-785f3b135494?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
-            alt=""
-            class="img-fluid rounded elevation-6"
-          />
-          
-        </div>
+      <div class="col-md-8 mb-5" v-motion-slide-visible-right>
+     <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+  <div class="carousel-inner elevation-6 rounded-1">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1524856781660-e5c92f4ac62a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1614338577197-5812cb856df7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1504667290505-eee11f23905a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
       </div>
     </div>
   </div>
@@ -163,15 +184,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.image-2{
+  height: 600px;
+  object-fit: cover;
+}
 .hero-image{
   height: 40vh;
   /* always scale the image to the appropriate size of your screen */
-  background-size: cover;
-  background-image: url(https://rare-gallery.com/uploads/posts/527149-firefighter.jpg);
-  background-position: bottom;
+  background-size: 100%;
+  background-image: url(https://images.unsplash.com/photo-1524856781660-e5c92f4ac62a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: center top;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed; 
+  .hero-text{
+    font-size: 6rem;
+  }
 }
+
 .three-images{
   height: 30rem;
   width: auto;
@@ -220,6 +250,7 @@ export default {
   padding: 17px 60px;
   margin: 0 auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  transition: all 0.5s ease;
 }
 .btn:hover{
    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -269,5 +300,85 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed; 
+}
+
+blockquote {
+	position: relative;
+	margin: 40px 0;
+	border: 2px solid white;
+	box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
+	text-indent: 1.6em;
+  transition: all 0.5s ease;
+}
+
+blockquote::before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: var(--border-rad);
+ box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+blockquote::after {
+	content: "❝";
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: -2px;
+	transform: translate(-50%, -50%);
+	width: 1.3em;
+	height: 1.3em;
+	background: white;
+	box-shadow: 0 4px 5px -1px hsla(0 0% 0% / 20%);
+	border-radius: 999px;
+	display: grid;
+	place-content: center;
+	padding-top: .5em;
+	color: var(--accent-color);
+	font-size: 36px;
+	font-style: normal;
+	text-indent: 0;
+}
+
+
+blockquote:hover{
+  transition: all 0.5s ease;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+
+
+
+.controls {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	font-size: 0.8em;
+	opacity: 0.7;
+	transition: .2s;
+}
+
+.controls:hover,
+.controls:focus {
+	opacity: 1;
+}
+
+.controls label {
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+.controls input {
+	display: block;
+	width: 100%;
+	border: 0;
+	outline: none;
+	padding: 0;
 }
 </style>

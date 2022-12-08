@@ -12,20 +12,20 @@
   <!-- NavButtons -->
   <nav>
     <div class="nav nav-tabs rounded justify-content-center justify-content-evenly" id="nav-tab" role="tablist">
-      <button v-motion-pop class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+      <button v-motion-pop class="nav-link active border-0 " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
         type="button" role="tab" aria-controls="nav-home" aria-selected="true">
         <i class="mdi mdi-view-dashboard me-1"></i> DashBoard
       </button>
-      <button v-motion-pop class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+      <button v-motion-pop class="nav-link  border-0 " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
         type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
        Dogs
       </button>
-      <button v-motion-pop class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+      <button v-motion-pop class="nav-link  border-0 " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
         type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
         Cats
       </button>
 
-      <button v-motion-pop class="nav-link" id="nav-fourth-tab" data-bs-toggle="tab" data-bs-target="#nav-fourth"
+      <button v-motion-pop class="nav-link  border-0 " id="nav-fourth-tab" data-bs-toggle="tab" data-bs-target="#nav-fourth"
         type="button" role="tab" aria-controls="nav-fourth" aria-selected="false">
         Lizards
       </button>
@@ -37,8 +37,8 @@
       <!-- Tab1 -->
    <div class="container-fluid ">
      <div class="row">
-       <div class="col-md-12 my-3 ">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid praesentium quaerat totam odit ea delectus est debitis obcaecati! Ex tempore doloribus laboriosam illum similique, earum nostrum cum labore rerum nam aliquid tempora dolor maxime sequi excepturi pariatur vel nobis rem ea magni quod repellendus dolorem perferendis. Delectus hic tempore eveniet beatae ratione porro voluptates dolorum rerum rem vitae incidunt natus est distinctio minima, adipisci suscipit deleniti architecto nostrum assumenda quae omnis atque animi dicta cumque. Voluptas voluptatum, sequi incidunt, enim perspiciatis ut labore accusantium dolore inventore, suscipit facilis dolor alias. Reiciendis eos possimus architecto eaque facilis quaerat ratione vitae error. Optio ab commodi, odit doloribus error sint et totam debitis veritatis perferendis. Deleniti, tempora assumenda. Itaque natus ullam consectetur optio! Voluptates corporis fugit incidunt ipsum, aperiam cumque nostrum ex facilis tempore dolores qui facere nesciunt aliquam mollitia porro deserunt repellat fugiat ut ea? Nisi at voluptates delectus corrupti eum ratione nesciunt eaque architecto tempore recusandae rerum consectetur tempora deleniti commodi vitae, alias suscipit aspernatur vel corporis! Eveniet delectus soluta libero nobis, error totam eligendi suscipit! Blanditiis velit perferendis nihil enim voluptatibus tenetur quibusdam architecto eos itaque alias. Sit voluptates consequuntur libero minus in odit, ea iusto eius nemo laborum.
+       <div class="col-md-12 my-3 p-5">
+      <p class="fs-4 ">   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid praesentium quaerat totam odit ea delectus est debitis obcaecati! Ex tempore doloribus laboriosam illum similique, earum nostrum cum labore rerum nam aliquid tempora dolor maxime sequi excepturi pariatur vel nobis rem ea magni quod repellendus dolorem perferendis. Delectus hic tempore eveniet beatae ratione porro voluptates dolorum rerum rem vitae incidunt natus est distinctio minima, adipisci suscipit deleniti architecto nostrum assumenda quae omnis atque animi dicta cumque. Voluptas voluptatum, sequi incidunt, enim perspiciatis ut labore accusantium dolore inventore, suscipit facilis dolor alias. Reiciendis eos possimus architecto eaque facilis quaerat ratione vitae error. Optio ab commodi, odit doloribus error sint et totam debitis veritatis perferendis. Deleniti, tempora assumenda. Itaque natus ullam consectetur optio! Voluptates corporis fugit incidunt ipsum, aperiam cumque nostrum ex facilis tempore dolores qui facere nesciunt aliquam mollitia porro deserunt repellat fugiat ut ea? Nisi at voluptates delectus corrupti eum ratione nesciunt eaque architecto tempore recusandae rerum consectetur tempora deleniti commodi vitae, alias suscipit aspernatur vel corporis! Eveniet delectus soluta libero nobis, error totam eligendi suscipit! Blanditiis velit perferendis nihil enim voluptatibus tenetur quibusdam architecto eos itaque alias. Sit voluptates consequuntur libero minus in odit, ea iusto eius nemo laborum.</p>
        </div>
      </div>
    </div>
@@ -157,6 +157,7 @@ nav .nav-link {
   font-size: 1.5rem;
   align-items: center;
   display: flex;
+  border: none;
 }
 
 nav .nav-link:hover {

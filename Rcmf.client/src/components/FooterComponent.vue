@@ -5,11 +5,123 @@
       style="background-color: rgba(0, 0, 0, 0.2)"
     ></div>
     <section class="d-flex justify-content-end d-none d-md-flex">
-      <div class="d-flex align-items-end me-md-3">
-        <p class="abril fs-3 ">Proud Sponsors</p>
-      </div>
-      <div class="d-flex">
-        <div class="card bg-light p-1 elevation-5 m-md-2">
+    
+      <div class="d-flex marquee">
+        <ul class="marquee-content">
+          <li>
+              <img
+            src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
+            alt=""
+            class="img-fluid m-md-2"
+            width="220"
+          />
+          </li>
+          <li>
+                 <img
+            src="http://pictures.dealer.com/t/teammazdasubaru/0516/de54bce8b069b739700d80f6c18ead60x.jpg"
+            alt=""
+            class="img-fluid"
+            width="200"
+          />
+          </li>
+          <li>
+                <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+          <li>
+              <img
+              src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
+              alt=""
+              class="img-fluid"
+              width="200 "
+            />
+          </li>
+          <li>
+             <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+            <li>
+                <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+          <li>
+              <img
+              src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
+              alt=""
+              class="img-fluid"
+              width="200 "
+            />
+          </li>
+       <li>
+                <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+          <li>
+              <img
+              src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
+              alt=""
+              class="img-fluid"
+              width="200 "
+            />
+          </li>
+        <li>
+              <img
+            src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
+            alt=""
+            class="img-fluid m-md-2"
+            width="220"
+          />
+          </li>
+          <li>
+                 <img
+            src="http://pictures.dealer.com/t/teammazdasubaru/0516/de54bce8b069b739700d80f6c18ead60x.jpg"
+            alt=""
+            class="img-fluid"
+            width="200"
+          />
+          </li>
+          <li>
+                <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+          <li>
+              <img
+              src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
+              alt=""
+              class="img-fluid"
+              width="200 "
+            />
+          </li>
+          <li>
+             <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </li>
+        </ul>
+        <!-- <div class="card bg-light p-1 elevation-5 m-md-2 marquee-content">
           <img
             src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
             alt=""
@@ -18,7 +130,7 @@
           />
         </div>
         <div
-          class="rounded bg-light p-1 elevation-5 m-md-2 d-flex align-items-center"
+          class="rounded marquee-content bg-light p-1 elevation-5 m-md-2 d-flex align-items-center"
         >
           <img
             src="http://pictures.dealer.com/t/teammazdasubaru/0516/de54bce8b069b739700d80f6c18ead60x.jpg"
@@ -28,7 +140,7 @@
           />
         </div>
         <a href="https://www.cabelas.com/shop/en#">
-          <div class="rounded bg-light p-1 text-center elevation-5 m-md-2 px-4">
+          <div class="rounded marquee-content bg-light p-1 text-center elevation-5 m-md-2 px-4">
             <img
               src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
               alt=""
@@ -39,7 +151,7 @@
         </a>
 
         <a href="https://www.iddk.com/">
-          <div class="rounded bg-primary p-1 m-md-2 px-4 text-center elevation-5">
+          <div class="rounded marquee-content bg-primary p-1 m-md-2 px-4 text-center elevation-5">
             <img
               src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
               alt=""
@@ -48,6 +160,45 @@
             />
           </div>
         </a>
+        <div class="card bg-light p-1 elevation-5 m-md-2 marquee-content">
+          <img
+            src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
+            alt=""
+            class="img-fluid m-md-2"
+            width="220"
+          />
+        </div>
+        <div
+          class="rounded marquee-content bg-light p-1 elevation-5 m-md-2 d-flex align-items-center"
+        >
+          <img
+            src="http://pictures.dealer.com/t/teammazdasubaru/0516/de54bce8b069b739700d80f6c18ead60x.jpg"
+            alt=""
+            class="img-fluid"
+            width="200"
+          />
+        </div>
+        <a href="https://www.cabelas.com/shop/en#">
+          <div class="rounded marquee-content bg-light p-1 text-center elevation-5 m-md-2 px-4">
+            <img
+              src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/cabelas-logo-2x.png"
+              alt=""
+              class="img-fluid rounded"
+              width="150"
+            />
+          </div>
+        </a>
+
+        <a href="https://www.iddk.com/">
+          <div class="rounded marquee-content bg-primary p-1 m-md-2 px-4 text-center elevation-5">
+            <img
+              src="https://i0.wp.com/iddk.com/wp-content/themes/dk-new/logo@2x.png"
+              alt=""
+              class="img-fluid"
+              width="200 "
+            />
+          </div>
+        </a> -->
       </div>
     
       <div class="d-flex text-center align-items-center d-flex">
@@ -108,7 +259,7 @@
             <p><i class="fas fa-phone mr-3"></i> + 208 234 567 88</p>
           </div>
 
-          <div class="col-md-3 mobile-Sponsors">
+          <div class="col-md-3 mobile-Sponsors  ">
             <div class="card bg-light p-1 elevation-5 mb-2">
               <img
                 src="https://www.rosenbaueramerica.com/wp-content/themes/bootscore-5-child/img/logo/rosenbauer-logo.png"
@@ -179,6 +330,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.marquee{
+  width: 80vw;
+  height: 10vh;
+
+  overflow: hidden;
+}
+.marquee-content{
+  list-style: none;
+  height: 50%;
+  display: flex;
+  animation: scrolling 10s linear infinite;
+  animation-duration: 20s;
+  
+}
+
+@keyframes scrolling{
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-180vw);}
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  flex-shrink:0;
+  white-space:nowrap
+}
 .forcedImg {
   height: 80px;
   width: 80px;

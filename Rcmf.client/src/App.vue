@@ -60,7 +60,7 @@ export default {
 @import "./assets/scss/main.scss";
 
 :root {
-  --main-height: calc(100vh - 32px - 64px);
+  --main-height: calc(100vh - 32px - 85px);
 }
 
 
