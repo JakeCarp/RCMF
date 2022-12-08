@@ -25,11 +25,11 @@
           v-motion-slide-right
           :delay="300"
         >
-          <div class="d-md-flex ">
+          <div class="d-md-flex">
             <a href="#tournament" class="text-dark mx-auto">
               <button class="btn p-3">Sign Up for Golf tournament</button>
             </a>
-            <a href="#donate" class="text-dark ">
+            <a href="#donate" class="text-dark">
               <button class="btn p-3 my-3 my-md-0">Make a Donation</button>
             </a>
             <button
@@ -43,7 +43,7 @@
         </div>
 
         <div
-          class="card p-5 border-0 mt-5 roboto"
+          class="card p-md-5 border-0 mt-5 roboto"
           v-motion-slide-right
           :delay="300"
         >
@@ -54,7 +54,7 @@
                 BEST <i class="mdi mdi-format-quote-close"></i>
               </p> -->
 
-            <blockquote class="p-4">
+            <blockquote class="p-5">
               <p class="fs-5 fw-bold text-start">
                 "PREPARATION
                 is the SEPARATION
@@ -175,15 +175,15 @@ export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
-      getFaceBookPictures()
+      getFaceBookPictures();
     });
 
-    async function getFaceBookPictures(){
+    async function getFaceBookPictures() {
       try {
-          await  firesService.getFaceBookPictures()
-        } catch (error) {
-          Pop.error(error,'[getFaceBookPictures]')
-        }
+        await firesService.getFaceBookPictures();
+      } catch (error) {
+        Pop.error(error, "[getFaceBookPictures]");
+      }
     }
 
     function hideOnScrollTest() {
@@ -223,8 +223,17 @@ export default {
   background-position: center top;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  height: 30vh;
+  }
   .hero-text {
-    font-size: 40pt;
+    font-size: 5.5rem;
+    //when screen is 768px OR LESS
+    @media only screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -410,8 +419,8 @@ blockquote:hover {
 
 @media screen and (min-width: 768px) {
   .hero-text {
-      font-size: 2rem;
-      color: #000;
-    }
+    font-size: 2rem;
+    color: #000;
+  }
 }
 </style>
