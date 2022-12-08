@@ -48,7 +48,7 @@ import { AppState } from "../AppState.js";
 class FiresService {
   async getFaceBookPictures() {
     const storage = getStorage();
-    const storageRef = ref(storage);
+   
     const imagesRef = ref(storage, "facebookPictures");
     const test = await listAll(imagesRef);
 
