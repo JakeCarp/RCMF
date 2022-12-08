@@ -1,9 +1,9 @@
 <template>
   <div class="hero-image d-flex align-items-center justify-content-center">
     <div class="col-md-12 text-center" v-motion-slide-left :delay="600">
-      <h1 class="hero-text font-1 text-light px-5 text-shadow-2">
+      <p class="hero-text font-1 text-light px-5 text-shadow-2">
         Randy Carpenter Memorial Foundation
-      </h1>
+      </p>
     </div>
   </div>
   <div class="container-fluid mt-5">
@@ -25,12 +25,12 @@
           v-motion-slide-right
           :delay="300"
         >
-          <div class="d-flex">
+          <div class="d-md-flex ">
             <a href="#tournament" class="text-dark mx-auto">
               <button class="btn p-3">Sign Up for Golf tournament</button>
             </a>
-            <a href="#donate" class="text-dark">
-              <button class="btn p-3">Make a Donation</button>
+            <a href="#donate" class="text-dark ">
+              <button class="btn p-3 my-3 my-md-0">Make a Donation</button>
             </a>
             <button
               class="btn p-3"
@@ -216,13 +216,13 @@ export default {
 .hero-image {
   height: 40vh;
   /* always scale the image to the appropriate size of your screen */
-  background-size: 100%;
+  background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1524856781660-e5c92f4ac62a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   background-position: center top;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
   .hero-text {
-    font-size: 6rem;
+    font-size: 40pt;
   }
 }
 
@@ -404,5 +404,12 @@ blockquote:hover {
   border: 0;
   outline: none;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text {
+      font-size: 2rem;
+      color: #000;
+    }
 }
 </style>

@@ -10,7 +10,7 @@
       <div class="row">
       <div class="col-md-12 my-5">
   <!-- NavButtons -->
-  <nav>
+  <nav class="">
     <div class="nav nav-tabs rounded justify-content-center justify-content-evenly" id="nav-tab" role="tablist">
       <button v-motion-pop class="nav-link active border-0 " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
         type="button" role="tab" aria-controls="nav-home" aria-selected="true">
