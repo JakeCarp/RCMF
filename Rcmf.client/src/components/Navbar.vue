@@ -66,7 +66,9 @@ export default {
 </script>
 
 <style scoped>
-
+.btn{
+  font-size: 1.5rem;
+}
 .btn:hover{
     border-bottom: 4px solid var(--bs-danger) !important;
     border: 0;

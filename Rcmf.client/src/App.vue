@@ -15,21 +15,26 @@
   <ModalComponent id="newsletterForm">
 <NewsLetterForm/>
   </ModalComponent>
+  <ModalComponent id="activeImage">
+<ActiveImage/>
+  </ModalComponent>
 </template>
 
 <script>
 import { computed, onMounted } from "vue";
 import { AppState } from "./AppState";
+import ActiveImage from "./components/ActiveImage.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import NewsLetterForm from "./components/forms/ NewsLetterForm.vue";
 import TournamentCreateForm from "./components/forms/TournamentCreateForm.vue";
 import ModalComponent from "./components/ModalComponent.vue";
 import Navbar from "./components/Navbar.vue";
+import { firesService } from "./services/FireBaseService.js";
 
 export default {
   setup() {
     onMounted(() => {
-      // hideOnScrollTest();
+     getFaceBookPictures()
     });
 
     // function hideOnScrollTest() {
@@ -49,11 +54,23 @@ export default {
     //     prevScrollpos = currentScrollPos;
     //   };
     // }
+     async function getFaceBookPictures() {
+      try {
+        AppState.loading = false
+        let ok =   await firesService.getFaceBookPictures();
+        if (ok) {
+          
+          AppState.loading = true
+     }
+      } catch (error) {
+        Pop.error(error, "[getFaceBookPictures]");
+      }
+    }
     return {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, FooterComponent, ModalComponent, TournamentCreateForm, NewsLetterForm },
+  components: { Navbar, FooterComponent, ModalComponent, TournamentCreateForm, NewsLetterForm, ActiveImage },
 };
 </script>
 <style lang="scss">

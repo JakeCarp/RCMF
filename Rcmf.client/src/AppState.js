@@ -29,6 +29,8 @@ monthTotal : 0,
   teams: [],
 
   photos:[],
+
+  loading:false,
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
 

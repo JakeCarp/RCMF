@@ -26,14 +26,17 @@ import { AppState } from "../AppState.js";
 class FiresService {
   async getFaceBookPictures() {
     const storage = getStorage();
-   
+
     const imagesRef = ref(storage, "facebookPictures");
     const test = await listAll(imagesRef);
-
+    console.log(test);
     for await (const x of test.items) {
       let test = await getDownloadURL(x);
       AppState.photos.push(test);
     }
+    return test;
+
+    
   }
   generateId() {
     let timestamp = ((new Date().getTime() / 1000) | 0).toString(16);

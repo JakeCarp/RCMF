@@ -4,7 +4,7 @@
       class="text-center p-3"
       style="background-color: rgba(0, 0, 0, 0.2)"
     ></div>
-    <section class="d-flex justify-content-end d-none d-md-flex">
+    <section class="d-flex justify-content-end d-none d-md-flex mt-3">
     
       <div class="d-flex marquee">
         <ul class="marquee-content">
@@ -201,15 +201,7 @@
         </a> -->
       </div>
     
-      <div class="d-flex text-center align-items-center d-flex">
-             <h5 class="fs-3 mx-md-4">Find Us</h5>
-        <a
-          href="https://www.facebook.com/profile.php?id=100064958131113"
-          class="text-white me-md-4"
-        >
-        <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="" width="60" height="60">
-        </a>
-      </div>
+    
     </section>
 
     <section class="">
@@ -258,6 +250,17 @@
             <p><i class="fas fa-envelope mr-3"></i> jcarp2011@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 208 234 567 88</p>
           </div>
+     
+              <div class="d-flex text-center align-items-center d-flex my-2">
+             <h5 class="fs-3 mx-md-4">Find Us</h5>
+        <a
+          href="https://www.facebook.com/profile.php?id=100064958131113"
+          class="text-white me-md-4"
+        >
+        <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="" width="60" height="60">
+        </a>
+      </div>
+
 
           <div class="col-md-3 mobile-Sponsors  ">
             <div class="card bg-light p-1 elevation-5 mb-2">
@@ -332,7 +335,7 @@ export default {
 <style lang="scss" scoped>
 
 .marquee{
-  width: 80vw;
+  width: 100vw;
   height: 10vh;
 
   overflow: hidden;
