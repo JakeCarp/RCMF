@@ -2,7 +2,7 @@
 
 
     <div class="hero-image text-center d-flex align-items-center justify-content-center" >
-      <h1 class="text-center text-light display-1 text-shadow abril">Who We Are</h1>
+      <h1 class="text-center text-light  text-shadow font-1 page-title">Who We Are</h1>
     </div>
 
 
@@ -145,7 +145,9 @@ export default {
 </script>
 <style>
 
-
+.page-title{
+  font-size: 7rem;
+}
 
 
 nav .active {
@@ -193,12 +195,11 @@ nav .nav-link:hover {
 
 .hero-image {
   background-image: url(https://images.unsplash.com/photo-1575920197509-2de60ffa1b0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1848&q=80);
-  height: 40vh;
+  height: 30vh;
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  border-radius: 4px;
 }
 
 .randyPic {

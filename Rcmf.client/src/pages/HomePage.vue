@@ -16,7 +16,7 @@
         <img
           src="https://scontent-fml2-1.xx.fbcdn.net/v/t1.18169-9/154320_466267117079_6118989_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=WDMrIYo_jxIAX-lfkcp&_nc_ht=scontent-fml2-1.xx&oh=00_AfDZpQIltUKPbi9QmLLR50ZFMIYJ2UPHLmUZEsWoVSae5w&oe=63B8D3E0"
           alt=""
-          class="img-fluid image-2 rounded elevation-6"
+          class="img-fluid image-2 hover-2 rounded elevation-6"
         />
       </div>
       <div class="col-md-7" v-motion-slide-right :delay="300">
