@@ -14,23 +14,32 @@
       </div>
     </div>
     <div class=""></div>
-   
-    <!-- <div
-      v-masonry="containerId"
+
+    <div
+      v-masonry=""
+      class="d-flex justify-content-center my-5 ms-5"
       transition-duration="0.3s"
       item-selector=".item"
     >
-      <div v-masonry-tile class="item" v-for="(i,index) in images" :key="index">
-        <img :src="i" alt="">
+      <div
+        v-masonry-tile
+        class="item"
+        v-for="(i, index) in images"
+        :key="index"
+      >
+      <div class="card rounded-1 border-0 m-3  hover-2 elevation-6" @click="setActiveImage(i)">
+
+        <img :src="i" alt="" class="img-fluid rounded-1"/>
       </div>
-    </div> -->
-    <div class="brick my-5 p-5">
-      <div class="" v-for="i in images" v-if="images">
-        <div class="card my-3">
-          <img :src="i" alt="" class="image-fluid">
-        </div>
       </div>
     </div>
+    <!-- <div class="brick my-5 ">
+      <div class="" v-for="(i,index) in images" :key="index" v-if="images">
+        <div class="card border-0 bg-transparent my-3">
+          <img :src="i" alt="" class=" rounded-1 elevation-2 hover-2  ">
+        </div>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -49,19 +58,22 @@ export default {
   setup(props) {
     const editable = ref({});
     onMounted(() => {
-      getFaceBookPictures()
+      getFaceBookPictures();
     });
     watchEffect(() => {});
-      async function getFaceBookPictures(){
+    async function getFaceBookPictures() {
       try {
-          await  firesService.getFaceBookPictures()
-        } catch (error) {
-          Pop.error(error,'[getFaceBookPictures]')
-        }
+        await firesService.getFaceBookPictures();
+      } catch (error) {
+        Pop.error(error, "[getFaceBookPictures]");
+      }
     }
     return {
       editable,
       images: computed(() => AppState.photos),
+      setActiveImage(image){
+         AppState.activeImage = image
+      }
     };
   },
   components: { TournamentSignUpForm },
@@ -69,11 +81,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.item{
+  max-width: 400px;
+}
 .brick {
   columns: 4;
 }
 
-.forcedImg{
+.forcedImg {
   height: 300px;
   width: 300px;
   object-fit: cover;

@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div class="row justify-content-evenly my-5 bg-primary">
+    <div class="row justify-content-evenly my-5 bg-primary darken-10">
       <div class="col-md-12 my-5" v-motion-slide-visible-right>
         <h2 class="display-4 font-1">Providing Firefighters With..</h2>
       </div>
