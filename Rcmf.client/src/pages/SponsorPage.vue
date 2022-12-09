@@ -1,6 +1,6 @@
 <template>
-  <div class="hero-image text-center d-flex align-items-center justify-content-center">
-    <h1 class="text-center text-light display-1 abril">Our Sponsors</h1>
+  <div v-motion-fade class="hero-image text-center d-flex align-items-center justify-content-center">
+    <h1 class="text-center text-light  font-1">Our Sponsors</h1>
   </div>
   <div class="container">
     <div class="row justify-content-center">
@@ -54,5 +54,9 @@ export default {
   background-position: center;
   background-attachment: fixed;
   border-radius: 4px;
+}
+
+.font-1{
+font-size: 7rem;
 }
 </style>

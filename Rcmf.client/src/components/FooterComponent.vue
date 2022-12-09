@@ -333,6 +333,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+footer{
+  z-index: -1333;
+}
 
 .marquee{
   width: 100vw;
