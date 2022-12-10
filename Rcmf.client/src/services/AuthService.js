@@ -32,12 +32,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function () {
   AppState.user = AuthService.user;
   await accountService.getAccount();
   socketService.authenticate(AuthService.bearer);
-  sponsorsService.getSponsors()
-  // grantsService.getGrants()
-  newsLetterService.getNewsletterSubscribers()
-  donationsService.getDonors()
-  // teamsService.getTeams()
-  // playersService.getPlayers()
+
   // NOTE if there is something you want to do once the user is authenticated, place that here
 });
 
