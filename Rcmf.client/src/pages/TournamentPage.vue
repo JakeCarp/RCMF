@@ -34,9 +34,9 @@
         v-for="(i, index) in images"
         :key="index"
       >
-      <div class="card rounded-1 border-0 m-3  hover-2 elevation-6" @click="setActiveImage(i)" data-bs-toggle="modal" data-bs-target="#activeImage">
+      <div class="card  border-0 m-3  hover-2 elevation-6" @click="setActiveImage(i)" data-bs-toggle="modal" data-bs-target="#activeImage">
 
-        <img :src="i" alt="" class="img-fluid rounded-1"/>
+        <img :src="i" alt="" class="img-fluid "/>
       </div>
       </div>
     </div>
@@ -103,7 +103,7 @@ export default {
 }
 
 .item{
-  max-width: 400px;
+  max-width: 300px;
 
 }
 .brick {

@@ -55,14 +55,13 @@
               </p> -->
 
             <blockquote class="p-5">
-              <p class="fs-5 fw-bold text-start">
-                "PREPARATION
-                is the SEPARATION
+              <p class="fs-3 text-center">
+             <b class="">   PREPARATION</b>
+                is the <b>SEPARATION</b>
                 between being a
                 good Firefighter
-                - or becoming the BEST"
-                Capt. Randy Carpenter              </p>
-              <figcaption class="blockquote-footer fs-5 mt-2 text-center">
+                - or becoming the <b>BEST</b></p>
+              <figcaption class="blockquote-footer fs-5 mt-5 text-center">
                 Captain Randy Carpenter
               </figcaption>
             </blockquote>
