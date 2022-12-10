@@ -244,13 +244,6 @@ export default {
 #searchBar22 {
   transition: all 0.5s ease;
 }
-.hiddenOnScroll {
-  transform: scale(3);
-  transform: rotate(40deg);
-}
-.showOnScroll {
-}
-
 .button_container {
   position: absolute;
   left: 0;

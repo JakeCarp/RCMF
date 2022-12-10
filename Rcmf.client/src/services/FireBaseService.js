@@ -25,6 +25,7 @@ class FiresService {
     logger.log(test);
     for await (const x of test.items) {
       let test = await getDownloadURL(x);
+      console.log(test);
       AppState.photos.push(test);
     }
     return test;

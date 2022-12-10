@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <SponsorForm />
+        <SponsorForm  v-motion-pop :delay="200" />
 
 
       </div>
