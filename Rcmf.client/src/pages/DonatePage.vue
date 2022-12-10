@@ -1,14 +1,13 @@
 <template>
   <div class="heroImg d-flex align-items-center justify-content-center">
-    <div class="col-md-12 text-center" v-motion-slide-left :delay="600">
-      
+    <div class="col-md-12 text-center" v-motion-slide-left :delay="300">
+        <h1 class="display-1 font-1 text-light"> Donations</h1>
+        <h2 class="font-1 text-light fs-1 "> Support the bravest people we know</h2>
     </div>
   </div>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 text-center my-3">
-        <h1 class="display-3 abril"> Donation Page</h1>
-      </div>
+   
       <!-- <div class="col-md-12 heroImg elevation-6 mb-5 mt-2">
 
       </div> -->
@@ -17,8 +16,10 @@
 <DonateForm/>
         </div>
         <div class="col-md-6">
-<div class="card">
-  TODO // Information Block
+<div class="card p-4">
+  <p class="title fs-3 text-center" >Title</p>
+  <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquam necessitatibus pariatur laboriosam temporibus facilis? Veritatis omnis pariatur vitae quidem vel sed amet esse, molestiae unde alias distinctio eveniet exercitationem similique illo. Dolores eaque natus deleniti modi vero quisquam quam cumque.
+  </p>
 </div>
         </div>
       </div>
@@ -64,5 +65,7 @@ export default {
   background-attachment: fixed;
   border-radius: 4px;
 }
-
+.font-1{
+  font-size: 7rem;
+}
 </style>

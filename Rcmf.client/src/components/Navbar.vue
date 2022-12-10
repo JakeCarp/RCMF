@@ -43,11 +43,7 @@
            Donate
           </router-link>
         </li>
-        <li>
-          <router-link :to="{ name: 'Admin' }" class="btn text-light   text-uppercase">
-           Admin
-          </router-link>
-        </li>
+     
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <!-- <Login /> -->
