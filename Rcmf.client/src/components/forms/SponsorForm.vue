@@ -1,4 +1,5 @@
 <template>
+    <form @submit.prevent="handleSubmit()" class="" v-motion-pop :delay="200">
   <div class="my-5">
     <div class="rounded d-flex justify-content-center">
       <div class="col-md-8 col-sm-12 shadow-lg p-5 bg-light">
@@ -6,7 +7,7 @@
           <h3 class="text-primary abril">SponsorShip Form</h3>
         </div>
 
-        <form @submit.prevent="handleSubmit()" class="">
+      
           <div class="p-4">
             <div class="form-floating mb-3">
               <input
@@ -14,6 +15,8 @@
                 class="form-control"
                 id="floatingName"
                 placeholder="Name"
+                required
+            
                 v-model="editable.name"
               />
               <label for="floatingName">Sponsor Name</label>
@@ -24,6 +27,7 @@
                 type="text"
                 class="form-control"
                 id="floatingInput"
+                required
                 placeholder="name@example.com"
                 v-model="editable.email"
               />
@@ -33,31 +37,30 @@
             <div class="form-floating mb-3">
               <div class="dropdown-top w-100">
                 <button
-                  class="btn text-dark dropdown-toggle w-100 fs-3 bg-transparent"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Sponsorship Tiers
-                </button>
-                <ul
-                  class="dropdown-menu w-100 border-0 elevation-6 scrollableY p-3"
-                  style="z-index: 9999"
-                >
-                  <li
-                    class="dropdown-item p-2 fw-bold hover-2 selectable rounded-2 text-wrap"
-                    v-for="t in tiers"
-                  >
-               
-                    <p class="fs-3 mb-0">{{ t.tier }} Sponsor: {{ t.price }}</p>
-                    <p>{{ t.text }}</p>
-                  </li>
-                </ul>
+                v-if="!editable.tier"
+                class="btn fw-bold fs-5 btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTiers" aria-controls="offcanvasTiers">
+ Select A SponsorShip Tier
+</button>
+<div   v-else class="d-flex">
+<p class="p-2 fw-bold fs-3  mb-0">  <img src="https://cdn-icons-png.flaticon.com/512/64/64440.png" alt="" width="40" height="40">  {{editable.tier}}  </p>
+
+       <button
+              
+                class="btn fw-bold fs-5 btn-outline-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTiers" aria-controls="offcanvasTiers">
+Change Tier
+</button>
+
+
+
+</div>
+         
               </div>
             </div>
 
             <div class="d-flex justify-content-end">
               <button
+                :class="editable.tier? '' : 'disabled text-dark border-dark'"
+          
                 class="btn btn-outline-success text-center mt-2 p-3 px-5"
                 type="submit"
               >
@@ -65,13 +68,39 @@
               </button>
             </div>
           </div>
-        </form>
-        <div class=" text-muted"><p class="fw-bold mt-3 fs-6">
-           The Randy Carpenter Moemorial Foundation is a 501c(3) Non-Profit Organization. <br> All donations are tax deductible
+     
+        <div class=" text-muted "><p class="fw-bold mt-3 fs-6">
+           The Randy Carpenter Memorial Foundation is a 501c(3) Non-Profit Organization. <br> All donations are tax deductible.
         </p></div>
       </div>
     </div>
   </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTiers" aria-labelledby="offcanvasTiersLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTiersLabel">Sponsorship Tiers</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  
+     <ul
+                  class=" w-100 border-0   p-3"
+            
+                >
+                  <li
+                    class="dropdown-item p-2 fw-bold hover-2 selectable rounded-2 text-wrap"
+                    v-for="t in tiers"
+                    @click="setTier(t.tier)"
+                  >
+               
+                    <p class="fs-3 mb-0">{{ t.tier }} {{ t.price }}</p>
+                    <p>{{ t.text }}</p>
+                  </li>
+                </ul>
+  
+  </div>
+</div>
+   </form>
 </template>
 
 <script>
@@ -82,6 +111,7 @@ import { sponsorsService } from "../../services/SponsorsService.js";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 import LoadingAnimation from "../LoadingAnimation.vue";
+import { Offcanvas } from "bootstrap";
 export default {
   props: {},
   setup(props) {
@@ -135,6 +165,11 @@ export default {
           Pop.error(error, "[createSponsor]");
         }
       },
+      setTier(tier){
+        editable.value.tier=tier
+        console.log(editable.value);
+        Offcanvas.getOrCreateInstance('#offcanvasTiers').hide()
+      }
     };
   },
   components: { LoadingAnimation },

@@ -32,7 +32,7 @@
     </div>
   </nav>
   <!-- !NavButtons -->
-  <div class="tab-content" id="nav-tabContent">
+  <div class="tab-content" id="nav-tabContent" v-motion-pop :delay="200">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
       <!-- Tab1 -->
    <div class="container-fluid ">

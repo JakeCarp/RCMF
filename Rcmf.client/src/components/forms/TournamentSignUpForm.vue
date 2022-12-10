@@ -13,6 +13,7 @@
                 class="form-control"
                 id="floatingName"
                 placeholder="Name"
+                required
               />
               <label for="floatingName">Name</label>
             </div>
@@ -22,6 +23,7 @@
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                required
               />
               <label for="floatingInput">Email address</label>
             </div>
@@ -32,6 +34,7 @@
                 pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
                 id="floatingInput"
                 placeholder="name@example.com"
+                required
               />
               <label for="floatingInput">Phone-Number </label>
             </div>
@@ -39,7 +42,8 @@
               <input
                 class="form-control"
                 id="floatingInput"
-                placeholder="859-543-2203"
+                placeholder="XXL"
+                required
               />
               <label for="floatingInput">ShirtSize</label>
             </div>
@@ -49,6 +53,7 @@
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                required
               />
               <label for="floatingInput">Address</label>
             </div>

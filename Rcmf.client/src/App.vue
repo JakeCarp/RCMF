@@ -1,6 +1,6 @@
 <template>
-  <header  class="sticky-top" id="searchBar22">
-    <Navbar  />
+  <header class="sticky-top" id="searchBar22">
+    <Navbar />
   </header>
   <main class="bg-light overflow-hidden">
     <router-view />
@@ -10,13 +10,13 @@
   </footer>
 
   <ModalComponent id="createTournament">
-<TournamentCreateForm/>
+    <TournamentCreateForm />
   </ModalComponent>
   <ModalComponent id="newsletterForm">
-<NewsLetterForm/>
+    <NewsLetterForm />
   </ModalComponent>
   <ModalComponent id="activeImage">
-<ActiveImage/>
+    <ActiveImage />
   </ModalComponent>
 </template>
 
@@ -34,34 +34,12 @@ import { firesService } from "./services/FireBaseService.js";
 export default {
   setup() {
     onMounted(() => {
-     getFaceBookPictures()
+      getFaceBookPictures();
     });
 
-    // function hideOnScrollTest() {
-    //   let nav = document.querySelector("#searchBar22");
-    //   let prevScrollpos = window.scrollY;
-    //   console.log(["prev"], prevScrollpos);
-    //   window.onscroll = function () {
-    //     let currentScrollPos = window.scrollY;
-    //     console.log(["current"], currentScrollPos);
-    //     if (prevScrollpos > currentScrollPos) {
-    //       // nav.style.top="0"
-    //       nav.classList.remove("showOnScroll");
-    //     } else {
-    //       nav.classList.add("showOnScroll");
-    //       //  nav.style.top="-50px"
-    //     }
-    //     prevScrollpos = currentScrollPos;
-    //   };
-    // }
-     async function getFaceBookPictures() {
+    async function getFaceBookPictures() {
       try {
-        AppState.loading = false
-        let ok =   await firesService.getFaceBookPictures();
-        if (ok) {
-          
-          AppState.loading = true
-     }
+        await firesService.getFaceBookPictures();
       } catch (error) {
         Pop.error(error, "[getFaceBookPictures]");
       }
@@ -70,7 +48,14 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, FooterComponent, ModalComponent, TournamentCreateForm, NewsLetterForm, ActiveImage },
+  components: {
+    Navbar,
+    FooterComponent,
+    ModalComponent,
+    TournamentCreateForm,
+    NewsLetterForm,
+    ActiveImage,
+  },
 };
 </script>
 <style lang="scss">
@@ -79,6 +64,4 @@ export default {
 :root {
   --main-height: calc(100vh - 32px - 85px);
 }
-
-
 </style>

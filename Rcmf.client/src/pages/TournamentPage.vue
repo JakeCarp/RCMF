@@ -32,12 +32,12 @@
         :key="index"
       >
         <div
-          class="card border-0 m-3 hover-2 elevation-6"
+          class="card border-0 m-2 hover-2 elevation-6"
           @click="setActiveImage(i)"
           data-bs-toggle="modal"
           data-bs-target="#activeImage"
         >
-          <img :src="i" alt="" class="img-fluid" />
+          <img :src="i" alt="" class="img-fluid rounded-1" />
         </div>
       </div>
     </div>

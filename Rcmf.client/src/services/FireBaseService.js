@@ -28,7 +28,7 @@ class FiresService {
       console.log(test);
       AppState.photos.push(test);
     }
-    return test;
+
   }
   async getUrls() {
     const imagesRef = collection(db,"images")
