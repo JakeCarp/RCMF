@@ -1,6 +1,6 @@
 <template>
-  <div v-motion-fade class="hero-image text-center d-flex align-items-center justify-content-center">
-    <h1 class="text-center text-light  font-1">Our Sponsors</h1>
+  <div  class="hero-image text-center d-flex align-items-center justify-content-center">
+    <h1  v-motion-slide-left class="text-center text-light  font-1">Our Sponsors</h1>
   </div>
   <div class="container">
     <div class="row justify-content-center">

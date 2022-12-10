@@ -1,9 +1,9 @@
 <template>
   <div class="hero-image d-flex align-items-center justify-content-center">
-    <div class="col-md-12 text-center" v-motion-slide-left :delay="600">
-      <p class="hero-text font-1 text-light px-5 text-shadow-2">
+    <div class="col-md-12 text-center" v-motion-slide-left >
+      <h1 class="hero-text font-1 text-light px-5 text-shadow-2">
         Randy Carpenter Memorial Foundation
-      </p>
+      </h1>
     </div>
   </div>
   <div class="container-fluid mt-5">
@@ -11,7 +11,7 @@
       <div
         class="col-md-5 d-flex align-items-center justify-content-center"
         v-motion-slide-left
-        :delay="300"
+        :delay="200"
       >
         <img
           src="https://scontent-fml2-1.xx.fbcdn.net/v/t1.18169-9/154320_466267117079_6118989_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=WDMrIYo_jxIAX-lfkcp&_nc_ht=scontent-fml2-1.xx&oh=00_AfDZpQIltUKPbi9QmLLR50ZFMIYJ2UPHLmUZEsWoVSae5w&oe=63B8D3E0"
@@ -19,11 +19,11 @@
           class="img-fluid image-2 hover-2 rounded elevation-6"
         />
       </div>
-      <div class="col-md-7" v-motion-slide-right :delay="300">
+      <div class="col-md-7" v-motion-slide-right :delay="200">
         <div
           class="card border-0 p-3 d-flex justify-content-around"
           v-motion-slide-right
-          :delay="300"
+          :delay="200"
         >
           <div class="d-md-flex">
             <a href="#tournament" class="text-dark mx-auto">
