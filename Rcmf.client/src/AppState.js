@@ -7,7 +7,7 @@ export const AppState = reactive({
   account: {},
 loader:0,
   members: [],
-
+activeImage:null,
   donationTotal: 0,
 monthTotal : 0,
   /** @type {import('./models/Newsletter.js').Newsletter.js[]} */
@@ -29,6 +29,8 @@ monthTotal : 0,
   teams: [],
 
   photos:[],
+
+  loading:false,
   shirtSizes: ["XS", "Small", "Medium", "Large", "XL", "XXL", "XXXL"],
 });
 

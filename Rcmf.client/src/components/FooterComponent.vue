@@ -1,10 +1,12 @@
 <template>
   <footer class="text-center text-lg-start text-white bg-dark roboto">
+
     <div
       class="text-center p-3"
       style="background-color: rgba(0, 0, 0, 0.2)"
     ></div>
-    <section class="d-flex justify-content-end d-none d-md-flex">
+    <!-- Sponsor Logo Marquee -->
+    <section class="d-flex justify-content-end d-none d-md-flex mt-3">
     
       <div class="d-flex marquee">
         <ul class="marquee-content">
@@ -212,8 +214,9 @@
         </a>
       </div>
     </section>
-
-    <section class="">
+ <!-- !Sponsor Logo Marquee -->
+    
+ <section >
       <div class="container text-center text-md-start my-2">
         <div class="row mt-3">
           <div class="col-md-3 col-lg-4 col-xl-3 mx-md-2 mb-4">
@@ -255,10 +258,21 @@
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
             />
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> jcarp2011@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 208 234 567 88</p>
+            <p><i class="fas fa-home mr-3"></i> Address</p>
+            <p><i class="fas fa-envelope mr-3"></i> Organization Email</p>
+            <p><i class="fas fa-phone mr-3"></i> Organization Phone</p>
           </div>
+     
+              <div class="d-flex text-center align-items-center d-flex my-2">
+       
+        <a
+          href="https://www.facebook.com/profile.php?id=100064958131113"
+          class="text-white me-md-4"
+        >
+        <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="" width="60" height="60">
+        </a>
+      </div>
+
 
           <div class="col-md-3 mobile-Sponsors  ">
             <div class="card bg-light p-1 elevation-5 mb-2">
@@ -333,7 +347,7 @@ export default {
 <style lang="scss" scoped>
 
 .marquee{
-  width: 80vw;
+  width: 100vw;
   height: 10vh;
 
   overflow: hidden;

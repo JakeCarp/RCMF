@@ -1,4 +1,4 @@
--- Active: 1669695164409@@rcmforg.mysql.database.azure.com@3306@rcmforg
+-- Active: 1670710066536@@rcmforg.mysql.database.azure.com@3306@rcmforg
 
 CREATE TABLE
     IF NOT EXISTS accounts(
@@ -89,4 +89,10 @@ CREATE TABLE
     ) default charset utf8 COMMENT '';
 
 
+
+CREATE TABLE IF NOT EXISTS facebookImages(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+  url varchar(500) NOT NULL 
+
+) default charset utf8 COMMENT '';
 

@@ -2,7 +2,7 @@
 
 
     <div class="hero-image text-center d-flex align-items-center justify-content-center" >
-      <h1 class="text-center text-light display-1 text-shadow abril">Who We Are</h1>
+      <h1 v-motion-slide-left :delay="200" class="text-center text-light  text-shadow font-1 page-title">Who We Are</h1>
     </div>
 
 
@@ -10,7 +10,7 @@
       <div class="row">
       <div class="col-md-12 my-5">
   <!-- NavButtons -->
-  <nav class="">
+  <nav class="" v-motion-pop :delay="200">
     <div class="nav nav-tabs rounded justify-content-center justify-content-evenly" id="nav-tab" role="tablist">
       <button v-motion-pop class="nav-link active border-0 " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
         type="button" role="tab" aria-controls="nav-home" aria-selected="true">
@@ -32,7 +32,7 @@
     </div>
   </nav>
   <!-- !NavButtons -->
-  <div class="tab-content" id="nav-tabContent">
+  <div class="tab-content" id="nav-tabContent" v-motion-pop :delay="200">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
       <!-- Tab1 -->
    <div class="container-fluid ">
@@ -48,8 +48,9 @@
       <!-- Tab2 -->
   <div class="container">
     <div class="row">
-      <div class="col-md-12 my-3 ">
-      The dog (Canis familiaris[4][5] or Canis lupus familiaris[5]) is a domesticated descendant of the wolf. Also called the
+     
+         <div class="col-md-12 my-3 p-5">
+      <p class="fs-4 ">  The dog (Canis familiaris[4][5] or Canis lupus familiaris[5]) is a domesticated descendant of the wolf. Also called the
       domestic dog, it is derived from the extinct Pleistocene wolf,[6][7] and the modern wolf is the dog's nearest living
       relative.[8] Dogs were the first species to be domesticated[9][8] by hunter-gatherers over 15,000 years ago[7] before
       the development of agriculture.[1] Due to their long association with humans, dogs have expanded to a large number of
@@ -60,8 +61,8 @@
       attributes.[12] Dog breeds vary widely in shape, size, and color. They perform many roles for humans, such as hunting,
       herding, pulling loads, protection, assisting police and the military, companionship, therapy, and aiding disabled
       people. Over the millennia, dogs became uniquely adapted to human behavior, and the human-canine bond has been a topic
-      of frequent study.[13] This influence on human society has given them the sobriquet of "man's best friend".
-      </div>
+      of frequent study.[13] This influence on human society has given them the sobriquet of "man's best friend".</p>
+       </div>
     </div>
   </div>
       <!-- !Tab2 -->
@@ -70,8 +71,9 @@
       <!-- Tab3 -->
       <div class="container">
         <div class="row">
-          <div class="col-md-12 my-3 ">
-            The cat (Felis catus) is a domestic species of small carnivorous mammal.[1][2] It is the only domesticated species in
+       
+           <div class="col-md-12 my-3 p-5">
+      <p class="fs-4 "> The cat (Felis catus) is a domestic species of small carnivorous mammal.[1][2] It is the only domesticated species in
             the family Felidae and is commonly referred to as the domestic cat or house cat to distinguish it from the wild members
             of the family.[4] Cats are commonly kept as house pets but can also be farm cats or feral cats; the feral cat ranges
             freely and avoids human contact.[5] Domestic cats are valued by humans for companionship and their ability to kill
@@ -97,8 +99,8 @@
             As of 2021, there were an estimated 220 million owned and 480 million stray cats in the world.[14][15] As of 2017, the
             domestic cat was the second most popular pet in the United States, with 95.6 million cats owned[16][17][18] and around
             42 million households owning at least one cat.[19] In the United Kingdom, 26% of adults have a cat, with an estimated
-            population of 10.9 million pet cats as of 2020
-          </div>
+            population of 10.9 million pet cats as of 2020</p>
+       </div>
         </div>
       </div>
       <!-- !Tab3 -->
@@ -107,8 +109,9 @@
       <!-- Tab4 -->
     <div class="container">
       <div class="row">
-        <div class="col-md-12 my-3 ">
-          Lizards are a widespread group of squamate reptiles, with over 7,000 species,[1] ranging across all continents except
+        
+          <div class="col-md-12 my-3 p-5">
+      <p class="fs-4 ">  Lizards are a widespread group of squamate reptiles, with over 7,000 species,[1] ranging across all continents except
           Antarctica, as well as most oceanic island chains. The group is paraphyletic since it excludes the snakes and
           Amphisbaenia although some lizards are more closely related to these two excluded groups than they are to other lizards.
           Lizards range in size from chameleons and geckos a few centimeters long to the 3-meter-long Komodo dragon.
@@ -120,8 +123,8 @@
           smaller species eat insects, while the Komodo eats mammals as big as water buffalo.
           
           Lizards make use of a variety of antipredator adaptations, including venom, camouflage, reflex bleeding, and the ability
-          to sacrifice and regrow their tails.
-        </div>
+          to sacrifice and regrow their tails.</p>
+       </div>
       </div>
     </div>
       <!-- !Tab4 -->
@@ -145,7 +148,9 @@ export default {
 </script>
 <style>
 
-
+.page-title{
+  font-size: 7rem;
+}
 
 
 nav .active {
@@ -193,12 +198,11 @@ nav .nav-link:hover {
 
 .hero-image {
   background-image: url(https://images.unsplash.com/photo-1575920197509-2de60ffa1b0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1848&q=80);
-  height: 40vh;
+  height: 30vh;
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  border-radius: 4px;
 }
 
 .randyPic {

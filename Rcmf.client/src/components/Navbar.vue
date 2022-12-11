@@ -43,11 +43,7 @@
            Donate
           </router-link>
         </li>
-        <li>
-          <router-link :to="{ name: 'Admin' }" class="btn text-light   text-uppercase">
-           Admin
-          </router-link>
-        </li>
+     
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <!-- <Login /> -->
@@ -66,7 +62,9 @@ export default {
 </script>
 
 <style scoped>
-
+.btn{
+  font-size: 1.5rem;
+}
 .btn:hover{
     border-bottom: 4px solid var(--bs-danger) !important;
     border: 0;
