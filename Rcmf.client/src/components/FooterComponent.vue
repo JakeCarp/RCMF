@@ -206,6 +206,7 @@
         <a
           href="https://www.facebook.com/profile.php?id=100064958131113"
           class="text-white me-md-4"
+          target="_blank"
         >
         <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="" width="60" height="60">
         </a>
